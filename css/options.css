@@ -3,8 +3,12 @@ body {
     color: #F92672;
 }
 
-a {
-    color: #F92672;
+#container {
+    margin: 32px auto;
+}
+
+td {
+    padding: 8px 16px;
 }
 
 select {
@@ -17,10 +21,7 @@ select {
     height: 32px;
 }
 
-#container {
-    margin: 32px auto;
-}
-
-td {
-    padding: 8px 16px;
+#close_btn {
+    width: 100%;
+    height: 28px;
 }

@@ -1,29 +1,13 @@
-div#sidebar, div#header{
-    line-height: 1.5;
-    background-color: #272822;
-    color: white;
-}
-
 a {
     color: #F92672;
     text-decoration: none;
 }
 
-input[type=text] {
-    width: 192px;
-}
-
-a#question-mark {
-    margin-right: 10px;
-}
-
-button {
-    padding: 3px 12px;
-}
-
 #header, #sidebar {
-    padding-top: 2px;
-    padding-left: 8px;
+    line-height: 1.5;
+    background-color: #272822;
+    color: white;
+    padding: 2px 8px;
 }
 
 #options_link {
