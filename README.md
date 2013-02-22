@@ -3,7 +3,6 @@
 Slim Text is a slim text editor which runs inside a web browser.
 
 
-
 ## todo list
 
 2. remember the working folder when the user last use the editor
@@ -23,4 +22,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 14. when user have unsaved content, change the browser action icon?
 15. bug: open then close developer tool, height of editor does not restore
 16. bug: filemanager plugin does not support windows!
-17.
+17. how to hanlde symbol links?
+18. remote the options link in the header?
+    1. not so useful, I am not sure
+19.
