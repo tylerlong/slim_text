@@ -2,7 +2,6 @@ $ ->
     _.each _.range(8, 33), (i) ->
         $('#font_size').append $("""<option value="#{i}px">#{i}px</option>""")
 
-
     chrome.storage.sync.get ['theme', 'font_size'], (items) ->
         if not items.theme
             items.theme = 'monokai'

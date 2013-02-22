@@ -7,47 +7,15 @@ editor.commands.addCommand
         alert 'fake save'
     readOnly: false
 
-setMode = (file) ->
-    extension = file.substr (file.lastIndexOf('.') + 1)
-    switch extension
-        when 'html', 'htm'
-            editor.getSession().setMode "ace/mode/html"
-        when 'css'
-            editor.getSession().setMode "ace/mode/css"
-        when 'js'
-            editor.getSession().setMode "ace/mode/javascript"
-        when 'coffee'
-            editor.getSession().setMode "ace/mode/coffee"
-        when 'txt'
-            editor.getSession().setMode "ace/mode/text"
-        when 'py'
-            editor.getSession().setMode "ace/mode/python"
-        when 'rb'
-            editor.getSession().setMode "ace/mode/ruby"
-        else
-            editor.getSession().setMode "ace/mode/text"
-
 $('body').on 'click', 'a.resource-link', ->
     link = $(this)
     if $(this).data('dir')
-        openFolder($(this).data('path'))
+        # list the content of folder
     else
         editor.setValue('content', -1)
-        setMode link.text()
+        mode = guess_mode(link.text().file_exteniosn())
+        editor.getSession().setMode mode
         breadcrumb(link.data('path'))
-
-parentFolder = (folder) ->
-    tokens = _.filter folder.split(/\//), (item) ->
-        item != ''
-    if tokens.length == 0
-        return ''
-    else
-        return '/' + _.initial(tokens).join('/')
-
-lastToken = (path) ->
-    tokens = _.filter path.split(/\//), (item) ->
-        item != ''
-    return _.last(tokens)
 
 breadcrumb = (path) ->
     $('#current_path').html('')
