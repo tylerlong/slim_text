@@ -1,9 +1,6 @@
 $ ->
     layout = $('body').layout
-        livePaneResizing: true
         spacing_open: 8
-        onresize: ->
-            editor.resize()
         north:
             spacing_closed: 8
             size: 32
@@ -17,6 +14,8 @@ $ ->
             onclose_start: ->
                 layout.close 'west'
         west:
+            livePaneResizing: true
             size: 192
             spacing_closed: 0
             togglerLength_open: 0
+            onresize: editor.resize
