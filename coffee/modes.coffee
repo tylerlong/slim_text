@@ -1,4 +1,4 @@
-modes = {
+modes =
     'abap': 'abap'
 
     'asciidoc': 'asciidoc'
@@ -159,7 +159,7 @@ modes = {
 
     'yaml': 'yaml'
     'yml': 'yaml'
-}
+
 
 guess_mode = (file_extension) ->
     mode = modes[file_extension]
