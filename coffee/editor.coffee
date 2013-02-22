@@ -46,6 +46,10 @@ open_path = (path) ->
         chrome.storage.local.set { 'file': path }
         content = file_manager.read(path)
         editor.setValue content, -1
+        extension = file_manager.extension(path)
+        if extension
+            extension = extension.toLowerCase().substr(1, extension.length - 1)
+        editor.getSession().setMode window.guess_mode(extension)
 
         path = file_manager.container(path)
     show_breadcrumb path

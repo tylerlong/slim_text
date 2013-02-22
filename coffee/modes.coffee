@@ -161,7 +161,7 @@ modes =
     'yml': 'yaml'
 
 
-guess_mode = (file_extension) ->
+window.guess_mode = (file_extension) ->
     mode = modes[file_extension]
     if not mode
         mode = 'text'
