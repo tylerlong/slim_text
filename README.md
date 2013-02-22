@@ -21,4 +21,5 @@ Slim Text is a slim text editor which runs inside a web browser.
     3. global settings via options page, cureent session settting via developer tools
         1. great idea!
 13. update the old editor_in_chrome project and tell the users that they should switch to this project.
-14.
+14. when user have unsaved content, change the browser action icon?
+15.

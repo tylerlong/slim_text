@@ -9,3 +9,5 @@ $ ->
 
         editor.setTheme "ace/theme/#{items.theme}"
         editor.setFontSize "#{items.font_size}px"
+
+    editor.setValue 'good to know', -1
