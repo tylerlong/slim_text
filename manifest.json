@@ -18,6 +18,10 @@
 
     "plugins": [
         {
+            "path": "plugin/npFileManager.dll",
+            "public": false
+        },
+        {
             "path": "plugin/npFileManager.so",
             "public": false
         }
