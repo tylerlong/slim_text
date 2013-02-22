@@ -15,7 +15,7 @@ $ ->
                 layout.close 'west'
         west:
             livePaneResizing: true
-            size: 256
+            size: 192
             spacing_closed: 0
             togglerLength_open: 0
             onresize: editor.resize
