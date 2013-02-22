@@ -1,6 +1,7 @@
 a {
     color: #F92672;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 #header, #sidebar {

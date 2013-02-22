@@ -10,10 +10,10 @@ $ ->
         editor.setTheme "ace/theme/#{items.theme}"
         editor.setFontSize "#{items.font_size}px"
 
+    file_manager = document.getElementById('file_manager')
     chrome.storage.local.get ['path'], (items) ->
         path = items.path
         if not path
-            file_manager = document.getElementById('file_manager')
             path = file_manager.temp_folder()
             chrome.storage.local.set { 'path': path }
         items = file_manager.list(path)
