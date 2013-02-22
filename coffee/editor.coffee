@@ -10,4 +10,6 @@ $ ->
         editor.setTheme "ace/theme/#{items.theme}"
         editor.setFontSize "#{items.font_size}px"
 
-    editor.setValue 'good to know', -1
+    file_manager = document.getElementById('file_manager')
+    temp_folder = file_manager.temp_folder()
+    editor.setValue temp_folder, -1

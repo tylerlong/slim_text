@@ -14,5 +14,12 @@
 
     "browser_action": {
         "default_icon": "icon/icon19.png"
-    }
+    },
+
+    "plugins": [
+        {
+            "path": "plugin/npFileManager.so",
+            "public": false
+        }
+    ]
 }
