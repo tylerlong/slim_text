@@ -72,7 +72,7 @@ $ ->
     window.layout = $('body').layout
         north:
             slidable: false
-            spacing_open: 24
+            spacing_open: 16
             spacing_closed: 8
             size: 32
             resizable: false
