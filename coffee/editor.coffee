@@ -71,7 +71,7 @@ $ ->
 
     window.layout = $('body').layout
         north:
-            spacing_open: 24
+            spacing_open: 60
             spacing_closed: 8
             size: 32
             resizable: false
@@ -92,6 +92,39 @@ $ ->
                 editor.resize()
 
     $('.ui-layout-resizer-north').append """<div id="toolbar"></div>"""
+
+    $('#toolbar').append("""<ul id="jMenu">
+  <li><a class="fNiv">Category 1</a><!-- Do not forget the "fNiv" class for the first level links !! -->
+    <ul>
+      <li class="arrow"></li>
+      <li><a>Category 1.2</a>
+        <ul>
+          <li><a>Category 1.3</a></li>
+          <li><a>Category 1.3</a></li>
+          <li><a>Category 1.3</a></li>
+        </ul>
+      </li>
+      <li><a>Category 1.2</a></li>
+      <li><a>Category 1.2</a>
+        <ul>
+          <li><a>Category 1.3</a></li>
+          <li><a>Category 1.3</a>
+            <ul>
+              <li><a>Category 1.4</a></li>
+              <li><a>Category 1.4</a></li>
+              <li><a>Category 1.4</a></li>
+              <li><a>Category 1.4</a></li>
+              <li><a>Category 1.4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a>Category 1.2</a></li>
+    </ul>
+  </li>
+</ul>""")
+    $("#jMenu").jMenu()
+
     $('#toolbar').append("""<button id="full_window_btn">Full Window</button>""")
     $('#toolbar').append("""<button id="save_btn">Save</button>""")
 

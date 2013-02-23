@@ -25,4 +25,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. wrong path cause the File Manager plugin crash
 24. change default folder to home folder
 25. bug: breadcrumb emtpty if '/'
-26.
+26. add jmenu as submodule?
+27. add ace as submodule?
+28.
