@@ -1,13 +1,20 @@
 editor = ace.edit "editor"
 file_manager = document.getElementById('file_manager')
 
+save_file = ->
+    chrome.storage.local.get ['file'], (items) ->
+        if items.file
+            file_manager.write items.file, editor.getValue()
+            notification = window.webkitNotifications.createNotification '../icon/icon48.png', 'File saved', items.file
+            notification.show()
+            setTimeout (-> notification.cancel()), 3000
+
+
 editor.commands.addCommand
     name: 'saveCommand'
     bindKey: { win: 'Ctrl-S',  mac: 'Command-S' }
     exec: (editor) ->
-        chrome.storage.local.get ['file'], (items) ->
-            if items.file
-                file_manager.write items.file, editor.getValue()
+        save_file()
     readOnly: false
 
 
@@ -113,6 +120,4 @@ $('body').on 'click', '#full_window_btn', ->
     window.layout.close 'west'
 
 $('body').on 'click', '#save_btn', ->
-    chrome.storage.local.get ['file'], (items) ->
-        if items.file
-            file_manager.write items.file, editor.getValue()
+    save_file()

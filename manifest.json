@@ -7,7 +7,8 @@
     "options_page": "html/options.html",
     "permissions": [
         "tabs",
-        "storage"
+        "storage",
+        "notifications"
     ],
 
     "background": { "scripts": ["js/background.js"] },
@@ -25,5 +26,9 @@
             "path": "plugin/npFileManager.so",
             "public": false
         }
+    ],
+
+    "web_accessible_resources": [
+        "icon/icon48.png"
     ]
 }
