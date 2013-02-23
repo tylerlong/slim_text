@@ -72,7 +72,7 @@ $ ->
     window.layout = $('body').layout
         north:
             slidable: false
-            spacing_open: 16
+            spacing_open: 18
             spacing_closed: 8
             size: 32
             resizable: false
@@ -104,4 +104,6 @@ $('body').on 'click', '#full_window_btn', ->
     window.layout.close 'west'
 
 $('body').on 'click', '#save_btn', ->
-    alert 'file saved!'
+    chrome.storage.local.get ['file'], (items) ->
+        if items.file
+            file_manager.write items.file, editor.getValue()
