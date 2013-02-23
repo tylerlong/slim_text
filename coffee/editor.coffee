@@ -83,7 +83,7 @@ open_path = (path) ->
 
 $ ->
     chrome.storage.local.get ['path', 'file'], (items) ->
-        path = items.file or items.path or file_manager.temp_folder()
+        path = items.file or items.path or file_manager.home_folder() or file_manager.temp_folder()
         open_path path
 
     chrome.storage.sync.get ['theme', 'font_size'], (items) ->

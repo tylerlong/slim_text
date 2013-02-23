@@ -12,7 +12,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. not priority, English support is enough at the moment
 13. update the old editor_in_chrome project and tell the users that they should switch to this project.
     1. do this after publishing Slim Text to public
-24. change default folder to home folder
 25. bug: breadcrumb emtpty if '/'
 27. add ace as submodule?
 29. add toolbar to the right of menu bar
