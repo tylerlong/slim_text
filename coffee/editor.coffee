@@ -71,11 +71,11 @@ $ ->
 
     window.layout = $('body').layout
         north:
+            slidable: false
             spacing_open: 24
             spacing_closed: 8
             size: 32
             resizable: false
-            togglerLength_closed: 128
             togglerLength_open: 0
             togglerTip_closed: 'Exit full window'
             onopen_end: ->
@@ -85,8 +85,10 @@ $ ->
             spacing_open: 8
             livePaneResizing: true
             size: 192
-            spacing_closed: 0
+            spacing_closed: 8
             togglerLength_open: 0
+            togglerLength_closed: 0
+            slideTrigger_open: 'mouseover'
 
         center:
             onresize_end: ->
