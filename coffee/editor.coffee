@@ -75,13 +75,11 @@ $ ->
             spacing_closed: 8
             size: 32
             resizable: false
-            togglerLength_closed: 64
+            togglerLength_closed: 128
             togglerLength_open: 0
             togglerTip_closed: 'Exit full window'
             onopen_start: ->
-                layout.open 'west'
-            onclose_start: ->
-                layout.close 'west'
+                window.layout.open 'west'
         west:
             spacing_open: 8
             livePaneResizing: true
@@ -89,9 +87,9 @@ $ ->
             spacing_closed: 0
             togglerLength_open: 0
 
-    lazy_resize = _.debounce (->
-        editor.resize()), 256
-    $(window).resize lazy_resize
+        center:
+            onresize_end: ->
+                editor.resize()
 
     $('.ui-layout-resizer-north').append """<div id="toolbar"></div>"""
     $('#toolbar').append("""<button id="full_window_btn">Full Window</button>""")
