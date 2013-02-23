@@ -23,10 +23,11 @@ div.ui-layout-center{
     height: 100%;
 }
 
-#toolbar{
-    text-align: center;
+#jMenu {
+    position: absolute;
+    top: 32px;
 }
 
-.ui-layout-resizer-closed #toolbar {
-    display: none;
+.jMenu li a {
+    padding: 2px 10px;
 }

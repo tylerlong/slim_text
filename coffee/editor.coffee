@@ -71,15 +71,16 @@ $ ->
 
     window.layout = $('body').layout
         north:
-            spacing_open: 60
+            spacing_open: 24
             spacing_closed: 8
             size: 32
             resizable: false
             togglerLength_closed: 128
             togglerLength_open: 0
             togglerTip_closed: 'Exit full window'
-            onopen_start: ->
+            onopen_end: ->
                 window.layout.open 'west'
+                window.layout.allowOverflow('north')
         west:
             spacing_open: 8
             livePaneResizing: true
@@ -91,43 +92,9 @@ $ ->
             onresize_end: ->
                 editor.resize()
 
-    $('.ui-layout-resizer-north').append """<div id="toolbar"></div>"""
+    window.layout.allowOverflow('north')
 
-    $('#toolbar').append("""<ul id="jMenu">
-  <li><a class="fNiv">Category 1</a><!-- Do not forget the "fNiv" class for the first level links !! -->
-    <ul>
-      <li class="arrow"></li>
-      <li><a>Category 1.2</a>
-        <ul>
-          <li><a>Category 1.3</a></li>
-          <li><a>Category 1.3</a></li>
-          <li><a>Category 1.3</a></li>
-        </ul>
-      </li>
-      <li><a>Category 1.2</a></li>
-      <li><a>Category 1.2</a>
-        <ul>
-          <li><a>Category 1.3</a></li>
-          <li><a>Category 1.3</a>
-            <ul>
-              <li><a>Category 1.4</a></li>
-              <li><a>Category 1.4</a></li>
-              <li><a>Category 1.4</a></li>
-              <li><a>Category 1.4</a></li>
-              <li><a>Category 1.4</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a>Category 1.2</a></li>
-    </ul>
-  </li>
-</ul>""")
-    $("#jMenu").jMenu()
-
-    $('#toolbar').append("""<button id="full_window_btn">Full Window</button>""")
-    $('#toolbar').append("""<button id="save_btn">Save</button>""")
-
+    $("#jMenu").jMenu { ulWidth: '128'}
 
 $('body').on 'click', 'a.file-link', ->
     open_path $(this).data('path')
