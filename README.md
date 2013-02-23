@@ -12,7 +12,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. not priority, English support is enough at the moment
 13. update the old editor_in_chrome project and tell the users that they should switch to this project.
     1. do this after publishing Slim Text to public
-27. add ace as submodule?
 29. add toolbar to the right of menu bar
 33. add a "syntax" menu items to "view" menuitem
 34. add clear cache action to options page
@@ -30,4 +29,5 @@ Slim Text is a slim text editor which runs inside a web browser.
 40. user can use omnibox to issue commands
 41. move current work env onto Slim Text
 42. bug: navigate to /root, FileManager crash
-43.
+43. options page desktop notification upon saving
+44.

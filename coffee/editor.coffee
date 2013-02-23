@@ -94,16 +94,16 @@ $ ->
         if not items.theme
             items.theme = 'monokai'
         if not items.font_size
-            items.font_size = '16'
+            items.font_size = '15'
         editor.setTheme "ace/theme/#{items.theme}"
         editor.setFontSize "#{items.font_size}px"
 
     window.layout = $('body').layout
         north:
             slidable: false
-            spacing_open: 18
+            spacing_open: 16
             spacing_closed: 8
-            size: 32
+            size: 24
             resizable: false
             togglerLength_open: 0
             togglerTip_closed: 'Exit full window'
@@ -113,7 +113,7 @@ $ ->
         west:
             spacing_open: 8
             livePaneResizing: true
-            size: 192
+            size: 160
             spacing_closed: 8
             togglerLength_open: 0
             togglerLength_closed: 0

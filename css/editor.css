@@ -5,10 +5,13 @@ a {
 }
 
 div.ui-layout-west, div.ui-layout-north {
-    line-height: 1.5;
     background-color: #272822;
     color: white;
-    padding: 2px 8px;
+    padding: 1px 16px;
+}
+
+#header, #sidebar {
+    font-size: 15px;
 }
 
 div.ui-layout-center {
@@ -20,12 +23,12 @@ div.ui-layout-center {
 }
 
 #navbar {
-    margin-top: 2px;
+    margin-top: 3px;
 }
 
 #navbar a {
     color: #333;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 #navbar span {
