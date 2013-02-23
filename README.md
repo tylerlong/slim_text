@@ -27,6 +27,5 @@ Slim Text is a slim text editor which runs inside a web browser.
 25. bug: breadcrumb emtpty if '/'
 27. add ace as submodule?
 29. add toolbar to the right of menu bar
-31. keyboard shutcut to save file
 32. indicate the file have unsaved change visually
 33.

@@ -1,6 +1,15 @@
 editor = ace.edit "editor"
 file_manager = document.getElementById('file_manager')
 
+editor.commands.addCommand
+    name: 'saveCommand'
+    bindKey: { win: 'Ctrl-S',  mac: 'Command-S' }
+    exec: (editor) ->
+        chrome.storage.local.get ['file'], (items) ->
+            if items.file
+                file_manager.write items.file, editor.getValue()
+    readOnly: false
+
 
 show_breadcrumb = (path) ->
     $('#route').html('')
