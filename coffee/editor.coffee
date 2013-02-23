@@ -71,7 +71,6 @@ $ ->
 
     window.layout = $('body').layout
         spacing_open: 8
-        onresize: editor.resize
         north:
             spacing_closed: 8
             size: 32
@@ -89,6 +88,10 @@ $ ->
             size: 192
             spacing_closed: 0
             togglerLength_open: 0
+
+    lazy_resize = _.debounce (->
+        editor.resize()), 256
+    $(window).resize lazy_resize
 
 
 $('body').on 'click', 'a.file-link', ->

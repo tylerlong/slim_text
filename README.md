@@ -18,7 +18,6 @@ Slim Text is a slim text editor which runs inside a web browser.
         1. great idea!
 13. update the old editor_in_chrome project and tell the users that they should switch to this project.
 14. when user have unsaved content, change the browser action icon?
-15. bug: open then close developer tool, height of editor does not restore
 17. how to hanlde symbol links?
 18. remove the options link in the header?
     1. not so useful, I am not sure
