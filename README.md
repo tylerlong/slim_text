@@ -22,8 +22,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 17. how to hanlde symbol links?
 18. remove the options link in the header?
     1. not so useful, I am not sure
-19. vertical scrollbar for left panel
-20. set mode according to filename
 23. check the correctness of path
     1. wrong path cause the File Manager plugin crash
 24. change default folder to home folder
