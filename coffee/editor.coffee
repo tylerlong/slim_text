@@ -7,7 +7,8 @@ save_file = ->
             file_manager.write items.file, editor.getValue()
             notification = window.webkitNotifications.createNotification '../icon/icon48.png', 'File saved', items.file
             notification.show()
-            setTimeout (-> notification.cancel()), 3000
+            setTimeout (-> notification.cancel()), 5000
+            document.title = items.file
 
 
 editor.commands.addCommand
@@ -16,6 +17,13 @@ editor.commands.addCommand
     exec: (editor) ->
         save_file()
     readOnly: false
+
+lazy_change = _.debounce (->
+    if document.title.indexOf('* ') != 0
+        document.title = '* ' + document.title
+    ), 300, true
+editor.getSession().on 'change', (e)->
+    lazy_change()
 
 
 show_breadcrumb = (path) ->
@@ -66,6 +74,7 @@ open_path = (path) ->
         if extension
             extension = extension.toLowerCase().substr(1, extension.length - 1)
         editor.getSession().setMode window.guess_mode(extension)
+        document.title = path
 
         path = file_manager.container(path)
     show_breadcrumb path

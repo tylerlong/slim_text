@@ -24,10 +24,15 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. change chrome page title?
     3. add file name to the to navbar and change it?
     4. add a shortcut icon to the navbar and highlight it?
-    5.
+    5. page action icon
+        6. browser action and page action cannot co-exist
 33. add a "syntax" menu items to "view" menuitem
 34. add clear cache action to options page
 35. can define filters, do not show some kind of files
 36. no need to show href in status bar, how to tell chrome not to do that?
     1. do not use <a>, use <span> and css it
-37
+37. remeber the status of layout
+    1. enter full window mode then refresh
+38. multiple tabs, folder, file conflict.
+    1. didn't consider multiple instance. should attach content to tab id and save into dict
+39.
