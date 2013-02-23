@@ -94,8 +94,6 @@ $ ->
 
     window.layout.allowOverflow('north')
 
-    $("#jMenu").jMenu { ulWidth: '128'}
-
 $('body').on 'click', 'a.file-link', ->
     open_path $(this).data('path')
 

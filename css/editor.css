@@ -11,11 +11,7 @@ div.ui-layout-west, div.ui-layout-north {
     padding: 2px 8px;
 }
 
-#options_link {
-    float: right;
-}
-
-div.ui-layout-center{
+div.ui-layout-center {
     padding: 0;
 }
 #editor {
@@ -23,11 +19,15 @@ div.ui-layout-center{
     height: 100%;
 }
 
-#jMenu {
-    position: absolute;
-    top: 32px;
+#navbar {
+    margin-top: 5px;
 }
 
-.jMenu li a {
-    padding: 2px 10px;
+#navbar a {
+    color: #333;
+    font-size: 13px;
+}
+
+#navbar span {
+    margin: 0 8px;
 }

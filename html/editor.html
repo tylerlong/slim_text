@@ -5,30 +5,36 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../icon/icon16.png">
     <link rel="stylesheet" href="../css/jquery.layout.css" type="text/css">
-    <link rel="stylesheet" href="../js/jmenu/css/jMenu.jquery.css" type="text/css">
+    <link rel="stylesheet" href="../js/bootstrap/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="../css/editor.css" type="text/css">
 </head>
 <body>
     <div class="ui-layout-north">
         <div id="header" class="ace_editor">
             <span id="route"></span>
+        </div>
+        <div id="navbar">
+            <span class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                File
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                  <li role="presentation"><a role="menuitem" href="#">Open</a></li>
+                  <li role="presentation"><a role="menuitem" href="#" id="save_btn">Save</a></li>
+              </ul>
+            </span>
+            <span class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                View
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                  <li role="presentation"><a role="menuitem" href="#" id="full_window_btn">Full Window</a></li>
+              </ul>
+            </span>
             <span id="options_link"><a href="options.html" target="_blank">Options</a></span>
         </div>
-        <ul id="jMenu">
-            <li><a class="fNiv"> File </a>
-                <ul>
-                    <li class="arrow"></li>
-                    <li><a>Open</a></li>
-                    <li><a id="save_btn">Save</a></li>
-                </ul>
-            </li>
-            <li><a class="fNiv"> View </a>
-                <ul>
-                    <li class="arrow"></li>
-                    <li><a id="full_window_btn">Full Window</a></li>
-                </ul>
-            </li>
-        </ul>
     </div>
     <div class="ui-layout-center">
         <div id="editor"></div>
@@ -45,7 +51,7 @@
     <script src="../js/jqueryui.js"></script>
     <script src="../js/jquery.layout.js"></script>
     <script src="../js/modes.js"></script>
-    <script src="../js/jmenu/js/jMenu.jquery.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
     <script src="../js/editor.js"></script>
 </body>
 </html>
