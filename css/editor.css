@@ -22,3 +22,11 @@ div.ui-layout-center{
     width: 100%;
     height: 100%;
 }
+
+#toolbar{
+    text-align: center;
+}
+
+.ui-layout-resizer-closed #toolbar {
+    display: none;
+}

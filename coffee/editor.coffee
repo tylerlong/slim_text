@@ -70,20 +70,20 @@ $ ->
         editor.setFontSize "#{items.font_size}px"
 
     window.layout = $('body').layout
-        spacing_open: 8
         north:
+            spacing_open: 24
             spacing_closed: 8
             size: 32
             resizable: false
-            togglerLength_closed: 128
-            togglerLength_open: 128
-            togglerTip_open: "Hide"
-            togglerTip_closed: "Show"
+            togglerLength_closed: 64
+            togglerLength_open: 0
+            togglerTip_closed: 'Exit full window'
             onopen_start: ->
                 layout.open 'west'
             onclose_start: ->
                 layout.close 'west'
         west:
+            spacing_open: 8
             livePaneResizing: true
             size: 192
             spacing_closed: 0
@@ -93,6 +93,17 @@ $ ->
         editor.resize()), 256
     $(window).resize lazy_resize
 
+    $('.ui-layout-resizer-north').append """<div id="toolbar"></div>"""
+    $('#toolbar').append("""<button id="full_window_btn">Full Window</button>""")
+    $('#toolbar').append("""<button id="save_btn">Save</button>""")
+
 
 $('body').on 'click', 'a.file-link', ->
     open_path $(this).data('path')
+
+$('body').on 'click', '#full_window_btn', ->
+    window.layout.close 'north'
+    window.layout.close 'west'
+
+$('body').on 'click', '#save_btn', ->
+    alert 'file saved!'
