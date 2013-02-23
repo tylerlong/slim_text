@@ -29,6 +29,10 @@ editor.getSession().on 'change', (e)->
 show_breadcrumb = (path) ->
     $('#route').html('')
     route = file_manager.route(path)
+    if route.length == 0
+        $('#route').append("&nbsp;")
+        return
+
     route.reverse()
     for item in _.initial(route)
         link = $("""<a href="#" class="file-link">#{item.name}</a>""")
