@@ -4,6 +4,11 @@ a {
     white-space: nowrap;
 }
 
+div {
+    padding: 0;
+    margin: 0;
+}
+
 #header, #sidebar {
     line-height: 1.5;
     background-color: #272822;

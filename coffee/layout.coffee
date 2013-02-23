@@ -1,5 +1,5 @@
 $ ->
-    layout = $('body').layout
+    window.layout = $('body').layout
         spacing_open: 8
         north:
             spacing_closed: 8
