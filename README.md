@@ -13,7 +13,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. not priority, English support is enough at the moment
 13. update the old editor_in_chrome project and tell the users that they should switch to this project.
     1. do this after publishing Slim Text to public
-29. add toolbar to the right of menu bar
 33. add a "syntax" menu items to "view" menuitem
 34. add clear cache action to options page
     1. reinstall the extension clears everything in chrome.storage
@@ -42,4 +41,12 @@ Slim Text is a slim text editor which runs inside a web browser.
 48. show filename instead of path on page title and desktop notification
 49. distinguish files and folders in left navbar
 50. context menu to toggle full windows mode
-51.
+51. remove trailing space
+52. add new line to the end of the file upon saving
+53. change red color to blue color?
+54. show invisible chars
+    55. upon selection only?
+56. auto enter full window whenver enter full screen?
+57. bug: hover the begin or end of the top navbar, color changed to green
+58. bug: full window then out, toolbar moves a little to the right
+59.

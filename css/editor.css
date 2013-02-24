@@ -30,3 +30,12 @@ div.ui-layout-center {
 #navbar span {
     margin: 0 8px;
 }
+
+#toolbar {
+    position: absolute;
+    top: 16px;
+    right: 12px;
+}
+#toolbar img {
+    padding-top: 5px;
+}
