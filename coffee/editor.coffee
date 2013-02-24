@@ -131,5 +131,5 @@ $('body').on 'click', '.full_window_btn', ->
     window.layout.close 'north'
     window.layout.close 'west'
 
-$('body').on 'click', '#save_btn', ->
+$('body').on 'click', '.save_btn', ->
     save_file()

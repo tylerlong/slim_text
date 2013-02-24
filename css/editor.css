@@ -31,11 +31,14 @@ div.ui-layout-center {
     margin: 0 8px;
 }
 
-#toolbar {
+#toolbar a.full_window_btn img {
     position: absolute;
-    top: 16px;
-    right: 12px;
+    right: 8px;
+    top: 21px;
 }
-#toolbar img {
-    padding-top: 5px;
+
+#toolbar a.save_btn img {
+    position: absolute;
+    right: 28px;
+    top: 20px;
 }
