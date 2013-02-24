@@ -99,11 +99,11 @@ $ ->
         editor.setFontSize "#{items.font_size}px"
 
     window.layout = $('body').layout
+        spacing_closed: 3
         north:
             slidable: false
-            spacing_open: 16
-            spacing_closed: 8
-            size: 24
+            spacing_open: 14
+            size: 21
             resizable: false
             togglerLength_open: 0
             togglerTip_closed: 'Exit full window'
@@ -111,10 +111,9 @@ $ ->
                 window.layout.open 'west'
                 window.layout.allowOverflow('north')
         west:
-            spacing_open: 8
+            spacing_open: 3
             livePaneResizing: true
-            size: 160
-            spacing_closed: 8
+            size: 128
             togglerLength_open: 0
             togglerLength_closed: 0
             slideTrigger_open: 'mouseover'

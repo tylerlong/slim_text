@@ -6,6 +6,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 ## todo list
 
 4. register domain name slimtext.org ?
+    1. when begin to open source the project
 7. should be able to browse to open a folder or file
     1. should do GUI programming for win, mac and linux, not easy, postpone
 10. i18n
@@ -30,4 +31,15 @@ Slim Text is a slim text editor which runs inside a web browser.
 41. move current work env onto Slim Text
 42. bug: navigate to /root, FileManager crash
 43. options page desktop notification upon saving
-44.
+44. open source the project
+    1. in order to get the most users
+    2. move project to github?
+45. test against windows
+    1. after linux version is stable
+46. test against mac
+    1. after linux version is stable
+47. bug: left panel no-wrap, only <a>, still wrap if <span>
+48. show filename instead of path on page title and desktop notification
+49. distinguish files and folders in left navbar
+50. context menu to toggle full windows mode
+51.
