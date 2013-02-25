@@ -24,3 +24,6 @@ $('body').on 'click', '.save_btn', ->
 
 $('body').on 'click', '.mode-link', ->
     window.editor.getSession().setMode "ace/mode/#{$(this).data('mode')}"
+
+$('body').on 'click', '#options_link', ->
+    chrome.tabs.create { url: chrome.extension.getURL('html/options.html') }

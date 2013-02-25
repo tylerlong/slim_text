@@ -23,7 +23,9 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. should store global variables in to windows.storage instead of chrome.storage
 39. only save to chrome.storage upon window close
     1. global variables save into window.storage
+    2. jquery layout onunload event
 40. user can use omnibox to issue commands
+    1. advanced feature, postpone
 41. move current work env onto Slim Text
 42. bug: navigate to /root, FileManager crash
 44. open source the project
@@ -35,7 +37,7 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. after linux version is stable
 47. bug: left panel no-wrap, only <a>, still wrap if <span>
 48. show filename instead of path on page title and desktop notification
-50. context menu to toggle full windows mode
+50. context menu to toggle full windows mode?
 51. remove trailing space
 52. add new line to the end of the file upon saving
 53. change red color to blue color?

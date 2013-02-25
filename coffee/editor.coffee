@@ -55,8 +55,8 @@ window.add_topbar = ->
         File
         <b class="caret"></b>
       </a>
-      <ul class="dropdown-menu" role="menu">
-          <li role="presentation"><a role="menuitem" class="save_btn">Save</a></li>
+      <ul class="dropdown-menu">
+          <li><a class="save_btn">Save</a></li>
       </ul>
     </span>
     <span class="dropdown">
@@ -64,7 +64,7 @@ window.add_topbar = ->
         View
         <b class="caret"></b>
       </a>
-      <ul class="dropdown-menu" role="menu">
+      <ul class="dropdown-menu">
           <li class="dropdown-submenu">
               <a>Syntax</a>
               <ul class="dropdown-menu" id="mode_list"></ul>
@@ -72,7 +72,15 @@ window.add_topbar = ->
           <li><a class="full_window_btn">Full Window</a></li>
       </ul>
     </span>
-    <span id="options_link"><a href="options.html" target="_blank">Options</a></span>
+    <span class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown">
+        Preferences
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+          <li><a id="options_link">Options</a></li>
+      </ul>
+    </span>
 </div>
 <div id="toolbar">
   <a class="save_btn" title="Save"><img src="../icon/save.png" width="14px" height="14px"/></a>
