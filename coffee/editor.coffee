@@ -5,9 +5,7 @@ save_file = ->
     chrome.storage.local.get ['file'], (items) ->
         if items.file
             file_manager.write items.file, editor.getValue()
-            notification = window.webkitNotifications.createNotification '../icon/icon48.png', 'File saved', items.file
-            notification.show()
-            setTimeout (-> notification.cancel()), 5000
+            window.notice 'File Saved', items.file
             document.title = items.file
 
 
