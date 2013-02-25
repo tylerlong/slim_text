@@ -19,7 +19,7 @@ editor.commands.addCommand
 lazy_change = _.debounce (->
     if document.title.indexOf('* ') != 0
         document.title = '* ' + document.title
-    ), 300, true
+    ), 500, true
 editor.getSession().on 'change', (e)->
     lazy_change()
 
@@ -27,10 +27,6 @@ editor.getSession().on 'change', (e)->
 show_breadcrumb = (path) ->
     $('#route').html('')
     route = file_manager.route(path)
-    if route.length == 0
-        $('#route').append("&nbsp;")
-        return
-
     route.reverse()
     for item in _.initial(route)
         link = $("""<a href="#" class="file-link">#{item.name}</a>""")
@@ -66,7 +62,6 @@ show_sidebar = (path) ->
 
 open_path = (path) ->
     chrome.storage.local.set { 'path': path }
-
     type = file_manager.type path
     if type == 'file'
         chrome.storage.local.set { 'file': path }
@@ -77,7 +72,6 @@ open_path = (path) ->
             extension = extension.toLowerCase().substr(1, extension.length - 1)
         editor.getSession().setMode window.guess_mode(extension)
         document.title = path
-
         path = file_manager.container(path)
     show_breadcrumb path
     show_sidebar path
@@ -97,7 +91,7 @@ $ ->
         editor.setFontSize "#{items.font_size}px"
 
     window.layout = $('body').layout
-        spacing_closed: 3
+        spacing_closed: 5
         north:
             slidable: false
             spacing_open: 14
@@ -105,7 +99,7 @@ $ ->
             resizable: false
             togglerLength_open: 0
             togglerTip_closed: 'Exit full window'
-            onopen_end: ->
+            onopen_start: ->
                 window.layout.open 'west'
                 $('#navbar').show()
                 $('#toolbar').show()
@@ -113,7 +107,7 @@ $ ->
                 $('#navbar').hide()
                 $('#toolbar').hide()
         west:
-            spacing_open: 3
+            spacing_open: 5
             livePaneResizing: true
             size: 128
             togglerLength_open: 0
