@@ -27,6 +27,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 44. open source the project
     1. in order to get the most users
     2. move project to github?
+    3. postpone. do more testing first
 45. test against windows
     1. after linux version is stable
 46. test against mac
@@ -41,12 +42,10 @@ Slim Text is a slim text editor which runs inside a web browser.
 54. show invisible chars
     55. upon selection only?
 56. auto enter full window whenver enter full screen?
-57. bug: hover the begin or end of the top navbar, color changed to green
-58. bug: full window then out, toolbar moves a little to the right
 60. make the code as cross-browser as possible
 61. select a new iconset for toolbar
     1. font-awesome?
-62. bar hover background green, get rid of it
+62. bug: top bar hover background green, get rid of it
 63. bug: close page before desktop notification close, the notification never close
 65. add a about link, show the softeware name and version
 66. get rid of options page, move the options to menu?
