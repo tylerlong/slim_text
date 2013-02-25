@@ -43,6 +43,8 @@ window.show_sidebar = (path) ->
                 link = $("""<a class="file-link">#{item.name}</a>""")
                 link.data("path", item.path)
                 $('#sidebar').append link
+                if item.type == 'folder'
+                    $('#sidebar').append '/'
             $('#sidebar').append "<br/>"
 
 
