@@ -22,23 +22,22 @@ div.ui-layout-center {
     height: 100%;
 }
 
+#navbar {
+    display: inline;
+}
 #navbar a {
     color: #333;
     font-size: 12px;
 }
-
 #navbar span {
     margin: 0 8px;
 }
 
-#toolbar a.full_window_btn img {
-    position: absolute;
-    right: 8px;
-    top: 21px;
+#toolbar {
+    display: inline;
+    float: right;
+    margin-right: 16px;
 }
-
-#toolbar a.save_btn img {
-    position: absolute;
-    right: 28px;
-    top: 20px;
+#toolbar a {
+    margin: 0 3px;
 }

@@ -109,7 +109,11 @@ $ ->
             togglerTip_closed: 'Exit full window'
             onopen_end: ->
                 window.layout.open 'west'
-                window.layout.allowOverflow('north')
+                $('#navbar').show()
+                $('#toolbar').show()
+            onclose_start: ->
+                $('#navbar').hide()
+                $('#toolbar').hide()
         west:
             spacing_open: 3
             livePaneResizing: true
@@ -122,7 +126,32 @@ $ ->
             onresize_end: ->
                 editor.resize()
 
-    window.layout.allowOverflow('north')
+    $('.ui-layout-resizer-north').append """<div id="navbar">
+    <span class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        File
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+          <li role="presentation"><a role="menuitem" href="#" class="save_btn">Save</a></li>
+      </ul>
+    </span>
+    <span class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        View
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+          <li role="presentation"><a role="menuitem" href="#" class="full_window_btn">Full Window</a></li>
+      </ul>
+    </span>
+    <span id="options_link"><a href="options.html" target="_blank">Options</a></span>
+</div>
+<div id="toolbar">
+  <a href="#" class="save_btn" title="Save"><img src="../icon/save.png" width="14px" height="14px"/></a>
+  <a href="#" class="full_window_btn" title="Full Window"><img src="../icon/expand.png" width="12px" height="12px"/></a>
+</div>"""
+    window.layout.allowOverflow($('.ui-layout-resizer-north'))
 
 $('body').on 'click', 'a.file-link', ->
     open_path $(this).data('path')

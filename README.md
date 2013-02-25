@@ -49,4 +49,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 56. auto enter full window whenver enter full screen?
 57. bug: hover the begin or end of the top navbar, color changed to green
 58. bug: full window then out, toolbar moves a little to the right
-59.
+59. try to put menu and toolbar directly onto the north bar
+60. make the code as cross-browser as possible
+61.
