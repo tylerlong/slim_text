@@ -7,6 +7,8 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 4. register domain name slimtext.org ?
     1. when begin to open source the project
+    2. should add a link to the menu
+        1. submenu in the "help" menu
 7. should be able to browse to open a folder or file
     1. should do GUI programming for win, mac and linux, not easy, postpone
 10. i18n
@@ -51,4 +53,5 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. font-awesome?
 62. bar hover background green, get rid of it
 63. bug: close page before desktop notification close, the notification never close
-65.
+65. add a about link, show the softeware name and version
+66.

@@ -78,7 +78,7 @@ window.add_topbar = ->
         <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
-          <li><a id="options_link">Options</a></li>
+          <li><a class="options_btn">Options</a></li>
       </ul>
     </span>
 </div>
