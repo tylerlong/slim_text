@@ -18,8 +18,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. advanced feature, postpone
 35. can define filters, do not show some kind of files
     1. advanced feature, postpone
-37. remember the status of layout
-    1. testing: enter full window mode then refresh
 38. multiple tabs, folder, file conflict.
     1. didn't consider multiple instance. should attach content to tab id and save into dict
     2. should store global variables in to windows.storage instead of chrome.storage
@@ -51,5 +49,4 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. font-awesome?
 62. bar hover background green, get rid of it
 63. bug: close page before desktop notification close, the notification never close
-64. put the idea onto gurudigger
 65.

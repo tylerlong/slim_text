@@ -48,7 +48,7 @@ window.show_sidebar = (path) ->
             $('#sidebar').append "<br/>"
 
 
-window.show_topbar = ->
+window.add_topbar = ->
     $('.ui-layout-resizer-north').append """<div id="navbar">
     <span class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown">
@@ -95,6 +95,9 @@ window.show_topbar = ->
                 $(pair[1]).append item
                 break
     window.layout.allowOverflow($('.ui-layout-resizer-north'))
+    if window.layout.state.north.isClosed
+        $('#navbar').hide()
+        $('#toolbar').hide()
 
 
 window.open_path = (path) ->
@@ -129,6 +132,7 @@ $ ->
 
     window.layout = $('body').layout
         spacing_closed: 5
+        stateManagement__enabled: true
         north:
             slidable: false
             spacing_open: 14
@@ -155,4 +159,4 @@ $ ->
             onresize_end: ->
                 editor.resize()
 
-    window.show_topbar()
+    window.add_topbar()
