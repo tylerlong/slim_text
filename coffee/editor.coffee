@@ -138,6 +138,8 @@ $ ->
         path = items.file or items.path or file_manager.home_folder() or file_manager.temp_folder()
         window.storage = { file: items.file, path: path }
         open_path path
+        path = items.path or file_manager.home_folder() or file_manager.temp_folder()
+        open_path path
 
     chrome.storage.sync.get ['theme', 'font_size'], (items) ->
         if not items.theme
