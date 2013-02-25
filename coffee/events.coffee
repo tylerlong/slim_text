@@ -12,7 +12,7 @@ lazy_change = _.debounce (->
 window.editor.getSession().on 'change', (e)->
     lazy_change()
 
-$('body').on 'click', 'a.file-link', ->
+$('body').on 'click', '.file-link', ->
     window.open_path $(this).data('path')
 
 $('body').on 'click', '.full_window_btn', ->
@@ -22,5 +22,5 @@ $('body').on 'click', '.full_window_btn', ->
 $('body').on 'click', '.save_btn', ->
     window.save_file()
 
-$('body').on 'click', 'a.mode-link', ->
+$('body').on 'click', '.mode-link', ->
     window.editor.getSession().setMode "ace/mode/#{$(this).data('mode')}"

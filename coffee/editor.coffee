@@ -15,7 +15,7 @@ window.show_breadcrumb = (path) ->
     route = file_manager.route(path)
     route.reverse()
     for item in _.initial(route)
-        link = $("""<a href="#" class="file-link">#{item.name}</a>""")
+        link = $("""<a class="file-link">#{item.name}</a>""")
         link.data("path", item.path)
         $('#route').append(link)
         if item.name == '/'
@@ -40,10 +40,59 @@ window.show_sidebar = (path) ->
             if item.path == file
                 $('#sidebar').append item.name
             else
-                link = $("""<a href="#" class="file-link">#{item.name}</a>""")
+                link = $("""<a class="file-link">#{item.name}</a>""")
                 link.data("path", item.path)
                 $('#sidebar').append link
             $('#sidebar').append "<br/>"
+
+
+window.show_topbar = ->
+    $('.ui-layout-resizer-north').append """<div id="navbar">
+    <span class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown">
+        File
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+          <li role="presentation"><a role="menuitem" class="save_btn">Save</a></li>
+      </ul>
+    </span>
+    <span class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown">
+        View
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+          <li class="dropdown-submenu">
+              <a>Syntax</a>
+              <ul class="dropdown-menu" id="mode_list"></ul>
+          </li>
+          <li><a class="full_window_btn">Full Window</a></li>
+      </ul>
+    </span>
+    <span id="options_link"><a href="options.html" target="_blank">Options</a></span>
+</div>
+<div id="toolbar">
+  <a class="save_btn" title="Save"><img src="../icon/save.png" width="14px" height="14px"/></a>
+  <a class="full_window_btn" title="Full Window"><img src="../icon/expand.png" width="12px" height="12px"/></a>
+</div>"""
+    ranges = [['a', 'd'], ['e', 'j'], ['k', 'o'], ['p', 's'], ['t', 'z']]
+    pairs = []
+    for range in ranges
+        $('#mode_list').append """
+<li class="dropdown-submenu">
+    <a>#{range[0].toUpperCase()} - #{range[1].toUpperCase()}</a>
+    <ul class="dropdown-menu" id="#{range[0]}_to_#{range[1]}"></ul>
+</li>
+"""
+        pairs.push [RegExp("^[#{range[0]}-#{range[1]}]", 'i'), "##{range[0]}_to_#{range[1]}"]
+    for mode, name of window.modes
+        item = """<li><a data-mode="#{mode}" class="mode-link">#{name}</a></li>"""
+        for pair in pairs
+            if name.match pair[0]
+                $(pair[1]).append item
+                break
+    window.layout.allowOverflow($('.ui-layout-resizer-north'))
 
 
 window.open_path = (path) ->
@@ -104,49 +153,4 @@ $ ->
             onresize_end: ->
                 editor.resize()
 
-    $('.ui-layout-resizer-north').append """<div id="navbar">
-    <span class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        File
-        <b class="caret"></b>
-      </a>
-      <ul class="dropdown-menu" role="menu">
-          <li role="presentation"><a role="menuitem" href="#" class="save_btn">Save</a></li>
-      </ul>
-    </span>
-    <span class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        View
-        <b class="caret"></b>
-      </a>
-      <ul class="dropdown-menu" role="menu">
-          <li class="dropdown-submenu">
-              <a href="#">Syntax</a>
-              <ul class="dropdown-menu" id="mode_list"></ul>
-          </li>
-          <li><a href="#" class="full_window_btn">Full Window</a></li>
-      </ul>
-    </span>
-    <span id="options_link"><a href="options.html" target="_blank">Options</a></span>
-</div>
-<div id="toolbar">
-  <a href="#" class="save_btn" title="Save"><img src="../icon/save.png" width="14px" height="14px"/></a>
-  <a href="#" class="full_window_btn" title="Full Window"><img src="../icon/expand.png" width="12px" height="12px"/></a>
-</div>"""
-    ranges = [['a', 'd'], ['e', 'j'], ['k', 'o'], ['p', 's'], ['t', 'z']]
-    pairs = []
-    for range in ranges
-        $('#mode_list').append """
-<li class="dropdown-submenu">
-    <a href="#">#{range[0].toUpperCase()} - #{range[1].toUpperCase()}</a>
-    <ul class="dropdown-menu" id="#{range[0]}_to_#{range[1]}"></ul>
-</li>
-"""
-        pairs.push [RegExp("^[#{range[0]}-#{range[1]}]", 'i'), "##{range[0]}_to_#{range[1]}"]
-    for mode, name of window.modes
-        item = """<li><a href="#" data-mode="#{mode}" class="mode-link">#{name}</a></li>"""
-        for pair in pairs
-            if name.match pair[0]
-                $(pair[1]).append item
-                break
-    window.layout.allowOverflow($('.ui-layout-resizer-north'))
+    window.show_topbar()

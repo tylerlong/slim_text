@@ -17,8 +17,7 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. reinstall the extension clears everything in chrome.storage
     2. advanced feature, postpone
 35. can define filters, do not show some kind of files
-36. no need to show href in status bar, how to tell chrome not to do that?
-    1. do not use <a>, use <span> and css it
+    1. advanced feature, postpone
 37. remeber the status of layout
     1. testing: enter full window mode then refresh
 38. multiple tabs, folder, file conflict.
