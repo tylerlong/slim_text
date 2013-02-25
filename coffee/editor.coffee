@@ -1,7 +1,8 @@
-editor = ace.edit "editor"
+window.editor = ace.edit "editor"
 file_manager = document.getElementById('file_manager')
 
-save_file = ->
+
+window.save_file = ->
     chrome.storage.local.get ['file'], (items) ->
         if items.file
             file_manager.write items.file, editor.getValue()
@@ -9,22 +10,7 @@ save_file = ->
             document.title = items.file
 
 
-editor.commands.addCommand
-    name: 'saveCommand'
-    bindKey: { win: 'Ctrl-S',  mac: 'Command-S' }
-    exec: (editor) ->
-        save_file()
-    readOnly: false
-
-lazy_change = _.debounce (->
-    if document.title.indexOf('* ') != 0
-        document.title = '* ' + document.title
-    ), 500, true
-editor.getSession().on 'change', (e)->
-    lazy_change()
-
-
-show_breadcrumb = (path) ->
+window.show_breadcrumb = (path) ->
     $('#route').html('')
     route = file_manager.route(path)
     route.reverse()
@@ -41,7 +27,7 @@ show_breadcrumb = (path) ->
         $('#route').append("#{last_token.name}")
 
 
-show_sidebar = (path) ->
+window.show_sidebar = (path) ->
     $('#sidebar').html('')
     chrome.storage.local.get ['file'], (items) ->
         file = items.file
@@ -60,7 +46,7 @@ show_sidebar = (path) ->
             $('#sidebar').append "<br/>"
 
 
-open_path = (path) ->
+window.open_path = (path) ->
     chrome.storage.local.set { 'path': path }
     type = file_manager.type path
     if type == 'file'
@@ -164,16 +150,3 @@ $ ->
                 $(pair[1]).append item
                 break
     window.layout.allowOverflow($('.ui-layout-resizer-north'))
-
-$('body').on 'click', 'a.file-link', ->
-    open_path $(this).data('path')
-
-$('body').on 'click', '.full_window_btn', ->
-    window.layout.close 'north'
-    window.layout.close 'west'
-
-$('body').on 'click', '.save_btn', ->
-    save_file()
-
-$('body').on 'click', 'a.mode-link', ->
-    editor.getSession().setMode "ace/mode/#{$(this).data('mode')}"

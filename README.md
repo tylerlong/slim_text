@@ -13,7 +13,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. not priority, English support is enough at the moment
 13. update the old editor_in_chrome project and tell the users that they should switch to this project.
     1. do this after publishing Slim Text to public
-33. add a "syntax" menu items to "view" menuitem
 34. add clear cache action to options page
     1. reinstall the extension clears everything in chrome.storage
     2. advanced feature, postpone
