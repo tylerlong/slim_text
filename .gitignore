@@ -1,5 +1,5 @@
-js/options.js
-js/editor.js
 js/background.js
+js/editor.js
 js/modes.js
-js/layout.js
+js/options.js
+js/util.js

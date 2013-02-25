@@ -52,4 +52,5 @@ Slim Text is a slim text editor which runs inside a web browser.
 61. select a new iconset for toolbar
     1. font-awesome?
 62. bar hover background green, get rid of it
-63.
+63. bug: close page before desktop notification close, the notification never close
+64.
