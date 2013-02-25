@@ -22,7 +22,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. advanced feature, postpone
 40. user can use omnibox to issue commands
     1. advanced feature, postpone
-41. move current work env onto Slim Text
 42. bug: navigate to /root, FileManager crash
 44. open source the project
     1. in order to get the most users
