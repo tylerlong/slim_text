@@ -106,6 +106,13 @@ window.add_topbar = ->
 
 
 window.open_path = (path) ->
+    if not file_manager.exists(path)
+        route = file_manager.route path
+        for item in _.rest(route)
+            if file_manager.exists item.path
+                window.open_path item.path
+                return
+        return
     window.storage.path = path
     type = file_manager.type path
     if type == 'file'
