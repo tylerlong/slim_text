@@ -49,4 +49,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 57. bug: hover the begin or end of the top navbar, color changed to green
 58. bug: full window then out, toolbar moves a little to the right
 60. make the code as cross-browser as possible
-61.
+61. select a new iconset for toolbar
+    1. font-awesome?
+62. bar hover background green, get rid of it
+63.

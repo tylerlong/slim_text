@@ -14,8 +14,3 @@ $ ->
         $('button#btn').click ->
             chrome.storage.sync.set {'theme': $('select#theme').val(), 'font_size': $('select#font_size').val()}, ->
                 window.notice 'Saved', ''
-
-    $('#close_btn').click ->
-        if confirm('Close window?')
-            chrome.tabs.getCurrent (tab) ->
-                chrome.tabs.remove tab.id

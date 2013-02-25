@@ -7,7 +7,7 @@
     notification.show();
     return setTimeout((function() {
       return notification.cancel();
-    }), 3600);
+    }), 3000);
   };
 
 }).call(this);

@@ -1,6 +1,7 @@
 body {
     background-color: #272822;
     color: #F92672;
+    font-size: 15px;
 }
 
 #container {
@@ -8,7 +9,7 @@ body {
 }
 
 td {
-    padding: 8px 16px;
+    padding: 3px 12px;
 }
 
 select {
@@ -17,11 +18,6 @@ select {
 }
 
 #btn {
-    width: 100%;
-    height: 32px;
-}
-
-#close_btn {
     width: 100%;
     height: 28px;
 }
