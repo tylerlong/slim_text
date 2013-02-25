@@ -3,11 +3,10 @@ file_manager = document.getElementById('file_manager')
 
 
 window.save_file = ->
-    chrome.storage.local.get ['file'], (items) ->
-        if items.file
-            file_manager.write items.file, editor.getValue()
-            window.notice 'File Saved', items.file
-            document.title = items.file
+    if window.storage.file
+        file_manager.write window.storage.file, editor.getValue()
+        window.notice 'File Saved', window.storage.file
+        document.title = window.storage.file
 
 
 window.show_breadcrumb = (path) ->
@@ -29,23 +28,21 @@ window.show_breadcrumb = (path) ->
 
 window.show_sidebar = (path) ->
     $('#sidebar').html('')
-    chrome.storage.local.get ['file'], (items) ->
-        file = items.file
-        items = file_manager.list(path)
-        items = _.filter items, (item) ->
-            item.type == 'file' || item.type == 'folder'
-        items = _.sortBy items, (item) ->
-            item.name.toLowerCase()
-        for item in items
-            if item.path == file
-                $('#sidebar').append item.name
-            else
-                link = $("""<a class="file-link">#{item.name}</a>""")
-                link.data("path", item.path)
-                $('#sidebar').append link
-                if item.type == 'folder'
-                    $('#sidebar').append '/'
-            $('#sidebar').append "<br/>"
+    items = file_manager.list(path)
+    items = _.filter items, (item) ->
+        item.type == 'file' || item.type == 'folder'
+    items = _.sortBy items, (item) ->
+        item.name.toLowerCase()
+    for item in items
+        if item.path == window.storage.file
+            $('#sidebar').append item.name
+        else
+            link = $("""<a class="file-link">#{item.name}</a>""")
+            link.data("path", item.path)
+            $('#sidebar').append link
+            if item.type == 'folder'
+                $('#sidebar').append '/'
+        $('#sidebar').append "<br/>"
 
 
 window.add_topbar = ->
@@ -109,10 +106,10 @@ window.add_topbar = ->
 
 
 window.open_path = (path) ->
-    chrome.storage.local.set { 'path': path }
+    window.storage.path = path
     type = file_manager.type path
     if type == 'file'
-        chrome.storage.local.set { 'file': path }
+        window.storage.file = path
         content = file_manager.read(path)
         editor.setValue content, -1
         extension = file_manager.extension(path)
@@ -128,6 +125,7 @@ window.open_path = (path) ->
 $ ->
     chrome.storage.local.get ['path', 'file'], (items) ->
         path = items.file or items.path or file_manager.home_folder() or file_manager.temp_folder()
+        window.storage = { file: items.file, path: path }
         open_path path
 
     chrome.storage.sync.get ['theme', 'font_size'], (items) ->
@@ -141,6 +139,8 @@ $ ->
     window.layout = $('body').layout
         spacing_closed: 5
         stateManagement__enabled: true
+        onunload: ->
+            chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
         north:
             slidable: false
             spacing_open: 14

@@ -20,12 +20,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. advanced feature, postpone
 35. can define filters, do not show some kind of files
     1. advanced feature, postpone
-38. multiple tabs, folder, file conflict.
-    1. didn't consider multiple instance. should attach content to tab id and save into dict
-    2. should store global variables in to windows.storage instead of chrome.storage
-39. only save to chrome.storage upon window close
-    1. global variables save into window.storage
-    2. jquery layout onunload event
 40. user can use omnibox to issue commands
     1. advanced feature, postpone
 41. move current work env onto Slim Text
@@ -39,6 +33,7 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. after linux version is stable
 47. bug: left panel no-wrap, only <a>, still wrap if <span>
 48. show filename instead of path on page title and desktop notification
+    1. at the end of the title, show " - Slim Text"
 50. context menu to toggle full windows mode?
 51. remove trailing space
 52. add new line to the end of the file upon saving
@@ -54,4 +49,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 62. bar hover background green, get rid of it
 63. bug: close page before desktop notification close, the notification never close
 65. add a about link, show the softeware name and version
-66.
+66. get rid of options page, move the options to menu?
+    1. not a priority
+67.
