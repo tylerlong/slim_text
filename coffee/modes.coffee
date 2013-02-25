@@ -1,4 +1,67 @@
-modes =
+window.modes =
+    'abap': 'ABAP'
+    'asciidoc': 'AsciiDoc'
+    'c_cpp': 'C/C++'
+    'clojure': 'Clojure'
+    'coffee': 'CoffeeScript'
+    'coldfusion': 'Coldfusion'
+    'csharp': 'C#'
+    'css': 'CSS'
+    'curly': 'Curly'
+    'dart': 'Dart'
+    'diff': 'Diff'
+    'dot': 'Dot'
+    'glsl': 'Glsl'
+    'golang': 'Golang'
+    'groovy': 'Groovy'
+    'haml': 'HAML'
+    'haxe': 'haXe'
+    'html': 'HTML'
+    'jade': 'Jade'
+    'java': 'Java'
+    'javascript': 'Javascript'
+    'json': 'JSON'
+    'jsp': 'JSP'
+    'jsx': 'JSX'
+    'latex': 'LaTex'
+    'less': 'LESS'
+    'liquid': 'Liquid'
+    'lisp': 'Lisp'
+    'lua': 'Lua'
+    'luapage': 'LuaPage'
+    'lucene': 'Lucene'
+    'makefile': 'Makefile'
+    'markdown': 'Markdown'
+    'objectivec': 'Objective-C'
+    'ocaml': 'Ocaml'
+    'perl': 'Perl'
+    'pgsql': 'pgSQL'
+    'php': 'PHP'
+    'powershell': 'Powershell'
+    'python': 'Python'
+    'r': 'R'
+    'rdoc': 'RDoc'
+    'rhtml': 'RHTML'
+    'ruby': 'Ruby'
+    'scad': 'OpenSCAD'
+    'scala': 'Scala'
+    'scss': 'SCSS'
+    'sh': 'SH'
+    'sql': 'SQL'
+    'stylus': 'Stylus'
+    'svg': 'SVG'
+    'tcl': 'Tcl'
+    'tex': 'Tex'
+    'text': 'Text'
+    'textible': 'Textile'
+    'typescript': 'Typescript'
+    'vbscript': 'VBScript'
+    'xml': 'XML'
+    'xquery': 'XQuery'
+    'yaml': 'YAML'
+
+
+extensions =
     'abap': 'abap'
 
     'asciidoc': 'asciidoc'
@@ -162,7 +225,7 @@ modes =
 
 
 window.guess_mode = (file_extension) ->
-    mode = modes[file_extension]
+    mode = extensions[file_extension]
     if not mode
         mode = 'text'
     return "ace/mode/#{mode}"

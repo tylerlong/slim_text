@@ -134,7 +134,11 @@ $ ->
         <b class="caret"></b>
       </a>
       <ul class="dropdown-menu" role="menu">
-          <li role="presentation"><a role="menuitem" href="#" class="full_window_btn">Full Window</a></li>
+          <li class="dropdown-submenu">
+              <a href="#">Syntax</a>
+              <ul class="dropdown-menu" id="mode_list"></ul>
+          </li>
+          <li><a href="#" class="full_window_btn">Full Window</a></li>
       </ul>
     </span>
     <span id="options_link"><a href="options.html" target="_blank">Options</a></span>
@@ -143,6 +147,22 @@ $ ->
   <a href="#" class="save_btn" title="Save"><img src="../icon/save.png" width="14px" height="14px"/></a>
   <a href="#" class="full_window_btn" title="Full Window"><img src="../icon/expand.png" width="12px" height="12px"/></a>
 </div>"""
+    ranges = [['a', 'd'], ['e', 'j'], ['k', 'o'], ['p', 's'], ['t', 'z']]
+    pairs = []
+    for range in ranges
+        $('#mode_list').append """
+<li class="dropdown-submenu">
+    <a href="#">#{range[0].toUpperCase()} - #{range[1].toUpperCase()}</a>
+    <ul class="dropdown-menu" id="#{range[0]}_to_#{range[1]}"></ul>
+</li>
+"""
+        pairs.push [RegExp("^[#{range[0]}-#{range[1]}]", 'i'), "##{range[0]}_to_#{range[1]}"]
+    for mode, name of window.modes
+        item = """<li><a href="#" data-mode="#{mode}" class="mode-link">#{name}</a></li>"""
+        for pair in pairs
+            if name.match pair[0]
+                $(pair[1]).append item
+                break
     window.layout.allowOverflow($('.ui-layout-resizer-north'))
 
 $('body').on 'click', 'a.file-link', ->
@@ -154,3 +174,6 @@ $('body').on 'click', '.full_window_btn', ->
 
 $('body').on 'click', '.save_btn', ->
     save_file()
+
+$('body').on 'click', 'a.mode-link', ->
+    editor.getSession().setMode "ace/mode/#{$(this).data('mode')}"
