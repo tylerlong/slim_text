@@ -48,6 +48,8 @@ Slim Text is a slim text editor which runs inside a web browser.
 65. add a about link, show the softeware name and version
 66. get rid of options page, move the options to menu?
     1. not a priority
-67. navigate to a folder that does not exist or does not have permission, crash
 68. auto detect file change outside of the editor and load the newest content into editor
-69.
+69. bug: refresh, go away from the current path
+    1. because default open file
+    2. solution, first open file, then navigate to path
+70.

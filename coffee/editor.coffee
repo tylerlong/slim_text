@@ -107,6 +107,7 @@ window.add_topbar = ->
 
 window.open_path = (path) ->
     if not file_manager.exists(path)
+        window.notice 'Does not exist', path
         route = file_manager.route path
         for item in _.rest(route)
             if file_manager.exists item.path
@@ -124,6 +125,9 @@ window.open_path = (path) ->
             extension = extension.toLowerCase().substr(1, extension.length - 1)
         editor.getSession().setMode window.guess_mode(extension)
         document.title = path
+        path = file_manager.container(path)
+    while not file_manager.can_list path
+        window.notice 'Permission denied', path
         path = file_manager.container(path)
     show_breadcrumb path
     show_sidebar path
