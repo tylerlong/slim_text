@@ -32,7 +32,7 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. after linux version is stable
 50. context menu to toggle full windows mode?
     1. not a priority
-51. remove trailing space
+51. remove trailing space upon saving
     1. configurable
 52. add new line to the end of the file upon saving
     1. configurable
@@ -54,4 +54,4 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. after chrome version is stable
 71. make an firefox version
     1. after chrome version is stable
-72.
+72. bug: breadcrumb on windows
