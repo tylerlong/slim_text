@@ -30,17 +30,18 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. after linux version is stable
 46. test against mac
     1. after linux version is stable
-47. bug: left panel no-wrap, only <a>, still wrap if <span>
-48. show filename instead of path on page title and desktop notification
-    1. at the end of the title, show " - Slim Text"
 50. context menu to toggle full windows mode?
+    1. not a priority
 51. remove trailing space
+    1. configurable
 52. add new line to the end of the file upon saving
+    1. configurable
 53. change red color to blue color?
 54. show invisible chars
     55. upon selection only?
+    56. configurable
 56. auto enter full window whenver enter full screen?
-60. make the code as cross-browser as possible
+    1. not a priority
 61. select a new iconset for toolbar
     1. font-awesome?
 62. bug: top bar hover background green, get rid of it
@@ -49,4 +50,8 @@ Slim Text is a slim text editor which runs inside a web browser.
 66. get rid of options page, move the options to menu?
     1. not a priority
 68. auto detect file change outside of the editor and load the newest content into editor
-70.
+70. make an IE version
+    1. after chrome version is stable
+71. make an firefox version
+    1. after chrome version is stable
+72.

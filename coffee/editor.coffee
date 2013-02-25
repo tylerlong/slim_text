@@ -6,7 +6,7 @@ window.save_file = ->
     if window.storage.file
         file_manager.write window.storage.file, editor.getValue()
         window.notice 'File Saved', window.storage.file
-        document.title = window.storage.file
+        document.title = "#{file_manager.filename(window.storage.file)} - Slim Text"
 
 
 window.show_breadcrumb = (path) ->
@@ -124,7 +124,7 @@ window.open_path = (path) ->
         if extension
             extension = extension.toLowerCase().substr(1, extension.length - 1)
         editor.getSession().setMode window.guess_mode(extension)
-        document.title = path
+        document.title = "#{file_manager.filename(path)} - Slim Text"
         path = file_manager.container(path)
     while not file_manager.can_list path
         window.notice 'Permission denied', path
