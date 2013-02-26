@@ -12,8 +12,8 @@ div.ui-layout-west, div.ui-layout-north {
 }
 
 #header, #sidebar {
-    font-size: 13px;
-    font-family: 'Droid Sans Mono';
+    font-size: 15px;
+    font-family: 'Inconsolata';
 }
 
 div.ui-layout-center {
@@ -22,7 +22,7 @@ div.ui-layout-center {
 #editor {
     width: 100%;
     height: 100%;
-    font-family: 'Droid Sans Mono';
+    font-family: 'Inconsolata';
 }
 
 #navbar {

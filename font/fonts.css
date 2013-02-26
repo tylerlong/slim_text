@@ -4,3 +4,10 @@
   font-weight: 400;
   src: local('Droid Sans Mono'), local('DroidSansMono'), url(droid_sans_mono.woff) format('woff');
 }
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata'), url(inconsolata.woff) format('woff');
+}
