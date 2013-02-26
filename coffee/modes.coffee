@@ -184,6 +184,7 @@ extensions =
 
     'rhtml': 'rhtml'
 
+    'rb': 'ruby'
     'ruby': 'ruby'
 
     'scad': 'scad'

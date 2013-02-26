@@ -58,6 +58,5 @@ Slim Text is a slim text editor which runs inside a web browser.
 73. font-size font-family in-consistent on different OS
 74. bug: top bar empty the first time open the page
     1. refresh then show
-75. bug: cannot auto-syntax-highlight ruby files
-    1. test against Mac
+    2. test against mac
 76.
