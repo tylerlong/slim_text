@@ -59,4 +59,5 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. refresh then show
     2. test against mac
 76. make font-family configurable
-77.
+77. font on windows, anti-alias
+78.
