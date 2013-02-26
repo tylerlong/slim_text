@@ -145,7 +145,7 @@ $ ->
         if not items.theme
             items.theme = 'monokai'
         if not items.font_size
-            items.font_size = '15'
+            items.font_size = '13'
         editor.setTheme "ace/theme/#{items.theme}"
         editor.setFontSize "#{items.font_size}px"
 
