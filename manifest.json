@@ -23,6 +23,10 @@
             "public": false
         },
         {
+            "path": "plugin/File Manager_x86_64.plugin",
+            "public": false
+        },
+        {
             "path": "plugin/npFileManager.so",
             "public": false
         }
