@@ -6,7 +6,7 @@ $ ->
         if not items.theme
             items.theme = 'monokai'
         if not items.font_size
-            items.font_size = '15'
+            items.font_size = '14'
 
         $('select#theme').val items.theme
         $('select#font_size').val items.font_size

@@ -145,7 +145,7 @@ $ ->
         if not items.theme
             items.theme = 'monokai'
         if not items.font_size
-            items.font_size = '15'
+            items.font_size = '14'
         editor.setTheme "ace/theme/#{items.theme}"
         editor.setFontSize "#{items.font_size}px"
 
@@ -157,7 +157,7 @@ $ ->
         north:
             slidable: false
             spacing_open: 14
-            size: 21
+            size: 18
             resizable: false
             togglerLength_open: 0
             togglerTip_closed: 'Exit full window'
