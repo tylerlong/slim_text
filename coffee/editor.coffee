@@ -4,9 +4,12 @@ file_manager = document.getElementById('file_manager')
 
 window.save_file = ->
     if window.storage.file
-        file_manager.write window.storage.file, editor.getValue()
-        window.notice 'File Saved', window.storage.file
-        document.title = "#{file_manager.filename(window.storage.file)} - Slim Text"
+        result = file_manager.write window.storage.file, editor.getValue()
+        if result
+            window.notice 'File Saved', window.storage.file
+            document.title = "#{file_manager.filename(window.storage.file)} - Slim Text"
+        else
+            alert "Unable to save #{window.storage.file}"
 
 
 window.show_breadcrumb = (path) ->

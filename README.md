@@ -54,4 +54,4 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. test against mac
 80. ask to save content before close or refresh page
 81. bug: ctrl + z revert to the content of last file
-82. 
+83. 
