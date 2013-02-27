@@ -40,7 +40,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. not a priority
 61. select a new iconset for toolbar
     1. font-awesome?
-62. bug: top bar hover background green, get rid of it
 63. bug: close page before desktop notification close, the notification never close
 66. get rid of options page, move the options to menu?
     1. not a priority
@@ -54,4 +53,5 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. refresh then show
     2. test against mac
 80. ask to save content before close or refresh page
-81. 
+81. bug: ctrl + z revert to the content of last file
+82. 
