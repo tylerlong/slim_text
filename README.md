@@ -56,8 +56,4 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. test against mac
 76. make font-family configurable
 77. font on windows, anti-alias
-78. add a help menu
-    1. submenu link to slimtext.org
-79. create a project on github named www.slimtext.org
-    1. make a project home page and host it on github.com
 80.

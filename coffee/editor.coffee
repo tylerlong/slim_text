@@ -78,6 +78,15 @@ window.add_topbar = ->
           <li><a class="options_btn">Options</a></li>
       </ul>
     </span>
+    <span class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown">
+        Help
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+          <li><a href="http://slimtext.org" target="_blank">Website</a></li>
+      </ul>
+    </span>
 </div>
 <div id="toolbar">
   <a class="save_btn" title="Save"><img src="../icon/save.png" width="14px" height="14px"/></a>
