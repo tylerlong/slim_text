@@ -85,6 +85,7 @@ window.add_topbar = ->
       </a>
       <ul class="dropdown-menu">
           <li><a href="http://slimtext.org" target="_blank">Website</a></li>
+          <li><a class="about_btn">About Slim Text</a></li>
       </ul>
     </span>
 </div>

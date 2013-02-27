@@ -27,3 +27,6 @@ $('body').on 'click', '.mode-link', ->
 
 $('body').on 'click', '.options_btn', ->
     chrome.tabs.create { url: chrome.extension.getURL('html/options.html') }
+
+$('body').on 'click', '.about_btn', ->
+    window.notice "Slim Text #{chrome.app.getDetails().version}", "Copyright @ 2012 - 2013 slimtext.org", 5000

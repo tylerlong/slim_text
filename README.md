@@ -42,18 +42,16 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. font-awesome?
 62. bug: top bar hover background green, get rid of it
 63. bug: close page before desktop notification close, the notification never close
-65. add a about link, show the softeware name and version
 66. get rid of options page, move the options to menu?
     1. not a priority
 68. auto detect file change outside of the editor and load the newest content into editor
 70. make an IE version
-    1. after chrome version is stable
+    1. after chrome version is stable, postpone
 71. make an firefox version
-    1. after chrome version is stable
+    1. after chrome version is stable, postpone
 72. bug: breadcrumb on windows
 74. bug: top bar empty the first time open the page
     1. refresh then show
     2. test against mac
-76. make font-family configurable
-77. font on windows, anti-alias
-80.
+80. ask to save content before close or refresh page
+81. 
