@@ -44,3 +44,8 @@ div.ui-layout-center {
 #toolbar a {
     margin: 0 3px;
 }
+
+#drives_select {
+    height: 16px;
+    font-size: 13px;
+}

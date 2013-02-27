@@ -44,11 +44,13 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. after chrome version is stable, postpone
 71. make an firefox version
     1. after chrome version is stable, postpone
-72. bug: breadcrumb on windows
 74. bug: top bar empty the first time open the page
     1. refresh then show
     2. test against mac
 80. ask to save content before close or refresh page
 81. bug: ctrl + z revert to the content of last file
 83. auto complete, I miss this feature a lot
-84. 
+84. bug: windows xp font ugly
+    1. Sublime Text ugly too, but mine is worse
+85. bug: does not support chinese characters in path
+86. 

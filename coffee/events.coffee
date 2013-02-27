@@ -30,3 +30,6 @@ $('body').on 'click', '.options_btn', ->
 
 $('body').on 'click', '.about_btn', ->
     window.notice "Slim Text #{chrome.app.getDetails().version}", "Copyright @ 2012 - 2013 slimtext.org", 5000
+
+$('body').on 'change', '#drives_select', ->
+    window.open_path $(this).val()
