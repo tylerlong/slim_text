@@ -154,7 +154,7 @@ $ ->
         if not items.theme
             items.theme = 'monokai'
         if not items.font_size
-            items.font_size = '14'
+            items.font_size = '12'
         editor.setTheme "ace/theme/#{items.theme}"
         editor.setFontSize "#{items.font_size}px"
 
@@ -184,7 +184,6 @@ $ ->
             togglerLength_open: 0
             togglerLength_closed: 0
             slideTrigger_open: 'mouseover'
-
         center:
             onresize_end: ->
                 editor.resize()
