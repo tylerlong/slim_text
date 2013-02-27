@@ -25,7 +25,7 @@ window.show_breadcrumb = (path) ->
         if route.length == 0
             drives = $('<select id="drives_select"></select>')
             for drive in file_manager.drives()
-                drives.append """<option value="#{drive}">#{drive}</option>"""
+                drives.append """<option value="#{drive}">#{drive.substr(0, drive.length - 1)}</option>"""
             drives.val(first.name + '/')
             $('#route').append drives
     else
