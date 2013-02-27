@@ -13,9 +13,20 @@ window.save_file = ->
 
 
 window.show_breadcrumb = (path) ->
-    $('#route').html('')
+    $('#route').empty()
     route = file_manager.route(path)
     route.reverse()
+    if navigator.appVersion.indexOf('Windows') != -1
+        first = _.first route
+        route = _.rest route
+        second = _.first route
+        if second
+            second.name = first.name
+        if route.length == 0
+            $('#route').append first.name
+    else
+        if route.length ==0
+            $('#route').append('/')
     for item in _.initial(route)
         link = $("""<a class="file-link">#{item.name}</a>""")
         link.data("path", item.path)
@@ -24,13 +35,13 @@ window.show_breadcrumb = (path) ->
             $('#route').append(' ')
         else
             $('#route').append(' / ')
-    last_token = _.last(route)
-    if last_token
-        $('#route').append("#{last_token.name}")
+    item = _.last(route)
+    if item
+        $('#route').append("#{item.name}")
 
 
 window.show_sidebar = (path) ->
-    $('#sidebar').html('')
+    $('#sidebar').empty()
     items = file_manager.list(path)
     items = _.filter items, (item) ->
         item.type == 'file' || item.type == 'folder'
@@ -87,6 +98,7 @@ window.add_topbar = ->
         <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
+          <li><a href="https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts" target="_blank">Keyboard Shortcuts</a></li>
           <li><a href="http://slimtext.org" target="_blank">Website</a></li>
           <li><a class="about_btn">About Slim Text</a></li>
       </ul>
