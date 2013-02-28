@@ -18,8 +18,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. advanced feature, postpone
 74. mac bug: top bar empty the first time open the page
     1. refresh then show
-81. bug: ctrl + z revert to the content of last file
-    1. clear undo list if current file changed
 84. windows xp bug: font ugly
     1. Sublime Text ugly too, but mine is worse
 85. windows bug: does not support chinese characters in path
@@ -49,13 +47,15 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. minimize js code: cat xxx.js | uglifyjs -o xxx.js -c
     2. minimize css code
         1. search for a tool to do this
-    3.only put necessary files into the final package
+    3. only put necessary files into the final package
+    4. this is the priority in the short run
 99. marketing work
     1. submit to oschina.net
         1. do they accept free but not os software?
     2. try to add a link to this page: http://ace.ajax.org/#nav=production
     3. update the old editor_in_chrome project and tell the users that they should switch to this project
         1. do this after publishing Slim Text to chrome web store, postpone
+    4. do not do these until the product is resonably stable
 104. minor bug: unsaved content, refresh page, page title changed to "chrome-extension://...."
     1. if the title does not start with "* ", is OK
     2. I think it is a bug of chrome

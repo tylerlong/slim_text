@@ -174,7 +174,7 @@ window.open_path = (path) ->
                 window.save_file()
         window.storage.file = path
         content = file_manager.read(path)
-        editor.setValue content, -1
+        editor.session.setValue content, -1
         extension = file_manager.extension(path)
         if extension
             extension = extension.toLowerCase().substr(1, extension.length - 1)
