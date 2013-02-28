@@ -42,4 +42,4 @@ $('body').on 'click', '.remove_lines_btn', ->
 window.onbeforeunload = () ->
     chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
     if document.title.indexOf('* ') == 0
-        return chrome.i18n.getMessage('save_before_leaving')
+        return "#{chrome.i18n.getMessage('save_before_leaving')} #{window.storage.file}"
