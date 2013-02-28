@@ -56,8 +56,10 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. try to add a link to this page: http://ace.ajax.org/#nav=production
     3. update the old editor_in_chrome project and tell the users that they should switch to this project
         1. do this after publishing Slim Text to chrome web store, postpone
-103. add more items to the "edit" menu item
 104. minor bug: unsaved content, refresh page, page title changed to "chrome-extension://...."
     1. if the title does not start with "* ", is OK
     2. I think it is a bug of chrome
-105.
+105. introduce plugin system
+    1. page actions, to change the appearance or behavior of the software, such as change background, such as define new shortcut key 
+    2. advanced feature, postpone
+106.

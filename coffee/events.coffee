@@ -39,6 +39,12 @@ $('body').on 'change', '#drives_select', ->
 $('body').on 'click', '.remove_lines_btn', ->
     window.editor.removeLines()
 
+$('body').on 'click', '.lower_case_btn', ->
+    window.editor.toLowerCase()
+
+$('body').on 'click', '.upper_case_btn', ->
+    window.editor.toUpperCase()
+
 window.onbeforeunload = () ->
     chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
     if document.title.indexOf('* ') == 0
