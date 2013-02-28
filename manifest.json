@@ -5,7 +5,7 @@
     "default_locale": "en",
     
     "description": "__MSG_description__",
-    "icons": { "128": "icon/icon128.png" },
+    "icons": { "128": "image/icon128.png" },
     "options_page": "html/options.html",
     "permissions": [
         "tabs",
@@ -16,7 +16,7 @@
     "background": { "scripts": ["js/background.js"] },
 
     "browser_action": {
-        "default_icon": "icon/icon19.png"
+        "default_icon": "image/icon19.png"
     },
 
     "plugins": [
@@ -35,6 +35,6 @@
     ],
 
     "web_accessible_resources": [
-        "icon/icon48.png"
+        "image/icon48.png"
     ]
 }

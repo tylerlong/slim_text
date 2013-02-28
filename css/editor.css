@@ -6,7 +6,7 @@ a {
 }
 
 div.ui-layout-west, div.ui-layout-north {
-    background: #151515 url("../icon/bkg.png") 0 0;
+    background-color: #1b1b1b;
     color: white;
     padding: 0 12px;
 }

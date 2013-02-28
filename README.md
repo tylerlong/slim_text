@@ -33,6 +33,7 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. open recent files or folders?
 88. publish to chrome web store
 89. add an "Edit menu"
+    1. sub-items: delete line (ctrl + d)
 90. Support tabs(inside the same chrome tab window)?
     1. there is tab example in the jquery ui layout project
     2. will not support this feature in version 0.0.1, postpone
@@ -61,5 +62,5 @@ Slim Text is a slim text editor which runs inside a web browser.
     3. update the old editor_in_chrome project and tell the users that they should switch to this project
         1. do this after publishing Slim Text to chrome web store, postpone
     4. set favicon for slimtext.org
-100. change the color of the icon
-101. 
+101. add feedback link to the menu
+103. 
