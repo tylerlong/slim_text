@@ -7,6 +7,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 10. i18n
     1. do it if it is easy!
+    2. refer to "Minimal Localized Hosted App" on this page: http://developer.chrome.com/extensions/samples.html
 13. update the old editor_in_chrome project and tell the users that they should switch to this project.
     1. do this after publishing Slim Text to public, postpone
 35. can define filters, do not show some kind of files
@@ -54,4 +55,14 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. open recent files or folders?
 88. publish to chrome web store
 89. add an "Edit menu"
-90. 
+90. Support tabs(inside the same chrome tab window)?
+    1. there is tab example in the jquery ui layout project
+91. try to add a link to this page: http://ace.ajax.org/#nav=production
+92. bug：Chinese input eats a character after cursor
+    1. ubuntu has this problem
+        1. maybe it is a bug of the ibus input program
+        2. ace editor have this problem, report the bug to them!
+    2. windows OK
+    3. Mac OK
+93. bug: if current focus is not the editor window, ctrl + s does not work
+94. 
