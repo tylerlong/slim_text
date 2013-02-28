@@ -41,7 +41,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. ubuntu has this problem
         1. maybe it is a bug of the ibus input program
         2. ace editor have this problem, report the bug to them!
-        3. no problem if select some text then type to replace
     2. windows OK, Mac OK
 93. bug: if current focus is not the editor window, ctrl + s does not work
 96. bug: windows csharp file, show BOM as *
@@ -61,6 +60,4 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. try to add a link to this page: http://ace.ajax.org/#nav=production
     3. update the old editor_in_chrome project and tell the users that they should switch to this project
         1. do this after publishing Slim Text to chrome web store, postpone
-    4. set favicon for slimtext.org
-101. add feedback link to the menu
 103. 

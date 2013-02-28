@@ -115,6 +115,7 @@ window.add_topbar = ->
       <ul class="dropdown-menu">
           <li><a href="https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts" target="_blank">#{chrome.i18n.getMessage('keyboard_shortcuts')}</a></li>
           <li><a href="http://slimtext.org" target="_blank">#{chrome.i18n.getMessage('website')}</a></li>
+          <li><a href="https://github.com/tylerlong/slimtext.org/issues" target="_blank">#{chrome.i18n.getMessage('report_issue')}</a></li>
           <li><a class="about_btn">#{chrome.i18n.getMessage('about')} Slim Text</a></li>
       </ul>
     </span>

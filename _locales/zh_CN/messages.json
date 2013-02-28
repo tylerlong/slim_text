@@ -34,5 +34,8 @@
     },
     "about": {
         "message": "关于"
+    },
+    "report_issue": {
+        "message": "问题反馈"
     }
 }
