@@ -208,6 +208,7 @@ extensions =
 
     'txt': 'text'
     'text': 'text'
+    'log': 'text'
 
     'textile': 'textile'
 
@@ -230,3 +231,9 @@ window.guess_mode = (file_extension) ->
     if not mode
         mode = 'text'
     return "ace/mode/#{mode}"
+
+
+window.known_extension = (file_extension) ->
+    if extensions[file_extension]
+        return true
+    return false

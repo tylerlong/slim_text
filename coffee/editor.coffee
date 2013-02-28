@@ -48,7 +48,18 @@ window.show_sidebar = (path) ->
     $('#sidebar').empty()
     items = file_manager.list(path)
     items = _.filter items, (item) ->
-        item.type == 'file' || item.type == 'folder'
+        if item.type == 'folder'
+            return true
+        if item.type == 'file'
+            extension = file_manager.extension(item.name)
+            if extension == ''
+                return true
+            if extension == item.name
+                return true
+            extension = extension.toLowerCase().substr(1, extension.length - 1)
+            if window.known_extension(extension)
+                return true
+        return false
     items = _.sortBy items, (item) ->
         item.name.toLowerCase()
     for item in items

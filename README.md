@@ -6,10 +6,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 ## todo list
 
 13. update the old editor_in_chrome project and tell the users that they should switch to this project.
-    1. do this after publishing Slim Text to public, postpone
-35. can define filters, do not show some kind of files
-    1. do not show files with unknow extension
-    2. show files without extension
+    1. do this after publishing Slim Text to chrome web store, postpone
 40. user can use omnibox to issue commands
     1. advanced feature, postpone
 45. test against windows
