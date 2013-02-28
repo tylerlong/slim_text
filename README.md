@@ -5,8 +5,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 ## todo list
 
-13. update the old editor_in_chrome project and tell the users that they should switch to this project.
-    1. do this after publishing Slim Text to chrome web store, postpone
 40. user can use omnibox to issue commands
     1. advanced feature, postpone
 53. change red color to blue color?
@@ -39,8 +37,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 89. add an "Edit menu"
 90. Support tabs(inside the same chrome tab window)?
     1. there is tab example in the jquery ui layout project
-    2. will not support this feature in version 0.0.1
-91. try to add a link to this page: http://ace.ajax.org/#nav=production
+    2. will not support this feature in version 0.0.1, postpone
 92. ubuntu bug：Chinese input eats a character after cursor
     1. ubuntu has this problem
         1. maybe it is a bug of the ibus input program
@@ -48,14 +45,21 @@ Slim Text is a slim text editor which runs inside a web browser.
         3. no problem if select some text then type to replace
     2. windows OK, Mac OK
 93. bug: if current focus is not the editor window, ctrl + s does not work
-94. submit to oschina.net
-    1. do they accept free but not os software?
-95. coffeescript compile to compressed version of javascript
-    1. do this before publishing
 96. bug: windows csharp file, show BOM as *
 97. enable ace editor features:
     1. remove trailing space upon saving
     2. add new line to the end of file upon saving
     3. show invisible chars. (upon selection?)
     4. auto complete
-98.
+98. write a script for generating publishing package
+    1. minimize js code: cat xxx.js | uglifyjs -o xxx.js -c
+    2. minimize css code
+        1. search for a tool to do this
+    3.only put necessary files into the final package
+99. marketing work
+    1. submit to oschina.net
+        1. do they accept free but not os software?
+    2. try to add a link to this page: http://ace.ajax.org/#nav=production
+    3. update the old editor_in_chrome project and tell the users that they should switch to this project
+        1. do this after publishing Slim Text to chrome web store, postpone
+    4. 
