@@ -35,6 +35,10 @@ div.ui-layout-center {
 #navbar span {
     margin-left: 16px;
 }
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
+    background-image: none;
+    background-color: #ddd;
+}
 
 #toolbar {
     display: inline;
