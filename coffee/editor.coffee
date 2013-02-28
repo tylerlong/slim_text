@@ -132,8 +132,8 @@ window.add_topbar = ->
     </span>
 </div>
 <div id="toolbar">
-  <a class="save_btn" title="Save"><img src="../image/save.png" width="14px" height="14px"/></a>
-  <a class="full_window_btn" title="Full Window"><img src="../image/expand.png" width="12px" height="12px"/></a>
+  <a class="save_btn" title="Save"><i class="icon-save"></i></a>
+  <a class="full_window_btn" title="Full window"><i class="icon-fullscreen"></i></a>
 </div>"""
     ranges = [['a', 'd'], ['e', 'j'], ['k', 'o'], ['p', 's'], ['t', 'z']]
     pairs = []
