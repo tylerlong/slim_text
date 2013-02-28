@@ -4,7 +4,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-63, 74, 61, 98, 88, 99
+74, 61, 98, 88, 99
 
 
 ## todo list
@@ -13,8 +13,9 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. advanced feature, postpone
 61. select a new iconset for toolbar
     1. font-awesome? yes, I think font-awesome is the answer!
-63. bug: close page before desktop notification close, the notification never close
-    1. search a solution for an auto disappear desktop notification
+63. bug: refresh page before desktop notification closes, the notification never closes
+    1. cannot dismiss the notification window upon refreshing, this is a bug of chrome:
+    2. https://code.google.com/p/chromium/issues/detail?id=40262 , so postpone
 66. get rid of options page, move the options to menu?
     1. move the options to menu!
     2. think again! think about the future: can I get rid of it for ever? or just currently?
