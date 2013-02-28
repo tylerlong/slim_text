@@ -1,12 +1,12 @@
 a {
-    color: #F92672;
+    color: #b5e853;
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
 }
 
 div.ui-layout-west, div.ui-layout-north {
-    background-color: #272822;
+    background: #151515 url("../icon/bkg.png") 0 0;
     color: white;
     padding: 0 12px;
 }

@@ -7,8 +7,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 40. user can use omnibox to issue commands
     1. advanced feature, postpone
-53. change red color to blue color?
-    1. or green color just like the one shown in slimtext.org ?
 61. select a new iconset for toolbar
     1. font-awesome? yes, I think font-awesome is the answer!
 63. bug: close page before desktop notification close, the notification never close
@@ -62,4 +60,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. try to add a link to this page: http://ace.ajax.org/#nav=production
     3. update the old editor_in_chrome project and tell the users that they should switch to this project
         1. do this after publishing Slim Text to chrome web store, postpone
-    4. 
+    4. set favicon for slimtext.org
+100. change the color of the icon
+101. 
