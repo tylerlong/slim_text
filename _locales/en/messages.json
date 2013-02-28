@@ -1,4 +1,7 @@
 {
+    "description": {
+        "message": "Slim Text is a slim text editor which runs inside a web browser."
+    },
     "file": {
         "message": "File"
     },

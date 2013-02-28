@@ -1,4 +1,7 @@
 {
+    "description": {
+        "message": "Slim Text 是一款运行在浏览器中的轻量级文本编辑器。"
+    },
     "file": {
         "message": "文件"
     },
