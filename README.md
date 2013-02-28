@@ -4,15 +4,13 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-61, 98, 88, 99
+106, 98, 88, 99
 
 
 ## todo list
 
 40. user can use omnibox to issue commands
     1. advanced feature, postpone
-61. select a new iconset for toolbar
-    1. font-awesome? yes, I think font-awesome is the answer!
 63. bug: refresh page before desktop notification closes, the notification never closes
     1. cannot dismiss the notification window upon refreshing, this is a bug of chrome, so postpone
         1. https://code.google.com/p/chromium/issues/detail?id=40262
@@ -63,4 +61,5 @@ Slim Text is a slim text editor which runs inside a web browser.
 105. introduce plugin system
     1. page actions, to change the appearance or behavior of the software, such as change background, such as define new shortcut key 
     2. advanced feature, postpone
-106.
+106. change menu item hover background color and color
+107. 

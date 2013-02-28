@@ -42,7 +42,6 @@ div.ui-layout-center {
     margin-right: 16px;
 }
 #toolbar a {
-    margin: 0 2px;
     font-size: 14px;
     color: #222;
     padding: 1px 4px;
@@ -50,6 +49,9 @@ div.ui-layout-center {
 #toolbar a:hover {
     color: #b5e853;
     background-color: #1b1b1b;
+}
+#hidden_btn {
+    color: #DDD;
 }
 
 #drives_select {
