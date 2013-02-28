@@ -17,5 +17,11 @@ def coffee():
 
 def dist():
     """generate distribution package inside the dist/ folder"""
+    import json
+    folder = ''
+    with open('manifest.json', 'r') as file:
+        data = json.loads(file.read())
+        folder = 'dist/{0}/'.format(data['version'])
     with workspace():
-        run('cp manifest.json dist/')
+        run('mkdir -p {0}'.format(folder))
+        run('cp manifest.json {0}'.format(folder))
