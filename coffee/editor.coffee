@@ -67,44 +67,44 @@ window.add_topbar = ->
     $('.ui-layout-resizer-north').append """<div id="navbar">
     <span class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown">
-        File
+        #{chrome.i18n.getMessage('file')}
         <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
-          <li><a class="save_btn">Save</a></li>
+          <li><a class="save_btn">#{chrome.i18n.getMessage('save')}</a></li>
       </ul>
     </span>
     <span class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown">
-        View
+        #{chrome.i18n.getMessage('view')}
         <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
           <li class="dropdown-submenu">
-              <a>Syntax</a>
+              <a>#{chrome.i18n.getMessage('syntax')}</a>
               <ul class="dropdown-menu" id="mode_list"></ul>
           </li>
-          <li><a class="full_window_btn">Full Window</a></li>
+          <li><a class="full_window_btn">#{chrome.i18n.getMessage('full_window')}</a></li>
       </ul>
     </span>
     <span class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown">
-        Preferences
+        #{chrome.i18n.getMessage('preferences')}
         <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
-          <li><a class="options_btn">Options</a></li>
+          <li><a class="options_btn">#{chrome.i18n.getMessage('options')}</a></li>
       </ul>
     </span>
     <span class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown">
-        Help
+        #{chrome.i18n.getMessage('help')}
         <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
-          <li><a href="https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts" target="_blank">Keyboard Shortcuts</a></li>
-          <li><a href="http://slimtext.org" target="_blank">Website</a></li>
-          <li><a class="about_btn">About Slim Text</a></li>
+          <li><a href="https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts" target="_blank">#{chrome.i18n.getMessage('keyboard_shortcuts')}</a></li>
+          <li><a href="http://slimtext.org" target="_blank">#{chrome.i18n.getMessage('website')}</a></li>
+          <li><a class="about_btn">#{chrome.i18n.getMessage('about')} Slim Text</a></li>
       </ul>
     </span>
 </div>

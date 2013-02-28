@@ -5,9 +5,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 ## todo list
 
-10. i18n
-    1. do it if it is easy!
-    2. refer to "Minimal Localized Hosted App" on this page: http://developer.chrome.com/extensions/samples.html
 13. update the old editor_in_chrome project and tell the users that they should switch to this project.
     1. do this after publishing Slim Text to public, postpone
 35. can define filters, do not show some kind of files
@@ -62,7 +59,13 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. ubuntu has this problem
         1. maybe it is a bug of the ibus input program
         2. ace editor have this problem, report the bug to them!
+        3. no problem if select some text then type to replace
     2. windows OK
     3. Mac OK
 93. bug: if current focus is not the editor window, ctrl + s does not work
-94. 
+94. submit to oschina.net
+    1. do they accept free but not os software?
+95. coffeescript compile to compressed version of javascript
+    1. do this before publishing
+96. bug: windows csharp file, show BOM as *
+97. 

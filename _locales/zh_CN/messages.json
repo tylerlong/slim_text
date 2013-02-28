@@ -1,0 +1,35 @@
+{
+    "file": {
+        "message": "文件"
+    },
+    "view": {
+        "message": "查看"
+    },
+    "preferences": {
+        "message": "首选项"
+    },
+    "help": {
+        "message": "帮助"
+    },
+    "save": {
+        "message": "保存"
+    },
+    "syntax": {
+        "message": "语法"
+    },
+    "full_window": {
+        "message": "满窗模式"
+    },
+    "options": {
+        "message": "设置"
+    },
+    "keyboard_shortcuts": {
+        "message": "快捷键"
+    },
+    "website": {
+        "message": "网站"
+    },
+    "about": {
+        "message": "关于"
+    }
+}

@@ -2,6 +2,8 @@
     "name": "Slim Text",
     "version": "0.0.1",
     "manifest_version": 2,
+    "default_locale": "en",
+    
     "description": "Slim Text is a slim text editor which runs inside a web browser.",
     "icons": { "128": "icon/icon128.png" },
     "options_page": "html/options.html",

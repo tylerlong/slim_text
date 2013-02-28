@@ -1,0 +1,35 @@
+{
+    "file": {
+        "message": "File"
+    },
+    "view": {
+        "message": "View"
+    },
+    "preferences": {
+        "message": "Preferences"
+    },
+    "help": {
+        "message": "Help"
+    },
+    "save": {
+        "message": "Save"
+    },
+    "syntax": {
+        "message": "Syntax"
+    },
+    "full_window": {
+        "message": "Full Window"
+    },
+    "options": {
+        "message": "Options"
+    },
+    "keyboard_shortcuts": {
+        "message": "Keyboard Shortcuts"
+    },
+    "website": {
+        "message": "Website"
+    },
+    "about": {
+        "message": "About"
+    }
+}
