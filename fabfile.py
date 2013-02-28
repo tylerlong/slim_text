@@ -14,3 +14,8 @@ def coffee():
     """start coffeescript daemon to compile dynamically"""
     with workspace():
         run('coffee --watch --output js/ --compile coffee/')
+
+def dist():
+    """generate distribution package inside the dist/ folder"""
+    with workspace():
+        run('cp manifest.json dist/')

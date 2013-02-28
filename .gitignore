@@ -1,4 +1,5 @@
 *.pyc
+*.swp
 
 js/background.js
 js/editor.js
