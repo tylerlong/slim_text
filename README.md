@@ -3,6 +3,10 @@
 Slim Text is a slim text editor which runs inside a web browser.
 
 
+## priority items
+63, 74, 61, 98, 88, 99
+
+
 ## todo list
 
 40. user can use omnibox to issue commands
@@ -18,8 +22,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. advanced feature, postpone
 74. mac bug: top bar empty the first time open the page
     1. refresh then show
-84. windows xp bug: font ugly
-    1. Sublime Text ugly too, but mine is worse
 85. windows bug: does not support chinese characters in path
     1. ubuntu OK, Mac OK
     2. windows 7 list result does not contain Chinese folders or files at all
