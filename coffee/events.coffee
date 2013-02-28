@@ -11,6 +11,7 @@ lazy_change = _.debounce (->
     ), 500, true
 window.editor.getSession().on 'change', (e)->
     lazy_change()
+    window.editor.focus()
 
 $('body').on 'click', '.file-link', ->
     window.open_path $(this).data('path')
@@ -18,6 +19,7 @@ $('body').on 'click', '.file-link', ->
 $('body').on 'click', '.full_window_btn', ->
     window.layout.close 'north'
     window.layout.close 'west'
+    window.editor.focus()
 
 $('body').on 'click', '.save_btn', ->
     window.save_file()
@@ -33,3 +35,6 @@ $('body').on 'click', '.about_btn', ->
 
 $('body').on 'change', '#drives_select', ->
     window.open_path $(this).val()
+
+$('body').on 'click', '.remove_lines_btn', ->
+    window.editor.removeLines()

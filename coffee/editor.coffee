@@ -87,6 +87,15 @@ window.add_topbar = ->
     </span>
     <span class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown">
+        #{chrome.i18n.getMessage('edit')}
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+          <li><a class="remove_lines_btn">#{chrome.i18n.getMessage('remove_line')}</a></li>
+      </ul>
+    </span>
+    <span class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown">
         #{chrome.i18n.getMessage('view')}
         <b class="caret"></b>
       </a>
