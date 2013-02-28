@@ -43,5 +43,17 @@
     },
     "remove_lines": {
         "message": "删除行"    
+    },
+    "lower_case": {
+        "message": "转小写"
+    },
+    "upper_case": {
+        "message": "转大写"
+    },
+    "save_before_leaving": {
+        "message": "您有尚未保存的修改，继续的话将失去这些修改。"
+    },
+    "save_before_open": {
+        "message": "您有尚未保存的修改，是否保存？"
     }
 }

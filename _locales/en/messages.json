@@ -43,5 +43,17 @@
     },
     "remove_lines": {
         "message": "Remove lines"
+    },
+    "lower_case": {
+        "message": "Lower case"
+    },
+    "upper_case": {
+        "message": "Upper case"
+    },
+    "save_before_leaving": {
+        "message": "You have unsaved changes, they will be lost if you continue"
+    },
+    "save_before_open": {
+        "message": "You have unsave changes, save them?"
     }
 }

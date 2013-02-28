@@ -38,3 +38,8 @@ $('body').on 'change', '#drives_select', ->
 
 $('body').on 'click', '.remove_lines_btn', ->
     window.editor.removeLines()
+
+window.onbeforeunload = () ->
+    chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
+    if document.title.indexOf('* ') == 0
+        return chrome.i18n.getMessage('save_before_leaving')

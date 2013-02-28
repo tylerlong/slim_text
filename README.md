@@ -18,8 +18,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. advanced feature, postpone
 74. mac bug: top bar empty the first time open the page
     1. refresh then show
-80. ask to save content before close or refresh page, or open a new file
-    1. how do I know that file changed?
 81. bug: ctrl + z revert to the content of last file
     1. clear undo list if current file changed
 84. windows xp bug: font ugly
@@ -32,8 +30,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 87. register workspace, quick open
     1. open recent files or folders?
 88. publish to chrome web store
-89. add an "Edit menu"
-    1. sub-items: delete line (ctrl + d)
 90. Support tabs(inside the same chrome tab window)?
     1. there is tab example in the jquery ui layout project
     2. will not support this feature in version 0.0.1, postpone
@@ -60,4 +56,5 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. try to add a link to this page: http://ace.ajax.org/#nav=production
     3. update the old editor_in_chrome project and tell the users that they should switch to this project
         1. do this after publishing Slim Text to chrome web store, postpone
-103. 
+103. add more items to the "edit" menu item
+104. 

@@ -91,7 +91,9 @@ window.add_topbar = ->
         <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
-          <li><a class="remove_lines_btn">#{chrome.i18n.getMessage('remove_line')}</a></li>
+          <li><a class="lower_case_btn">#{chrome.i18n.getMessage('lower_case')}</a></li>
+          <li><a class="upper_case_btn">#{chrome.i18n.getMessage('upper_case')}</a></li>
+          <li><a class="remove_lines_btn">#{chrome.i18n.getMessage('remove_lines')}</a></li>
       </ul>
     </span>
     <span class="dropdown">
@@ -168,7 +170,7 @@ window.open_path = (path) ->
     type = file_manager.type path
     if type == 'file'
         if document.title.indexOf('* ') == 0
-            if confirm("Save changes to #{window.storage.path}?")
+            if confirm("#{chrome.i18n.getMessage('save_before_open')} #{window.storage.path}")
                 window.save_file()
         window.storage.file = path
         content = file_manager.read(path)
@@ -205,8 +207,6 @@ $ ->
     window.layout = $('body').layout
         spacing_closed: 5
         stateManagement__enabled: true
-        onunload: ->
-            chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
         north:
             slidable: false
             spacing_open: 14
