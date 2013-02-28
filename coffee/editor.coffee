@@ -167,6 +167,9 @@ window.open_path = (path) ->
     window.storage.path = path
     type = file_manager.type path
     if type == 'file'
+        if document.title.indexOf('* ') == 0
+            if confirm("Save changes to #{window.storage.path}?")
+                window.save_file()
         window.storage.file = path
         content = file_manager.read(path)
         editor.setValue content, -1
