@@ -4,7 +4,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-106, 98, 88, 99
+98, 88, 99
 
 
 ## todo list
@@ -61,5 +61,5 @@ Slim Text is a slim text editor which runs inside a web browser.
 105. introduce plugin system
     1. page actions, to change the appearance or behavior of the software, such as change background, such as define new shortcut key 
     2. advanced feature, postpone
-106. change menu item hover background color and color
-107. 
+107. provide multiple themes and icons, the user can switch themes and icons
+108. 

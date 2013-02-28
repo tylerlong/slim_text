@@ -1,3 +1,5 @@
+*.pyc
+
 js/background.js
 js/editor.js
 js/events.js
