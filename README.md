@@ -4,7 +4,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-114, 99
+99
 
 
 ## todo list
@@ -41,7 +41,7 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. add new line to the end of file upon saving
     3. show invisible chars. (upon selection?)
     4. auto complete
-99. marketing work
+99. marketing
     1. submit to oschina.net
         1. do they accept free but not os software?
     2. try to add a link to this page: http://ace.ajax.org/#nav=production
@@ -59,8 +59,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 111. bug: windows 7 C: / Windows / System32 / drivers, can not see the etc/ folder
 112. bug: slow when open windows 7 C: / Windows / System32
     1. caused by underscorejs filter method?
-114. i18n "Exit full window"
 115. make all the icons padded?
 116. change the filter algorithm, filter all binary files while keep all text files
-117. bug: ubuntu toolbar no tooltop title
 118. 

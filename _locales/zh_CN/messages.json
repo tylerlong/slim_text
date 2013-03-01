@@ -23,6 +23,9 @@
     "full_window": {
         "message": "全窗模式"
     },
+    "exit_full_window": {
+        "message": "退出全窗模式"
+    },
     "options": {
         "message": "设置"
     },

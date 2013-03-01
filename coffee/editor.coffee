@@ -220,7 +220,7 @@ $ ->
             size: 18
             resizable: false
             togglerLength_open: 0
-            togglerTip_closed: 'Exit full window'
+            togglerTip_closed: chrome.i18n.getMessage('exit_full_window')
             onopen_start: ->
                 window.layout.open 'west'
                 $('#navbar').show()

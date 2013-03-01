@@ -23,6 +23,9 @@
     "full_window": {
         "message": "Full Window"
     },
+    "exit_full_window": {
+        "message": "Exit full Window"
+    },
     "options": {
         "message": "Options"
     },
