@@ -4,7 +4,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-88, 99
+99
 
 
 ## todo list
@@ -26,7 +26,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 86. bug: chinese encoding decoding issue for C:/QQDownload/From Tyler/01.htm
 87. register workspace, quick open
     1. open recent files or folders?
-88. publish to chrome web store
 90. Support tabs(inside the same chrome tab window)?
     1. there is tab example in the jquery ui layout project
     2. will not support this feature in version 0.0.1, postpone
@@ -48,7 +47,8 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. try to add a link to this page: http://ace.ajax.org/#nav=production
     3. update the old editor_in_chrome project and tell the users that they should switch to this project
         1. do this after publishing Slim Text to chrome web store, postpone
-    4. do not do these until the product is resonably stable
+    4. upload promotion images to chrome web store
+    5. do not do these until the product is resonably stable
 104. minor bug: unsaved content, refresh page, page title changed to "chrome-extension://...."
     1. if the title does not start with "* ", is OK
     2. I think it is a bug of chrome
@@ -59,4 +59,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 111. bug: windows 7 C: / Windows / System32 / drivers, can not see the etc/ folder
 112. bug: slow when open windows 7 C: / Windows / System32
     1. caused by underscorejs filter method?
-113.
+113. change the dist script to exclude screenshot images
+114. i18n "Exit full window"
+115. make all the icons padded?
+116. 

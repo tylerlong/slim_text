@@ -38,7 +38,9 @@ def dist():
         
         run('cp -r font/ {0}/'.format(folder))
         run('cp -r html/ {0}/'.format(folder))
-        run('cp -r image/ {0}/'.format(folder))
+        
+        run('mkdir -p {0}/image/'.format(folder))  
+        run('cp -r image/icon*.png {0}/image/'.format(folder))
         
         run('mkdir -p {0}/js/'.format(folder))        
         run('uglifyjs js/background.js -c -m -o {0}/js/background.js'.format(folder))
