@@ -51,10 +51,7 @@
         "message": "转大写"
     },
     "save_before_leaving": {
-        "message": "您有尚未保存的修改，继续的话将失去这些修改。"
-    },
-    "save_before_open": {
-        "message": "您有尚未保存的修改，是否保存？"
+        "message": "发现未保存的修改，继续的话将抛弃这些修改。仍然继续？"
     },
     "saved": {
         "message": "已保存"
@@ -64,5 +61,8 @@
     },
     "permission_denied": {
         "message": "无权限"
+    },
+    "unable_to_save": {
+        "message": "无法保存"
     }
 }

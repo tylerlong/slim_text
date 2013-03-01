@@ -51,10 +51,7 @@
         "message": "Upper case"
     },
     "save_before_leaving": {
-        "message": "You have unsaved changes, they will be lost if you continue"
-    },
-    "save_before_open": {
-        "message": "You have unsave changes, save them?"
+        "message": "Unsaved changes detected, they will be LOST if you continue. Continue anyway?"
     },
     "saved": {
         "message": "Saved"
@@ -64,5 +61,8 @@
     },
     "permission_denied": {
         "message": "Permission denied"
+    },
+    "unable_to_save": {
+        "message": "Unable to save"
     }
 }

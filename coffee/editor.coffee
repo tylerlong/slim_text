@@ -9,7 +9,7 @@ window.save_file = ->
             window.notice chrome.i18n.getMessage('saved'), window.storage.file
             document.title = "#{file_manager.filename(window.storage.file)} - Slim Text"
         else
-            alert "Unable to save #{window.storage.file}"
+            alert "#{chrome.i18n.getMessage('unable_to_save')} #{window.storage.file}"
 
 
 window.show_breadcrumb = (path) ->
@@ -167,12 +167,11 @@ window.open_path = (path) ->
                 window.open_path item.path
                 return
         return
-    window.storage.path = path
     type = file_manager.type path
     if type == 'file'
         if document.title.indexOf('* ') == 0
-            if confirm("#{chrome.i18n.getMessage('save_before_open')} #{window.storage.path}")
-                window.save_file()
+            if not confirm("#{window.storage.file} #{chrome.i18n.getMessage('save_before_leaving')}")
+                return
         window.storage.file = path
         content = file_manager.read(path)
         editor.session.setValue content, -1
@@ -185,6 +184,7 @@ window.open_path = (path) ->
     while not file_manager.can_list path
         window.notice chrome.i18n.getMessage('permission_denied'), path
         path = file_manager.container(path)
+    window.storage.path = path
     show_breadcrumb path
     show_sidebar path
 

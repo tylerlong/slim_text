@@ -4,7 +4,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-108, 98, 88, 99
+98, 88, 99
 
 
 ## todo list
@@ -62,5 +62,7 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. page actions, to change the appearance or behavior of the software, such as change background, such as define new shortcut key 
     2. advanced feature, postpone
 107. provide multiple themes and icons, the user can switch themes and icons
-108. open a file, current file changes, it is prone to click cancel in the prompt. So change the sentence to "do you want to continue?"
-111. 
+111. bug: windows 7 C: / Windows / System32 / drivers, can not see the etc/ folder
+112. bug: slow when open windows 7 C: / Windows / System32
+    1. caused by underscorejs filter method?
+113.
