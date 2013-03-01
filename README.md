@@ -4,7 +4,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-98, 88, 99
+88, 99
 
 
 ## todo list
@@ -42,12 +42,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. add new line to the end of file upon saving
     3. show invisible chars. (upon selection?)
     4. auto complete
-98. write a script for generating publishing package
-    1. minimize js code: cat xxx.js | uglifyjs -o xxx.js -c
-    2. minimize css code
-        1. search for a tool to do this
-    3. only put necessary files into the final package
-    4. this is the priority in the short run
 99. marketing work
     1. submit to oschina.net
         1. do they accept free but not os software?

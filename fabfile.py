@@ -40,7 +40,14 @@ def dist():
         run('cp -r html/ {0}/'.format(folder))
         run('cp -r image/ {0}/'.format(folder))
         
-        run('cp -r js/ {0}/'.format(folder))
+        run('mkdir -p {0}/js/'.format(folder))        
+        run('uglifyjs js/background.js -c -m -o {0}/js/background.js'.format(folder))
+        run('uglifyjs js/editor.js -c -m -o {0}/js/editor.js'.format(folder))
+        run('uglifyjs js/events.js -c -m -o {0}/js/events.js'.format(folder))
+        run('uglifyjs js/modes.js -c -m -o {0}/js/modes.js'.format(folder))
+        run('uglifyjs js/options.js -c -m -o {0}/js/options.js'.format(folder))
+        run('uglifyjs js/util.js -c -m -o {0}/js/util.js'.format(folder))
+        run('cp -r -n js/* {0}/js/'.format(folder))
         
         run('cp manifest.json {0}/'.format(folder))
         run('cp -r plugin/ {0}/'.format(folder))

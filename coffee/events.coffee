@@ -1,7 +1,7 @@
 window.editor.commands.addCommand
     name: 'saveCommand'
     bindKey: { win: 'Ctrl-S',  mac: 'Command-S' }
-    exec: (editor) ->
+    exec: ->
         window.save_file()
     readOnly: false
 
@@ -9,7 +9,7 @@ lazy_change = _.debounce (->
     if document.title.indexOf('* ') != 0
         document.title = '* ' + document.title
     ), 500, true
-window.editor.getSession().on 'change', (e)->
+window.editor.getSession().on 'change', ->
     lazy_change()
     window.editor.focus()
 
