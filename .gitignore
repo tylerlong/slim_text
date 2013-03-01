@@ -7,3 +7,5 @@ js/events.js
 js/modes.js
 js/options.js
 js/util.js
+
+.sass-cache/

@@ -1,7 +1,7 @@
 from fabric.api import *
 from contextlib import contextmanager as _contextmanager
 
-env.user = 'root'
+env.user = 'tyler'
 env.directory = '/home/tyler/src/win/javascript/slim_text/'
 env.hosts = ['localhost']
 
@@ -21,16 +21,23 @@ def dist():
     folder = ''
     with open('manifest.json', 'r') as file:
         data = json.loads(file.read())
-        folder = 'dist/{0}/'.format(data['version'])
+        folder = '../slimtext.org/dist/{0}'.format(data['version'])
     with workspace():
-        run('mkdir -p {0}'.format(folder))
-        run('rm -rf {0}*'.format(folder))
-        run('cp -r _locales/ {0}'.format(folder))
-        run('cp -r ace/ {0}'.format(folder))
-        run('cp -r css/ {0}'.format(folder))
-        run('cp -r font/ {0}'.format(folder))
-        run('cp -r html/ {0}'.format(folder))
-        run('cp -r image/ {0}'.format(folder))
-        run('cp -r js/ {0}'.format(folder))
-        run('cp manifest.json {0}'.format(folder))
-        run('cp -r plugin/ {0}'.format(folder))
+        run('mkdir -p {0}/'.format(folder))
+        run('rm -rf {0}/*'.format(folder))
+        run('cp -r _locales/ {0}/'.format(folder))
+        run('mkdir -p {0}/ace/src-min-noconflict/'.format(folder))
+        run('cp -r ace/src-min-noconflict/* {0}/ace/src-min-noconflict/'.format(folder))
+        
+        run('mkdir -p {0}/css/'.format(folder))
+        run('scss -t compressed css/bootstrap.css {0}/css/bootstrap.css'.format(folder))
+        run('scss -t compressed css/editor.css {0}/css/editor.css'.format(folder))
+        run('scss -t compressed css/jquery.layout.css {0}/css/jquery.layout.css'.format(folder))
+        run('scss -t compressed css/options.css {0}/css/options.css'.format(folder))
+        
+        run('cp -r font/ {0}/'.format(folder))
+        run('cp -r html/ {0}/'.format(folder))
+        run('cp -r image/ {0}/'.format(folder))
+        run('cp -r js/ {0}/'.format(folder))
+        run('cp manifest.json {0}/'.format(folder))
+        run('cp -r plugin/ {0}/'.format(folder))
