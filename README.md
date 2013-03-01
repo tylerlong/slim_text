@@ -62,4 +62,5 @@ Slim Text is a slim text editor which runs inside a web browser.
 114. i18n "Exit full window"
 115. make all the icons padded?
 116. change the filter algorithm, filter all binary files while keep all text files
-117. 
+117. bug: ubuntu toolbar no tooltop title
+118. 

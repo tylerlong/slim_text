@@ -91,10 +91,12 @@ window.add_topbar = ->
         <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
-          <li><a class="lower_case_btn">#{chrome.i18n.getMessage('lower_case')}</a></li>
-          <li><a class="upper_case_btn">#{chrome.i18n.getMessage('upper_case')}</a></li>
-          <li><a class="remove_lines_btn">#{chrome.i18n.getMessage('remove_lines')}</a></li>
-          <li><a class="toggle_comment_btn">#{chrome.i18n.getMessage('toggle_comment')}</a></li>
+        <li><a class="indent_btn">#{chrome.i18n.getMessage('indent')}</a></li>
+        <li><a class="outdent_btn">#{chrome.i18n.getMessage('outdent')}</a></li>
+        <li><a class="lower_case_btn">#{chrome.i18n.getMessage('lower_case')}</a></li>
+        <li><a class="upper_case_btn">#{chrome.i18n.getMessage('upper_case')}</a></li>
+        <li><a class="remove_lines_btn">#{chrome.i18n.getMessage('remove_lines')}</a></li>
+        <li><a class="toggle_comment_btn">#{chrome.i18n.getMessage('toggle_comment')}</a></li>
       </ul>
     </span>
     <span class="dropdown">
@@ -134,6 +136,8 @@ window.add_topbar = ->
 </div>
 <div id="toolbar">
   <a class="save_btn" title="#{chrome.i18n.getMessage('save')}"><i class="icon-save"></i></a>
+  <a class="indent_btn" title="#{chrome.i18n.getMessage('indent')}"><i class="icon-indent-right"></i></a>
+  <a class="outdent_btn" title="#{chrome.i18n.getMessage('outdent')}"><i class="icon-indent-left"></i></a>
   <a class="full_window_btn" title="#{chrome.i18n.getMessage('full_window')}"><i class="icon-fullscreen"></i></a>
   <a class="about_btn" title="#{chrome.i18n.getMessage('about')} Slim Text"><i class="icon-info-sign"></i></a>
   <i class="icon-fullscreen" id="hidden_btn"></i>

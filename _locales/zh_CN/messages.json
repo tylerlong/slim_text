@@ -67,5 +67,11 @@
     },
     "toggle_comment": {
         "message": "注释/反注释"
+    },
+    "indent": {
+        "message": "缩进"
+    },
+    "outdent": {
+        "message": "反缩进"
     }
 }

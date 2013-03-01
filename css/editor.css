@@ -33,7 +33,7 @@ div.ui-layout-center {
     font-size: 12px;
 }
 #navbar span {
-    margin-left: 16px;
+    margin: 0 8px;
 }
 .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
     background-image: none;
@@ -43,7 +43,7 @@ div.ui-layout-center {
 #toolbar {
     display: inline;
     float: right;
-    margin-right: 16px;
+    margin-right: 8px;
 }
 #toolbar a {
     font-size: 14px;

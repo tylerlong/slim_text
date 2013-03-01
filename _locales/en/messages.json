@@ -67,5 +67,11 @@
     },
     "toggle_comment": {
         "message": "Toggle comment"
+    },
+    "indent": {
+        "message": "Indent"
+    },
+    "outdent": {
+        "message": "Outdent"
     }
 }
