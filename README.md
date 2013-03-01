@@ -4,7 +4,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-99
+114, 99
 
 
 ## todo list
@@ -59,7 +59,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 111. bug: windows 7 C: / Windows / System32 / drivers, can not see the etc/ folder
 112. bug: slow when open windows 7 C: / Windows / System32
     1. caused by underscorejs filter method?
-113. change the dist script to exclude screenshot images
 114. i18n "Exit full window"
 115. make all the icons padded?
-116. 
+116. change the filter algorithm, filter all binary files while keep all text files
+117. 

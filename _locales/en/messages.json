@@ -64,5 +64,8 @@
     },
     "unable_to_save": {
         "message": "Unable to save"
+    },
+    "toggle_comment": {
+        "message": "Toggle comment"
     }
 }

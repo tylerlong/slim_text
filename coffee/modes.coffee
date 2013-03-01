@@ -209,6 +209,7 @@ extensions =
     'txt': 'text'
     'text': 'text'
     'log': 'text'
+    'conf': 'text'
 
     'textile': 'textile'
 

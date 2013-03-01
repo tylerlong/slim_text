@@ -94,6 +94,7 @@ window.add_topbar = ->
           <li><a class="lower_case_btn">#{chrome.i18n.getMessage('lower_case')}</a></li>
           <li><a class="upper_case_btn">#{chrome.i18n.getMessage('upper_case')}</a></li>
           <li><a class="remove_lines_btn">#{chrome.i18n.getMessage('remove_lines')}</a></li>
+          <li><a class="toggle_comment_btn">#{chrome.i18n.getMessage('toggle_comment')}</a></li>
       </ul>
     </span>
     <span class="dropdown">

@@ -45,6 +45,9 @@ $('body').on 'click', '.lower_case_btn', ->
 $('body').on 'click', '.upper_case_btn', ->
     window.editor.toUpperCase()
 
+$('body').on 'click', '.toggle_comment_btn', ->
+    window.editor.toggleCommentLines()
+
 window.onbeforeunload = () ->
     chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
     if document.title.indexOf('* ') == 0

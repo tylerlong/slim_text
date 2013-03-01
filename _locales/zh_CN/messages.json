@@ -64,5 +64,8 @@
     },
     "unable_to_save": {
         "message": "无法保存"
+    },
+    "toggle_comment": {
+        "message": "注释/反注释"
     }
 }
