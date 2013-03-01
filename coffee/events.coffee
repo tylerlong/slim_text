@@ -48,4 +48,4 @@ $('body').on 'click', '.upper_case_btn', ->
 window.onbeforeunload = () ->
     chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
     if document.title.indexOf('* ') == 0
-        return "#{window.storage.file} #{chrome.i18n.getMessage('save_before_leaving')}"
+        return """"#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}"""

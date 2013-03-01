@@ -170,7 +170,7 @@ window.open_path = (path) ->
     type = file_manager.type path
     if type == 'file'
         if document.title.indexOf('* ') == 0
-            if not confirm("#{window.storage.file} #{chrome.i18n.getMessage('save_before_leaving')}")
+            if not confirm(""""#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}""")
                 return
         window.storage.file = path
         content = file_manager.read(path)

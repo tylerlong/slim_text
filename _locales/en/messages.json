@@ -51,7 +51,7 @@
         "message": "Upper case"
     },
     "save_before_leaving": {
-        "message": "Unsaved changes detected, they will be LOST if you continue. Continue anyway?"
+        "message": "unsaved changes detected, they will be LOST if you continue. Continue anyway?"
     },
     "saved": {
         "message": "Saved"
