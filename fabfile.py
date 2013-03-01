@@ -26,6 +26,7 @@ def dist():
         run('mkdir -p {0}/'.format(folder))
         run('rm -rf {0}/*'.format(folder))
         run('cp -r _locales/ {0}/'.format(folder))
+        
         run('mkdir -p {0}/ace/src-min-noconflict/'.format(folder))
         run('cp -r ace/src-min-noconflict/* {0}/ace/src-min-noconflict/'.format(folder))
         
@@ -38,6 +39,8 @@ def dist():
         run('cp -r font/ {0}/'.format(folder))
         run('cp -r html/ {0}/'.format(folder))
         run('cp -r image/ {0}/'.format(folder))
+        
         run('cp -r js/ {0}/'.format(folder))
+        
         run('cp manifest.json {0}/'.format(folder))
         run('cp -r plugin/ {0}/'.format(folder))
