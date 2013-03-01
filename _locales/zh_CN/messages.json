@@ -55,5 +55,14 @@
     },
     "save_before_open": {
         "message": "您有尚未保存的修改，是否保存？"
+    },
+    "saved": {
+        "message": "已保存"
+    },
+    "does_not_exist": {
+        "message": "不存在"
+    },
+    "permission_denied": {
+        "message": "无权限"
     }
 }

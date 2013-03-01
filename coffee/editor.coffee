@@ -6,7 +6,7 @@ window.save_file = ->
     if window.storage.file
         result = file_manager.write window.storage.file, editor.getValue()
         if result
-            window.notice 'File Saved', window.storage.file
+            window.notice chrome.i18n.getMessage('saved'), window.storage.file
             document.title = "#{file_manager.filename(window.storage.file)} - Slim Text"
         else
             alert "Unable to save #{window.storage.file}"
@@ -160,7 +160,7 @@ window.add_topbar = ->
 
 window.open_path = (path) ->
     if not file_manager.exists(path)
-        window.notice 'Does not exist', path
+        window.notice chrome.i18n.getMessage('does_not_exist'), path
         route = file_manager.route path
         for item in _.rest(route)
             if file_manager.exists item.path
@@ -183,7 +183,7 @@ window.open_path = (path) ->
         document.title = "#{file_manager.filename(path)} - Slim Text"
         path = file_manager.container(path)
     while not file_manager.can_list path
-        window.notice 'Permission denied', path
+        window.notice chrome.i18n.getMessage('permission_denied'), path
         path = file_manager.container(path)
     show_breadcrumb path
     show_sidebar path

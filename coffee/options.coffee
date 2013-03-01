@@ -13,4 +13,4 @@ $ ->
 
         $('button#btn').click ->
             chrome.storage.sync.set {'theme': $('select#theme').val(), 'font_size': $('select#font_size').val()}, ->
-                window.notice 'Saved', ''
+                window.notice chrome.i18n.getMessage('saved'), ''

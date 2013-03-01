@@ -55,5 +55,14 @@
     },
     "save_before_open": {
         "message": "You have unsave changes, save them?"
+    },
+    "saved": {
+        "message": "Saved"
+    },
+    "does_not_exist": {
+        "message": "Does not exist"
+    },
+    "permission_denied": {
+        "message": "Permission denied"
     }
 }
