@@ -61,4 +61,5 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. caused by underscorejs filter method?
 115. make all the icons padded?
 116. change the filter algorithm, filter all binary files while keep all text files
-118. 
+118. should be able to open a folder quickly.
+    1. for example, register a folder as a button, and click that button.
