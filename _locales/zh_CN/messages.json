@@ -76,5 +76,8 @@
     },
     "outdent": {
         "message": "反缩进"
+    },
+    "command_not_found": {
+        "message": "找不到命令"
     }
 }

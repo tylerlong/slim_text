@@ -90,6 +90,6 @@ chrome.omnibox.onInputEntered.addListener (text) ->
                             if absolute_path != ''
                                 window.open_path absolute_path
                             else 
-                                window.notice 'does not exist', params
+                                window.notice chrome.i18n.getMessage('does_not_exist'), params
                     else
-                        window.notice 'unknown command', command
+                        window.notice chrome.i18n.getMessage('command_not_found'), command
