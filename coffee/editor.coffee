@@ -2,6 +2,10 @@ window.editor = ace.edit "editor"
 file_manager = document.getElementById('file_manager')
 
 
+window.combine_path = (path1, path2) ->
+    file_manager.combine path1, path2
+    
+
 window.save_file = ->
     if window.storage.file
         result = file_manager.write window.storage.file, editor.getValue()

@@ -16,7 +16,7 @@
         "notifications"
     ],
     
-    "omnibox": { "keyword": "slim" },
+    "omnibox": { "keyword": "s" },
 
     "background": { "scripts": ["js/background.js"] },
 

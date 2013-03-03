@@ -63,4 +63,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. for example, register a folder as a button, and click that button.
 120. design omnibox command set
     1. should be easy to remember and similiar to the ones used in linux, window and mac
-122. open command relative path should merge /../
+123. do not need any omnibox keyword at all?
+    1. google search does not need keyword at all, so it is technically possible
+124. 

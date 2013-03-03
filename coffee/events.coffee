@@ -86,6 +86,10 @@ chrome.omnibox.onInputEntered.addListener (text) ->
                         if params.indexOf('/') == 0 || params.indexOf(':/') == 1
                             window.open_path params
                         else 
-                            window.open_path "#{window.storage.path}/#{params}"
+                            absolute_path = window.combine_path(window.storage.path, params)
+                            if absolute_path != ''
+                                window.open_path absolute_path
+                            else 
+                                window.notice 'does not exist', params
                     else
                         window.notice 'unknown command', command
