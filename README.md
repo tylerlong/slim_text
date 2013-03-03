@@ -22,8 +22,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. windows 7 list result does not contain Chinese folders or files at all
     3. windows xp show Chinese folders as drunk codes, can not list the folder and can not open file
 86. bug: chinese encoding decoding issue for C:/QQDownload/From Tyler/01.htm
-87. register workspace, quick open
-    1. open recent files or folders?
 90. Support tabs(inside the same chrome tab window)?
     1. there is tab example in the jquery ui layout project
     2. will not support this feature in version 0.0.1, postpone
@@ -61,9 +59,10 @@ Slim Text is a slim text editor which runs inside a web browser.
 116. change the filter algorithm, filter all binary files while keep all text files
 118. should be able to open a folder quickly.
     1. for example, register a folder as a button, and click that button.
+    2. register workspace, quick open
+        1. open recent files or folders?
 120. design omnibox command set
     1. should be easy to remember and similiar to the ones used in linux, window and mac
 123. do not need any omnibox keyword at all?
     1. google search does not need keyword at all, so it is technically possible
-124. windows bug: omnibox open D:/, the items selected is C:
 125. 
