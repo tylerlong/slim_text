@@ -83,6 +83,9 @@ chrome.omnibox.onInputEntered.addListener (text) ->
                     when 'save'
                         window.save_file()
                     when 'open', 'cd'
-                        window.open_path params
+                        if params.indexOf('/') == 0 || params.indexOf(':/') == 1
+                            window.open_path params
+                        else 
+                            window.open_path "#{window.storage.path}/#{params}"
                     else
                         window.notice 'unknown command', command
