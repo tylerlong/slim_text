@@ -9,8 +9,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 ## todo list
 
-40. user can use omnibox to issue commands
-    1. advanced feature, postpone
 63. bug: refresh page before desktop notification closes, the notification never closes
     1. cannot dismiss the notification window upon refreshing, this is a bug of chrome, so postpone
         1. https://code.google.com/p/chromium/issues/detail?id=40262
@@ -63,4 +61,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 116. change the filter algorithm, filter all binary files while keep all text files
 118. should be able to open a folder quickly.
     1. for example, register a folder as a button, and click that button.
-120. 
+120. design omnibox command set
+    1. should be easy to remember and similiar to the ones used in linux, window and mac
+121. 

@@ -72,5 +72,17 @@ window.onbeforeunload = () ->
         return """"#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}"""
 
 chrome.omnibox.onInputEntered.addListener (text) ->
-    if text == 'full window'
-        window.full_window()
+    chrome.tabs.getCurrent (tab) ->
+        chrome.tabs.query { currentWindow: true, active: true }, (tabs) ->
+            if tabs[0].id == tab.id
+                text = text.replace /\s{2,}/g, ' '
+                tokens = text.split(' ')
+                command = tokens[0]
+                params = _.rest(tokens).join(' ')
+                switch command
+                    when 'save'
+                        window.save_file()
+                    when 'open', 'cd'
+                        window.open_path params
+                    else
+                        window.notice 'unknown command', command
