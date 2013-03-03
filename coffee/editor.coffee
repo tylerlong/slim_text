@@ -225,9 +225,12 @@ $ ->
                 window.layout.open 'west'
                 $('#navbar').show()
                 $('#toolbar').show()
+                window.editor.focus()
             onclose_start: ->
+                window.layout.close 'west'
                 $('#navbar').hide()
                 $('#toolbar').hide()
+                window.editor.focus()
         west:
             spacing_open: 5
             livePaneResizing: true

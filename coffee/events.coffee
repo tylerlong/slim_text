@@ -1,3 +1,11 @@
+window.full_window = ->
+    if window.layout.state.north.isVisible
+        window.layout.close 'north'
+
+window.exit_full_window = ->
+    if window.layout.state.north.isClosed
+        window.layout.open 'north'
+
 window.editor.commands.addCommand
     name: 'saveCommand'
     bindKey: { win: 'Ctrl-S',  mac: 'Command-S' }
@@ -9,8 +17,7 @@ window.editor.commands.addCommand
     name: 'exitFullWindowCommand'
     bindKey: { win: 'Esc',  mac: 'Esc' }
     exec: ->
-        if window.layout.state.north.isClosed
-            window.layout.open 'north'
+        window.exit_full_window()
 
 lazy_change = _.debounce (->
     if document.title.indexOf('* ') != 0
@@ -24,9 +31,7 @@ $('body').on 'click', '.file-link', ->
     window.open_path $(this).data('path')
 
 $('body').on 'click', '.full_window_btn', ->
-    window.layout.close 'north'
-    window.layout.close 'west'
-    window.editor.focus()
+    window.full_window()
 
 $('body').on 'click', '.save_btn', ->
     window.save_file()
@@ -65,3 +70,7 @@ window.onbeforeunload = () ->
     chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
     if document.title.indexOf('* ') == 0
         return """"#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}"""
+
+chrome.omnibox.onInputEntered.addListener (text) ->
+    if text == 'full window'
+        window.full_window()
