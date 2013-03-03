@@ -65,4 +65,7 @@ Slim Text is a slim text editor which runs inside a web browser.
     1. should be easy to remember and similiar to the ones used in linux, window and mac
 123. do not need any omnibox keyword at all?
     1. google search does not need keyword at all, so it is technically possible
-125. 
+125. launch via command line, such as subl . &
+126. add desktop shortcut
+    1. reference chrome app launcher
+127. 
