@@ -63,3 +63,4 @@ Slim Text is a slim text editor which runs inside a web browser.
 116. change the filter algorithm, filter all binary files while keep all text files
 118. should be able to open a folder quickly.
     1. for example, register a folder as a button, and click that button.
+120. 

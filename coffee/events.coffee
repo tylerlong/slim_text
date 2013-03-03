@@ -4,6 +4,13 @@ window.editor.commands.addCommand
     exec: ->
         window.save_file()
     readOnly: false
+    
+window.editor.commands.addCommand
+    name: 'exitFullWindowCommand'
+    bindKey: { win: 'Esc',  mac: 'Esc' }
+    exec: ->
+        if window.layout.state.north.isClosed
+            window.layout.open 'north'
 
 lazy_change = _.debounce (->
     if document.title.indexOf('* ') != 0
