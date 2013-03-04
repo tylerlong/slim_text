@@ -4,7 +4,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-99
+129, 131, 130
 
 
 ## todo list
@@ -12,9 +12,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 63. bug: refresh page before desktop notification closes, the notification never closes
     1. cannot dismiss the notification window upon refreshing, this is a bug of chrome, so postpone
         1. https://code.google.com/p/chromium/issues/detail?id=40262
-66. get rid of options page, move the options to menu?
-    1. move the options to menu!
-    2. think again! think about the future: can I get rid of it for ever? or just currently?
 68. auto detect file change outside of the editor and load the newest content into editor
     1. advanced feature, postpone
 85. windows bug: does not support chinese characters in path
@@ -31,19 +28,16 @@ Slim Text is a slim text editor which runs inside a web browser.
         2. ace editor have this problem, report the bug to them!
     2. windows OK, Mac OK
 93. bug: if current focus is not the editor window, ctrl + s does not work
+    1. use chrome extension to listen this keyboard event?
 96. bug: windows csharp file, show BOM as *
 97. enable ace editor features:
     1. remove trailing space upon saving
     2. add new line to the end of file upon saving
     3. show invisible chars. (upon selection?)
+        1. make this into the view menu
     4. auto complete
 99. marketing
-    1. submit to oschina.net
-        1. do they accept free but not os software?
-    3. update the old editor_in_chrome project and tell the users that they should switch to this project
-        1. do this after publishing Slim Text to chrome web store, postpone
     4. upload promotion images to chrome web store
-    5. do not do these until the product is resonably stable
 104. minor bug: unsaved content, refresh page, page title changed to "chrome-extension://...."
     1. if the title does not start with "* ", is OK
     2. I think it is a bug of chrome
@@ -70,4 +64,9 @@ Slim Text is a slim text editor which runs inside a web browser.
 129. add current version to slimtext.org, such as "newest version 0.0.2"
 130. modes reference here: https://github.com/ajaxorg/ace-builds/blob/master/kitchen-sink/demo.js   modesByName
 131. add "check for updates" link
-132. 
+132. infobar to issue commands? http://developer.chrome.com/extensions/experimental.infobars.html
+    1. and for find and replace?
+    2. and for create new files?
+133. open a new tab, default path is the current tab's path?
+    1. the same as ubuntu terminal
+134. 
