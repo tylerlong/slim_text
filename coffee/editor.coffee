@@ -207,13 +207,17 @@ $ ->
         path = items.path or file_manager.home_folder() or file_manager.temp_folder()
         open_path path
 
-    chrome.storage.sync.get ['theme', 'font_size'], (items) ->
+    chrome.storage.sync.get ['theme', 'font_size', 'key_binding'], (items) ->
         if not items.theme
             items.theme = 'monokai'
         if not items.font_size
             items.font_size = '12'
+        if not items.key_binding
+            items.key_binding = 'ace'
         editor.setTheme "ace/theme/#{items.theme}"
         editor.setFontSize "#{items.font_size}px"
+        if items.key_binding == 'vim'
+            editor.setKeyboardHandler(ace.require("ace/keyboard/vim").handler)
 
     window.layout = $('body').layout
         spacing_closed: 5

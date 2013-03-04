@@ -67,9 +67,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 125. launch via command line, such as subl . &
 126. add desktop shortcut
     1. reference chrome app launcher
-128. can enable vim mode
-    1. it seems not easy
-    2. figured out: first add keybing-vim.js to page and then editor.setKeyboardHandler(ace.require("ace/keyboard/vim").handler)
 129. add current version to slimtext.org, such as "newest version 0.0.2"
 130. modes reference here: https://github.com/ajaxorg/ace-builds/blob/master/kitchen-sink/demo.js   modesByName
-131. 
+131. add "check for updates" link
+132. 
