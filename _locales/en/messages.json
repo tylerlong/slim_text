@@ -79,5 +79,8 @@
     },
     "command_not_found": {
         "message": "Command not found"
+    },
+    "toggle_invisibles": {
+        "message": "Show/Hide invisibles"
     }
 }

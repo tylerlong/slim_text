@@ -113,6 +113,7 @@ window.add_topbar = ->
               <a>#{chrome.i18n.getMessage('syntax')}</a>
               <ul class="dropdown-menu" id="mode_list"></ul>
           </li>
+          <li><a class="toggle_invisibles_btn">#{chrome.i18n.getMessage('toggle_invisibles')}</a></li>
           <li><a class="full_window_btn">#{chrome.i18n.getMessage('full_window')}</a></li>
       </ul>
     </span>

@@ -66,6 +66,9 @@ $('body').on 'click', '.indent_btn', ->
 $('body').on 'click', '.outdent_btn', ->
     window.editor.blockOutdent()
 
+$('body').on 'click', '.toggle_invisibles_btn', ->
+    window.editor.setShowInvisibles(!window.editor.getShowInvisibles())
+    
 window.onbeforeunload = () ->
     chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
     if document.title.indexOf('* ') == 0

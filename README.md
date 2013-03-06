@@ -9,9 +9,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 ## todo list
 
-63. bug: refresh page before desktop notification closes, the notification never closes
-    1. cannot dismiss the notification window upon refreshing, this is a bug of chrome, so postpone
-        1. https://code.google.com/p/chromium/issues/detail?id=40262
 68. auto detect file change outside of the editor and load the newest content into editor
     1. advanced feature, postpone
 85. windows bug: does not support chinese characters in path
@@ -69,4 +66,17 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. and for create new files?
 133. open a new tab, default path is the current tab's path?
     1. the same as ubuntu terminal
-134. 
+134. bug: left panel, long file name such as "aaa-bbb-ccc.py" wrap
+    1. <a> does not wrap but pure text wrap
+135. go through this page: http://ace.ajax.org/#nav=production
+136. move ace into js folder?
+137. listen to backspace keyboard event and open the last folder?
+138. 
+
+
+## won't fix
+
+1. bug: refresh page before desktop notification closes, the notification never closes
+    1. cannot dismiss the notification window upon refreshing, this is a bug of chrome, so postpone
+        1. https://code.google.com/p/chromium/issues/detail?id=40262
+2.

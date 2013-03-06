@@ -79,5 +79,8 @@
     },
     "command_not_found": {
         "message": "找不到命令"
+    },
+    "toggle_invisibles": {
+        "message": "显示/隐藏不可见字符"
     }
 }
