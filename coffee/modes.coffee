@@ -266,12 +266,28 @@ extensions =
     'yml': 'yaml'
 
 
-window.guess_mode = (file_extension) ->
+names = 
+    'Cakefile': 'coffee'
+    'Gemfile': 'ruby'
+    'GNUmakefile': 'makefile'
+    'makefile': 'makefile'
+    'Makefile': 'makefile'
+    'OCamlMakefile': 'makefile'
+    
+
+window.guess_mode_by_extension = (file_extension) ->
     mode = extensions[file_extension]
     if not mode
         mode = 'text'
     return "ace/mode/#{mode}"
 
+
+window.guess_mode_by_name = (name) ->
+    mode = names[name]
+    if not mode
+        mode = 'text'
+    return "ace/mode/#{mode}"
+    
 
 window.known_extension = (file_extension) ->
     if extensions[file_extension]

@@ -189,11 +189,14 @@ window.open_path = (path) ->
         window.storage.file = path
         content = file_manager.read(path)
         editor.session.setValue content, -1
-        extension = file_manager.extension(path)
+        filename = file_manager.filename(path)
+        document.title = "#{filename} - Slim Text"
+        extension = file_manager.extension(filename)
         if extension
             extension = extension.toLowerCase().substr(1, extension.length - 1)
-        editor.getSession().setMode window.guess_mode(extension)
-        document.title = "#{file_manager.filename(path)} - Slim Text"
+            editor.getSession().setMode window.guess_mode_by_extension(extension)
+        else 
+            editor.getSession().setMode window.guess_mode_by_name(filename)
         path = file_manager.container(path)
     while not file_manager.can_list path
         window.notice chrome.i18n.getMessage('permission_denied'), path

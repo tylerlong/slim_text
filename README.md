@@ -73,9 +73,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 141. Chinese name 思灵编辑器 ?
 142. add increase font-size or decrease font-size to menu ?
 144. i18n options page
-147. guess mode by file name, such as Cakefile is coffeescript file
-    1. Gemfile is ruby file
-    2. check the source code of the ultimate ace demo, their is a file with all the possible file names
 148. add emacs key binding
 150. 
 
