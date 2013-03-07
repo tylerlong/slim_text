@@ -68,7 +68,7 @@ window.show_sidebar = (path) ->
         item.name.toLowerCase()
     for item in items
         if item.path == window.storage.file
-            $('#sidebar').append item.name
+            $('#sidebar').append "<span>#{item.name}</span>"
         else
             link = $("""<a class="file-link">#{item.name}</a>""")
             link.data("path", item.path)

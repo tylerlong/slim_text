@@ -4,7 +4,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-134, 130, 146
+130, 146
 
 
 ## todo list
@@ -62,8 +62,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     2. and for create new files?
 133. open a new tab, default path is the current tab's path?
     1. the same as ubuntu terminal
-134. bug: left panel, long file name such as "aaa-bbb-ccc.py" wrap
-    1. <a> does not wrap but pure text wrap
 135. go through this page: http://ace.ajax.org/#nav=production
 136. move ace into js folder?
 137. listen to backspace keyboard event and open the last folder?

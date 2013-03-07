@@ -16,6 +16,10 @@ div.ui-layout-west, div.ui-layout-north {
     font-family: 'Consolas', 'Droid Sans Mono';
 }
 
+#sidebar span {
+    white-space: nowrap;
+}
+
 div.ui-layout-center {
     padding: 0;
 }
