@@ -136,6 +136,7 @@ window.add_topbar = ->
           <li><a href="https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts" target="_blank">#{chrome.i18n.getMessage('keyboard_shortcuts')}</a></li>
           <li><a href="http://slimtext.org" target="_blank">#{chrome.i18n.getMessage('website')}</a></li>
           <li><a href="https://github.com/tylerlong/slimtext.org/issues" target="_blank">#{chrome.i18n.getMessage('report_issue')}</a></li>
+          <li><a class="check_for_updates_btn">#{chrome.i18n.getMessage('check_for_updates')}</a></li>
           <li><a class="about_btn">#{chrome.i18n.getMessage('about')} Slim Text</a></li>
       </ul>
     </span>
@@ -145,6 +146,7 @@ window.add_topbar = ->
   <a class="indent_btn" title="#{chrome.i18n.getMessage('indent')}"><i class="icon-indent-right"></i></a>
   <a class="outdent_btn" title="#{chrome.i18n.getMessage('outdent')}"><i class="icon-indent-left"></i></a>
   <a class="full_window_btn" title="#{chrome.i18n.getMessage('full_window')}"><i class="icon-fullscreen"></i></a>
+  <a class="check_for_updates_btn" title="#{chrome.i18n.getMessage('check_for_updates')}"><i class="icon-cloud-download"></i></a>
   <a class="about_btn" title="#{chrome.i18n.getMessage('about')} Slim Text"><i class="icon-info-sign"></i></a>
   <i class="icon-fullscreen" id="hidden_btn"></i>
 </div>"""

@@ -13,7 +13,8 @@
     "permissions": [
         "tabs",
         "storage",
-        "notifications"
+        "notifications",
+        "*://*/*"
     ],
     
     "omnibox": { "keyword": "s" },

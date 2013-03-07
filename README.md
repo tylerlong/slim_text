@@ -4,7 +4,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-129, 131, 130
+130
 
 
 ## todo list
@@ -58,9 +58,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 125. launch via command line, such as subl . &
 126. add desktop shortcut
     1. reference chrome app launcher
-129. add current version to slimtext.org, such as "newest version 0.0.2"
 130. modes reference here: https://github.com/ajaxorg/ace-builds/blob/master/kitchen-sink/demo.js   modesByName
-131. add "check for updates" link
 132. infobar to issue commands? http://developer.chrome.com/extensions/experimental.infobars.html
     1. and for find and replace?
     2. and for create new files?
@@ -81,7 +79,8 @@ Slim Text is a slim text editor which runs inside a web browser.
 141. Chinese name 思灵编辑器 ?
 142. add increase font-size or decrease font-size to menu ?
 144. i18n options page
-145. 
+145. update automatically
+146. 
 
 
 ## won't fix

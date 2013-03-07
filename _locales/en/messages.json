@@ -85,5 +85,26 @@
     },
     "toggle_word_wrap": {
         "message": "Toggle word wrap"
+    },
+    "check_for_updates": {
+        "message": "Check for updates"
+    },
+    "no_update": {
+        "message": "No update is available"
+    },
+    "newest_version": {
+        "message": "You are running the newest version"
+    },
+    "new_version": {
+        "message": "New version available"
+    },
+    "fetch_and_install": {
+        "message": "Please visit http://slimtext.org to get the newest version"
+    },
+    "network_error": {
+        "message": "Network error"
+    },
+    "check_manually": {
+        "message": "Please check for updates manually: http://slimtext.org"
     }
 }

@@ -85,5 +85,26 @@
     },
     "toggle_word_wrap": {
         "message": "启用/禁用自动折行"
+    },
+    "check_for_updates": {
+        "message": "检查更新"
+    },
+    "no_update": {
+        "message": "没有可用的更新"
+    },
+    "newest_version": {
+        "message": "您运行的是最新版本"
+    },
+    "new_version": {
+        "message": "有新的版本"
+    },
+    "fetch_and_install": {
+        "message": "请访问 http://slimtext.org 获取最新版本"
+    },
+    "network_error": {
+        "message": "网络故障"
+    },
+    "check_manually": {
+        "message": "请手动检查更新: http://slimtext.org"
     }
 }

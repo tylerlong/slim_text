@@ -43,7 +43,7 @@ $('body').on 'click', '.options_btn', ->
     chrome.tabs.create { url: chrome.extension.getURL('html/options.html') }
 
 $('body').on 'click', '.about_btn', ->
-    window.notice "Slim Text #{chrome.app.getDetails().version}", "Copyright @ 2012 - 2013 slimtext.org", 5000
+    window.notice "Slim Text #{chrome.app.getDetails().version}", "Copyright © 2012 - 2013 slimtext.org", 5000
 
 $('body').on 'change', '#drives_select', ->
     window.open_path $(this).val()
@@ -71,7 +71,19 @@ $('body').on 'click', '.toggle_invisibles_btn', ->
 
 $('body').on 'click', '.toggle_word_wrap_btn', ->
     window.editor.getSession().setUseWrapMode(!window.editor.getSession().getUseWrapMode())
-    
+
+$('body').on 'click', '.check_for_updates_btn', ->
+    $.get('https://raw.github.com/tylerlong/slimtext.org/gh-pages/__version__', (data) ->
+        newest = data.trim()
+        current = chrome.app.getDetails().version
+        if newest > current
+            window.notice "#{chrome.i18n.getMessage('new_version')}: #{newest}", chrome.i18n.getMessage('fetch_and_install'), 8000
+        else
+            window.notice chrome.i18n.getMessage('no_update'), "#{chrome.i18n.getMessage('newest_version')}: #{current}", 5000
+            
+    ).fail ->
+        window.notice chrome.i18n.getMessage('network_error'), chrome.i18n.getMessage('check_manually'), 5000
+
 window.onbeforeunload = () ->
     chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
     if document.title.indexOf('* ') == 0
