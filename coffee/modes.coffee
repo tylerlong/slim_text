@@ -45,6 +45,7 @@ window.modes =
     'ruby': 'Ruby'
     'scad': 'OpenSCAD'
     'scala': 'Scala'
+    'scheme': 'Scheme'
     'scss': 'SCSS'
     'sh': 'SH'
     'sql': 'SQL'
@@ -54,6 +55,7 @@ window.modes =
     'tex': 'Tex'
     'text': 'Text'
     'textible': 'Textile'
+    'tm_snippet': 'tmSnippet'
     'typescript': 'Typescript'
     'vbscript': 'VBScript'
     'xml': 'XML'
@@ -65,11 +67,13 @@ extensions =
     'abap': 'abap'
 
     'asciidoc': 'asciidoc'
-
+    
+    'c9search_results': 'c9search'
     'c9search': 'c9search'
 
     'cpp': 'c_cpp'
     'h': 'c_cpp'
+    'hh': 'c_cpp'
     'c': 'c_cpp'
     'hpp': 'c_cpp'
     'cc': 'c_cpp'
@@ -81,6 +85,7 @@ extensions =
     'clojure': 'clojure'
 
     'coffee': 'coffee'
+    'cf': 'coffee'
 
     'cfm': 'coldfusion'
     'cfml': 'coldfusion'
@@ -96,6 +101,7 @@ extensions =
     'dart': 'dart'
 
     'diff': 'diff'
+    'patch': 'diff'
 
     'dot': 'dot'
 
@@ -118,6 +124,7 @@ extensions =
 
     'htm': 'html'
     'html': 'html'
+    'xhtml': 'html'
 
     'jade': 'jade'
 
@@ -134,6 +141,8 @@ extensions =
 
     'latex': 'latex'
     'tex': 'latex'
+    'ltx': 'latex'
+    'bib': 'latex'
 
     'less': 'less'
 
@@ -144,6 +153,7 @@ extensions =
     'lua': 'lua'
 
     'luapage': 'luapage'
+    'lp': 'luapage'
 
     'lucene': 'lucene'
 
@@ -159,14 +169,17 @@ extensions =
     'objectivec': 'objectivec'
 
     'ml': 'ocaml'
+    'mli': 'ocaml'
     'ocaml': 'ocaml'
 
     'pl': 'perl'
+    'pm': 'perl'
     'perl': 'perl'
 
     'pgsql': 'pgsql'
 
     'php': 'php'
+    'phtml': 'php'
 
     'ps1': 'powershell'
     'ps1xml': 'powershell'
@@ -181,19 +194,30 @@ extensions =
     'r': 'r'
 
     'rdoc': 'rdoc'
+    'rd': 'rdoc'
 
     'rhtml': 'rhtml'
 
     'rb': 'ruby'
+    'ru': 'ruby'
+    'gemspec': 'ruby'
+    'rake': 'ruby'
     'ruby': 'ruby'
 
     'scad': 'scad'
 
     'scala': 'scala'
+    
+    'scm': 'scheme'
+    'rkt': 'scheme'
+    'scheme': 'scheme'
 
     'scss': 'scss'
+    'sass': 'scss'
 
     'sh': 'sh'
+    'bash': 'sh'
+    'bat': 'sh'
 
     'sql': 'sql'
 
@@ -212,16 +236,30 @@ extensions =
     'conf': 'text'
 
     'textile': 'textile'
+    
+    'tmSnippet': 'tm_snippet'
+    'tm_snippet': 'tm_snippet'
 
     'typescript': 'typescript'
     'ts': 'typescript'
+    'str': 'typescript'
 
     'vbscript': 'vbscript'
     'vbs': 'vbscript'
 
     'xml': 'xml'
+    'rdf': 'xml'
+    'rss': 'xml'
+    'wsdl': 'xml'
+    'xslt': 'xml'
+    'atom': 'xml'
+    'mathml': 'xml'
+    'mml': 'xml'
+    'xul': 'xml'
+    'xbl': 'xml'
 
     'xquery': 'xquery'
+    'xq': 'xquery'
 
     'yaml': 'yaml'
     'yml': 'yaml'
