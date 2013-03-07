@@ -68,6 +68,9 @@ $('body').on 'click', '.outdent_btn', ->
 
 $('body').on 'click', '.toggle_invisibles_btn', ->
     window.editor.setShowInvisibles(!window.editor.getShowInvisibles())
+
+$('body').on 'click', '.toggle_word_wrap_btn', ->
+    window.editor.getSession().setUseWrapMode(!window.editor.getSession().getUseWrapMode())
     
 window.onbeforeunload = () ->
     chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }

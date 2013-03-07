@@ -82,5 +82,8 @@
     },
     "toggle_invisibles": {
         "message": "Show/Hide invisibles"
+    },
+    "toggle_word_wrap": {
+        "message": "Toggle word wrap"
     }
 }

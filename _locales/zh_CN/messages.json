@@ -18,7 +18,7 @@
         "message": "保存"
     },
     "syntax": {
-        "message": "语法"
+        "message": "语法高亮"
     },
     "full_window": {
         "message": "全窗模式"
@@ -82,5 +82,8 @@
     },
     "toggle_invisibles": {
         "message": "显示/隐藏不可见字符"
+    },
+    "toggle_word_wrap": {
+        "message": "启用/禁用自动折行"
     }
 }

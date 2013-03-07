@@ -71,7 +71,16 @@ Slim Text is a slim text editor which runs inside a web browser.
 135. go through this page: http://ace.ajax.org/#nav=production
 136. move ace into js folder?
 137. listen to backspace keyboard event and open the last folder?
-138. 
+138. remove options page, move all the options to menu
+    1. two categories of menu items: 
+        1. one is temp ones which does not need to be persistent
+        2. the other is permenant ones which should be stored into chrome.storage
+        3. DRY, write code to handle all of the menu items, add new menu items should be easy.
+139. refactor the code!!!
+140. gcli: https://github.com/mozilla/gcli
+141. Chinese name 思灵编辑器 ?
+142. add increase font-size or decrease font-size to menu ?
+143. 
 
 
 ## won't fix
