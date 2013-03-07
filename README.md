@@ -4,7 +4,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-130
+134, 130, 146
 
 
 ## todo list
@@ -30,8 +30,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 97. enable ace editor features:
     1. remove trailing space upon saving
     2. add new line to the end of file upon saving
-    3. show invisible chars. (upon selection?)
-        1. make this into the view menu
     4. auto complete
 99. marketing
     4. upload promotion images to chrome web store
@@ -80,7 +78,10 @@ Slim Text is a slim text editor which runs inside a web browser.
 142. add increase font-size or decrease font-size to menu ?
 144. i18n options page
 145. update automatically
-146. 
+    1. it is not possible unless publishing the software to chrome web store
+    2. in fact, extensions can not be installed from websites other than chrome web store
+146. update screenshots
+147. 
 
 
 ## won't fix
