@@ -228,6 +228,8 @@ $ ->
         editor.getSession().setTabSize(items.tab_size)
         if items.key_binding == 'vim'
             editor.setKeyboardHandler(ace.require("ace/keyboard/vim").handler)
+        else if items.key_binding == 'emacs'
+            editor.setKeyboardHandler(ace.require("ace/keyboard/emacs").handler)
 
     window.layout = $('body').layout
         spacing_closed: 5

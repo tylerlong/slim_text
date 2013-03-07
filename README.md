@@ -73,8 +73,8 @@ Slim Text is a slim text editor which runs inside a web browser.
 141. Chinese name 思灵编辑器 ?
 142. add increase font-size or decrease font-size to menu ?
 144. i18n options page
-148. add emacs key binding
-150. 
+150. read the list of ace files, every file is useful, such as the ext-searchbox
+151. 
 
 
 ## won't fix
