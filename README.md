@@ -4,8 +4,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-99
-
+148
 
 ## todo list
 
@@ -33,7 +32,6 @@ Slim Text is a slim text editor which runs inside a web browser.
     4. auto complete
 99. marketing
     4. upload promotion images to chrome web store
-    5. post news about version 0.0.3 to oshicna.net
 104. minor bug: unsaved content, refresh page, page title changed to "chrome-extension://...."
     1. if the title does not start with "* ", is OK
     2. I think it is a bug of chrome
@@ -75,11 +73,9 @@ Slim Text is a slim text editor which runs inside a web browser.
 141. Chinese name 思灵编辑器 ?
 142. add increase font-size or decrease font-size to menu ?
 144. i18n options page
-145. update automatically
-    1. it is not possible unless publishing the software to chrome web store
-    2. in fact, extensions can not be installed from websites other than chrome web store
 147. guess mode by file name, such as Cakefile is coffeescript file
-148. 
+148. add emacs key binding
+149. 
 
 
 ## won't fix
