@@ -197,6 +197,7 @@ extensions =
     'rd': 'rdoc'
 
     'rhtml': 'rhtml'
+    'erb': 'rhtml'
 
     'rb': 'ruby'
     'ru': 'ruby'
