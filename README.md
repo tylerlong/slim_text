@@ -4,7 +4,7 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-146, 99
+99
 
 
 ## todo list
@@ -78,7 +78,6 @@ Slim Text is a slim text editor which runs inside a web browser.
 145. update automatically
     1. it is not possible unless publishing the software to chrome web store
     2. in fact, extensions can not be installed from websites other than chrome web store
-146. update screenshots
 147. guess mode by file name, such as Cakefile is coffeescript file
 148. 
 
