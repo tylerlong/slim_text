@@ -80,7 +80,8 @@ Slim Text is a slim text editor which runs inside a web browser.
 140. gcli: https://github.com/mozilla/gcli
 141. Chinese name 思灵编辑器 ?
 142. add increase font-size or decrease font-size to menu ?
-143. 
+144. i18n options page
+145. 
 
 
 ## won't fix
