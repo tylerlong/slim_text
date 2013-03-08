@@ -72,6 +72,12 @@ $('body').on 'click', '.toggle_invisibles_btn', ->
 $('body').on 'click', '.toggle_word_wrap_btn', ->
     window.editor.getSession().setUseWrapMode(!window.editor.getSession().getUseWrapMode())
 
+$('body').on 'click', '.find_btn', ->
+    alert "unimplemented, press ctrl + f instead"
+
+$('body').on 'click', '.replace_btn', ->
+    alert "unimplemented, press ctrl + h instead"
+
 $('body').on 'click', '.check_for_updates_btn', ->
     $.get('https://raw.github.com/tylerlong/slimtext.org/gh-pages/__version__', (data) ->
         newest = data.trim()

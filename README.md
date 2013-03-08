@@ -1,6 +1,6 @@
 # Slim Text
 
-Slim Text is a slim text editor which runs inside a web browser.
+Slim Text is a slim Text editor which runs inside a web browser.
 
 
 ## priority items
@@ -81,8 +81,11 @@ easy first, hard last, no hurry!
 150. read the list of ace files, every file is useful, such as the ext-searchbox
 151. split window?
   1. design this feature together with multiple tabs
-154. options page color green?
-155. 
+155. can diable soft tab?
+156. add search menu
+    1. submenu find and replace
+157. bug: searchbox too weak, can not specify case-sensitive and regex search
+158.
 
 
 ## won't fix

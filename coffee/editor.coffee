@@ -105,6 +105,16 @@ window.add_topbar = ->
     </span>
     <span class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown">
+        #{chrome.i18n.getMessage('search')}
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="find_btn">#{chrome.i18n.getMessage('find')}</a></li>
+        <li><a class="replace_btn">#{chrome.i18n.getMessage('replace')}</a></li>
+      </ul>
+    </span>
+    <span class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown">
         #{chrome.i18n.getMessage('view')}
         <b class="caret"></b>
       </a>

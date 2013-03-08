@@ -109,5 +109,14 @@
     },
     "resize": {
         "message": "调整大小"
+    },
+    "search": {
+        "message": "搜索"
+    },
+    "find": {
+        "message": "查找"
+    },
+    "replace": {
+        "message": "替换"
     }
 }

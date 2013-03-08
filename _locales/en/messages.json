@@ -109,5 +109,14 @@
     },
     "resize": {
         "message": "Resize"
+    },
+    "search": {
+        "message": "Search"
+    },
+    "find": {
+        "message": "Find"
+    },
+    "replace": {
+        "message": "Replace"
     }
 }
