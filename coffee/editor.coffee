@@ -236,7 +236,7 @@ $ ->
         stateManagement__enabled: true
         north:
             slidable: false
-            spacing_open: 14
+            spacing_open: 15
             size: 18
             resizable: false
             togglerLength_open: 0
@@ -258,6 +258,7 @@ $ ->
             togglerLength_open: 0
             togglerLength_closed: 0
             slideTrigger_open: 'mouseover'
+            resizerTip: chrome.i18n.getMessage('resize')
         center:
             onresize_end: ->
                 editor.resize()

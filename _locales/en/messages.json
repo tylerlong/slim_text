@@ -106,5 +106,8 @@
     },
     "check_manually": {
         "message": "Please check for updates manually: http://slimtext.org"
+    },
+    "resize": {
+        "message": "Resize"
     }
 }

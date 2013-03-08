@@ -106,5 +106,8 @@
     },
     "check_manually": {
         "message": "请手动检查更新: http://slimtext.org"
+    },
+    "resize": {
+        "message": "调整大小"
     }
 }

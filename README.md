@@ -4,7 +4,9 @@ Slim Text is a slim text editor which runs inside a web browser.
 
 
 ## priority items
-148
+
+easy first, hard last, no hurry!
+
 
 ## todo list
 
@@ -71,10 +73,16 @@ Slim Text is a slim text editor which runs inside a web browser.
 139. refactor the code!!!
 140. gcli: https://github.com/mozilla/gcli
 141. Chinese name 思灵编辑器 ?
+    1. 四死私似思斯司丝驷
+    2. 零另令灵领玲凌玲聆伶
+    3. no hurry, postpone
 142. add increase font-size or decrease font-size to menu ?
 144. i18n options page
 150. read the list of ace files, every file is useful, such as the ext-searchbox
-151. 
+151. split window?
+  1. design this feature together with multiple tabs
+154. options page color green?
+155. 
 
 
 ## won't fix
