@@ -10,7 +10,7 @@
 <body>
 <table id="container">
 <tr>
-    <td>Theme:</td>
+    <td><span id="theme_label"></span>:</td>
     <td>
         <select id="theme">
             <optgroup label="Bright">
@@ -50,13 +50,13 @@
     </td>
 </tr>
 <tr>
-    <td>Font Size:</td>
+    <td><span id="font_size_label"></span>:</td>
     <td>
         <select id="font_size"></select>
     </td>
 </tr>
 <tr>
-    <td>Key Binding:</td>
+    <td><span id="key_binding_label"></span>:</td>
     <td>
         <select id="key_binding">
             <option value="ace">Ace</option>
@@ -66,14 +66,14 @@
     </td>
 </tr>
 <tr>
-    <td>Tab Size:</td>
+    <td><span id="tab_size_label"></span>:</td>
     <td>
         <input id="tab_size" type="range" min="2" max="8" step="2"/>
-        <span id="tab_size_label"></span>
+        <span id="tab_size_value"></span>
     </td>
 </tr>
 <tr>
-    <td colspan="2"><button id="btn">OK</button></td>
+    <td colspan="2"><button id="save_btn"></button></td>
 </tr>
 </table>
     <script src="../js/jquery.js"></script>

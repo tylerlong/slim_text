@@ -1,4 +1,10 @@
 $ ->
+    $('#theme_label').text chrome.i18n.getMessage('theme')
+    $('#font_size_label').text chrome.i18n.getMessage('font_size')
+    $('#tab_size_label').text chrome.i18n.getMessage('tab_size')
+    $('#key_binding_label').text chrome.i18n.getMessage('key_binding')
+    $('#save_btn').text chrome.i18n.getMessage('save')
+    
     _.each _.range(8, 33), (i) ->
         $('#font_size').append $("""<option value="#{i}">#{i}px</option>""")
     
@@ -16,12 +22,12 @@ $ ->
         $('select#font_size').val items.font_size
         $('select#key_binding').val items.key_binding
         $('input#tab_size').val items.tab_size
-        $('span#tab_size_label').text items.tab_size
+        $('span#tab_size_value').text items.tab_size
         
         $('input#tab_size').change ->
-            $('span#tab_size_label').text $(this).val()
+            $('span#tab_size_value').text $(this).val()
 
-        $('button#btn').click ->
+        $('button#save_btn').click ->
             options = 
                 'theme': $('select#theme').val()
                 'font_size': $('select#font_size').val() 

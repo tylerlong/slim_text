@@ -6,7 +6,7 @@ Slim Text is a Slim Text editor which runs inside a web browser.
 ## priority items
 
 easy first, hard last, no hurry!
-126, 144
+170
 
 
 ## todo list
@@ -50,8 +50,6 @@ easy first, hard last, no hurry!
 123. do not need any omnibox keyword at all?
     1. google search does not need keyword at all, so it is technically possible
 125. launch via command line, such as subl . &
-126. add desktop shortcut
-    1. reference chrome app launcher
 132. infobar to issue commands? http://developer.chrome.com/extensions/experimental.infobars.html
     1. and for find and replace?
     2. and for create new files?
@@ -73,7 +71,6 @@ easy first, hard last, no hurry!
     2. 零另令灵领玲凌玲聆伶
     3. no hurry, postpone
 142. add increase font-size or decrease font-size to menu ?
-144. i18n options page
 151. split window?
   1. design this feature together with multiple tabs
 155. can diable soft tab?
@@ -91,7 +88,18 @@ easy first, hard last, no hurry!
     5. select a candidate to open
 162. Preview markdown: https://gist.github.com/4670615
 163. cvanalyze.com click qq icon can launch qq, investigate
-166. 
+166. spell check
+167. Text Drive 这个app可以直接读写本地的文件! 了解下是怎么做的！！！
+    1. https://chrome.google.com/webstore/detail/text-drive/mmfbcljfglbokpmkimbfghdkjmjhdgbg
+    2. 在我电脑上的目录： C:\Users\Tyler\AppData\Local\Google\Chrome\User Data\Default\Extensions\mmfbcljfglbokpmkimbfghdkjmjhdgbg\0.2.38_0
+    3. 初步的了解， 它没有用NPAPI
+    4. 貌似是因为app的缘故？ app的权限远大于extension？
+        1. 正确来讲， 是packaged app的权限非常大。 这是个新东东， 不得不学。
+    5. 我可以用这个推出桌面版的Slim Text？
+168. 开发桌面版的Slim Text， 利用这里的技术： http://developer.chrome.com/apps/about_apps.html
+169. 这篇文章不错： http://www.ibm.com/developerworks/library/os-extendchrome/index.html
+170. add more toolbar icons
+171. 
 
 
 ## won't fix

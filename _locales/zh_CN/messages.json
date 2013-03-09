@@ -118,5 +118,17 @@
     },
     "replace": {
         "message": "替换"
+    },
+    "theme": {
+        "message": "主题"
+    },
+    "font_size": {
+        "message": "字体大小"
+    },
+    "key_binding": {
+        "message": "键盘绑定"
+    },
+    "tab_size": {
+        "message": "制表符大小"
     }
 }

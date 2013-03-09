@@ -118,5 +118,17 @@
     },
     "replace": {
         "message": "Replace"
+    },
+    "theme": {
+        "message": "Theme"
+    },
+    "font_size": {
+        "message": "Font size"
+    },
+    "key_binding": {
+        "message": "Key binding"
+    },
+    "tab_size": {
+        "message": "Tab size"
     }
 }
