@@ -73,10 +73,10 @@ $('body').on 'click', '.toggle_word_wrap_btn', ->
     window.editor.getSession().setUseWrapMode(!window.editor.getSession().getUseWrapMode())
 
 $('body').on 'click', '.find_btn', ->
-    alert "unimplemented, press ctrl + f instead"
+    ace.require('ace/ext/searchbox').Search(window.editor)
 
 $('body').on 'click', '.replace_btn', ->
-    alert "unimplemented, press ctrl + h instead"
+    ace.require('ace/ext/searchbox').Search(window.editor, true)
 
 $('body').on 'click', '.check_for_updates_btn', ->
     $.get('https://raw.github.com/tylerlong/slimtext.org/gh-pages/__version__', (data) ->

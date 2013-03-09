@@ -1,11 +1,12 @@
 # Slim Text
 
-Slim Text is a slim Text editor which runs inside a web browser.
+Slim Text is a Slim Text editor which runs inside a web browser.
 
 
 ## priority items
 
 easy first, hard last, no hurry!
+126, 144
 
 
 ## todo list
@@ -73,16 +74,14 @@ easy first, hard last, no hurry!
     3. no hurry, postpone
 142. add increase font-size or decrease font-size to menu ?
 144. i18n options page
-150. read the list of ace files, every file is useful, such as the ext-searchbox
 151. split window?
   1. design this feature together with multiple tabs
 155. can diable soft tab?
-156. add search menu
-    1. submenu find and replace
 157. bug: searchbox too weak, can not specify case-sensitive and regex search
 158. chrome history api to go back to last folder?
     1. I think use history api for quick file open is possible. can do free form searching
 159. show folder path in address bar?
+    1. should be able to open a file by enter address, otherwise it is confusing
 160. bootstrap Typeahead can replace omnibox
 161. a viable quick open solution: 
     1. everyting time open a folder, add the files in the folder into chrome.history
@@ -92,7 +91,7 @@ easy first, hard last, no hurry!
     5. select a candidate to open
 162. Preview markdown: https://gist.github.com/4670615
 163. cvanalyze.com click qq icon can launch qq, investigate
-165. 
+166. 
 
 
 ## won't fix
