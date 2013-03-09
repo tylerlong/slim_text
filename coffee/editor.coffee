@@ -221,7 +221,7 @@ $ ->
 
     chrome.storage.sync.get ['theme', 'font_size', 'key_binding', 'tab_size'], (items) ->
         if not items.theme
-            items.theme = 'monokai'
+            items.theme = 'merbivore_soft'
         if not items.font_size
             items.font_size = '12'
         if not items.key_binding

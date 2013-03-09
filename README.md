@@ -92,7 +92,7 @@ easy first, hard last, no hurry!
     5. select a candidate to open
 162. Preview markdown: https://gist.github.com/4670615
 163. cvanalyze.com click qq icon can launch qq, investigate
-164. change default theme to Merbivorse Soft
+165. 
 
 
 ## won't fix
