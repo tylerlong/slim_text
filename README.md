@@ -60,6 +60,7 @@ easy first, hard last, no hurry!
 132. infobar to issue commands? http://developer.chrome.com/extensions/experimental.infobars.html
     1. and for find and replace?
     2. and for create new files?
+    3. problem: this feature is currently experimental, disabled by default unless user change some flag manually.
 133. open a new tab, default path is the current tab's path?
     1. the same as ubuntu terminal
 135. go through this page: http://ace.ajax.org/#nav=production
@@ -85,7 +86,19 @@ easy first, hard last, no hurry!
 156. add search menu
     1. submenu find and replace
 157. bug: searchbox too weak, can not specify case-sensitive and regex search
-158.
+158. chrome history api to go back to last folder?
+    1. I think use history api for quick file open is possible. can do free form searching
+159. show folder path in address bar?
+160. bootstrap Typeahead can replace omnibox
+161. a viable quick open solution: 
+    1. everyting time open a folder, add the files in the folder into chrome.history
+    2. ctrl + P show a input box
+    3. use chrome history search to search
+    4. bootstrap typeahead to show candidates
+    5. select a candidate to open
+162. Preview markdown: https://gist.github.com/4670615
+163. cvanalyze.com click qq icon can launch qq, investigate
+164. 
 
 
 ## won't fix
