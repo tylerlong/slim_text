@@ -6,7 +6,7 @@ Slim Text is a Slim Text editor which runs inside a web browser.
 ## priority items
 
 easy first, hard last, no hurry!
-171
+171, 174, 135, 162
 
 
 ## todo list
@@ -30,12 +30,18 @@ easy first, hard last, no hurry!
     4. auto complete
 99. marketing
     4. upload promotion images to chrome web store
+    5. submit news to oschina.net
+    6. update the page in gurudigger
+    7. update the page in ruby-china
+    8. create a weibo tweet
+    9. reply users in oschina.net and ruby-china
 104. minor bug: unsaved content, refresh page, page title changed to "chrome-extension://...."
     1. if the title does not start with "* ", is OK
     2. I think it is a bug of chrome
 105. introduce plugin system
     1. page actions, to change the appearance or behavior of the software, such as change background, such as define new shortcut key 
     2. advanced feature, postpone
+    3. is it viable and practical?
 107. provide multiple themes and icons, the user can switch themes and icons
 111. bug: windows 7 C: / Windows / System32 / drivers, can not see the etc/ folder
 112. bug: slow when open windows 7 C: / Windows / System32
@@ -57,15 +63,10 @@ easy first, hard last, no hurry!
 133. open a new tab, default path is the current tab's path?
     1. the same as ubuntu terminal
 135. go through this page: http://ace.ajax.org/#nav=production
-136. move ace into js folder?
 137. listen to backspace keyboard event and open the last folder?
-138. remove options page, move all the options to menu
-    1. two categories of menu items: 
-        1. one is temp ones which does not need to be persistent
-        2. the other is permenant ones which should be stored into chrome.storage
-        3. DRY, write code to handle all of the menu items, add new menu items should be easy.
-139. refactor the code!!!
-140. gcli: https://github.com/mozilla/gcli
+140. add command line
+    1. gcli: https://github.com/mozilla/gcli
+    2. research, find the best solution!
 141. Chinese name 思灵编辑器 ?
     1. 四死私似思斯司丝驷
     2. 零另令灵领玲凌玲聆伶
@@ -88,7 +89,7 @@ easy first, hard last, no hurry!
     5. select a candidate to open
 162. Preview markdown: https://gist.github.com/4670615
 163. cvanalyze.com click qq icon can launch qq, investigate
-166. spell check
+166. spell check (it is an ext of Ace)
 167. Text Drive 这个app可以直接读写本地的文件! 了解下是怎么做的！！！
     1. https://chrome.google.com/webstore/detail/text-drive/mmfbcljfglbokpmkimbfghdkjmjhdgbg
     2. 在我电脑上的目录： C:\Users\Tyler\AppData\Local\Google\Chrome\User Data\Default\Extensions\mmfbcljfglbokpmkimbfghdkjmjhdgbg\0.2.38_0
@@ -102,7 +103,9 @@ easy first, hard last, no hurry!
 172. differentiate states for some operations
     1. such as show/hide invisibles, two states: show invisibles and hide invisibles
 173. create seperators for toolbar icons
-174. 
+174. publish version 0.0.4 to chome web store
+175. add toolbar icon for "Report an issue", because I think gathering user feedback is very important
+176. 
 
 
 ## won't fix
