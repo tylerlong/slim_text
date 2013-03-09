@@ -6,7 +6,7 @@ Slim Text is a Slim Text editor which runs inside a web browser.
 ## priority items
 
 easy first, hard last, no hurry!
-171, 174, 135, 162
+135, 162
 
 
 ## todo list
@@ -30,11 +30,6 @@ easy first, hard last, no hurry!
     4. auto complete
 99. marketing
     4. upload promotion images to chrome web store
-    5. submit news to oschina.net
-    6. update the page in gurudigger
-    7. update the page in ruby-china
-    8. create a weibo tweet
-    9. reply users in oschina.net and ruby-china
 104. minor bug: unsaved content, refresh page, page title changed to "chrome-extension://...."
     1. if the title does not start with "* ", is OK
     2. I think it is a bug of chrome
@@ -99,13 +94,14 @@ easy first, hard last, no hurry!
     5. 我可以用这个推出桌面版的Slim Text？
 168. 开发桌面版的Slim Text， 利用这里的技术： http://developer.chrome.com/apps/about_apps.html
 169. 这篇文章不错： http://www.ibm.com/developerworks/library/os-extendchrome/index.html
-171. create screenshots
 172. differentiate states for some operations
     1. such as show/hide invisibles, two states: show invisibles and hide invisibles
 173. create seperators for toolbar icons
-174. publish version 0.0.4 to chome web store
 175. add toolbar icon for "Report an issue", because I think gathering user feedback is very important
-176. 
+176. compress more files before deployment
+    1. json files
+    2. html files
+177. 
 
 
 ## won't fix
