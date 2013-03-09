@@ -6,7 +6,7 @@ Slim Text is a Slim Text editor which runs inside a web browser.
 ## priority items
 
 easy first, hard last, no hurry!
-170
+171
 
 
 ## todo list
@@ -98,8 +98,11 @@ easy first, hard last, no hurry!
     5. 我可以用这个推出桌面版的Slim Text？
 168. 开发桌面版的Slim Text， 利用这里的技术： http://developer.chrome.com/apps/about_apps.html
 169. 这篇文章不错： http://www.ibm.com/developerworks/library/os-extendchrome/index.html
-170. add more toolbar icons
-171. 
+171. create screenshots
+172. differentiate states for some operations
+    1. such as show/hide invisibles, two states: show invisibles and hide invisibles
+173. create seperators for toolbar icons
+174. 
 
 
 ## won't fix

@@ -149,9 +149,12 @@ window.add_topbar = ->
 </div>
 <div id="toolbar">
   <a class="save_btn" title="#{chrome.i18n.getMessage('save')}"><i class="icon-save"></i></a>
+  <a class="find_btn" title="#{chrome.i18n.getMessage('find')}"><i class="icon-search"></i></a>
+  <a class="toggle_invisibles_btn" title="#{chrome.i18n.getMessage('toggle_invisibles')}"><i class="icon-eye-open"></i></a>
   <a class="indent_btn" title="#{chrome.i18n.getMessage('indent')}"><i class="icon-indent-right"></i></a>
   <a class="outdent_btn" title="#{chrome.i18n.getMessage('outdent')}"><i class="icon-indent-left"></i></a>
   <a class="full_window_btn" title="#{chrome.i18n.getMessage('full_window')}"><i class="icon-fullscreen"></i></a>
+  <a class="options_btn" title="#{chrome.i18n.getMessage('options')}"><i class="icon-cog"></i></a>
   <a class="check_for_updates_btn" title="#{chrome.i18n.getMessage('check_for_updates')}"><i class="icon-cloud-download"></i></a>
   <a class="about_btn" title="#{chrome.i18n.getMessage('about')} Slim Text"><i class="icon-info-sign"></i></a>
   <i class="icon-fullscreen" id="hidden_btn"></i>

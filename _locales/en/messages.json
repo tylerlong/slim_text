@@ -21,16 +21,16 @@
         "message": "Syntax"
     },
     "full_window": {
-        "message": "Full Window"
+        "message": "Full window"
     },
     "exit_full_window": {
-        "message": "Exit full Window"
+        "message": "Exit full window"
     },
     "options": {
         "message": "Options"
     },
     "keyboard_shortcuts": {
-        "message": "Keyboard Shortcuts"
+        "message": "Keyboard shortcuts"
     },
     "website": {
         "message": "Website"
@@ -81,7 +81,7 @@
         "message": "Command not found"
     },
     "toggle_invisibles": {
-        "message": "Show/Hide invisibles"
+        "message": "Show/hide invisibles"
     },
     "toggle_word_wrap": {
         "message": "Toggle word wrap"

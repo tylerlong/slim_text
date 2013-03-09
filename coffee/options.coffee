@@ -4,7 +4,7 @@ $ ->
     $('#tab_size_label').text chrome.i18n.getMessage('tab_size')
     $('#key_binding_label').text chrome.i18n.getMessage('key_binding')
     $('#save_btn').text chrome.i18n.getMessage('save')
-    
+
     _.each _.range(8, 33), (i) ->
         $('#font_size').append $("""<option value="#{i}">#{i}px</option>""")
     
@@ -28,7 +28,7 @@ $ ->
             $('span#tab_size_value').text $(this).val()
 
         $('button#save_btn').click ->
-            options = 
+            options =
                 'theme': $('select#theme').val()
                 'font_size': $('select#font_size').val() 
                 'key_binding': $('select#key_binding').val()
