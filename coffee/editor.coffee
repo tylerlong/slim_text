@@ -48,33 +48,29 @@ window.show_breadcrumb = (path) ->
         $('#route').append("#{item.name}")
 
 
+clickable = (item) ->
+    if item.type == 'file'
+        extension = file_manager.extension(item.name)
+        if extension.length > 0
+            extension = extension.toLowerCase().substr(1, extension.length - 1)
+            return false if window.is_binary(extension)
+    return true
 window.show_sidebar = (path) ->
     $('#sidebar').empty()
     items = file_manager.list(path)
-    items = _.filter items, (item) ->
-        if item.type == 'folder'
-            return true
-        if item.type == 'file'
-            extension = file_manager.extension(item.name)
-            if extension == ''
-                return true
-            if extension == item.name
-                return true
-            extension = extension.toLowerCase().substr(1, extension.length - 1)
-            if window.known_extension(extension)
-                return true
-        return false
     items = _.sortBy items, (item) ->
         item.name.toLowerCase()
     for item in items
         if item.path == window.storage.file
-            $('#sidebar').append "<span>#{item.name}</span>"
-        else
+            $('#sidebar').append """<span class="current">#{item.name}</span>"""
+        else if clickable(item)
             link = $("""<a class="file-link">#{item.name}</a>""")
             link.data("path", item.path)
             $('#sidebar').append link
             if item.type == 'folder'
                 $('#sidebar').append '/'
+        else 
+            $('#sidebar').append "<span>#{item.name}</span>"
         $('#sidebar').append "<br/>"
 
 
@@ -194,8 +190,7 @@ window.open_path = (path) ->
     type = file_manager.type path
     if type == 'file'
         if document.title.indexOf('* ') == 0
-            if not confirm(""""#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}""")
-                return
+            return if not confirm(""""#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}""")
         window.storage.file = path
         content = file_manager.read(path)
         editor.session.setValue content, -1

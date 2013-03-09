@@ -275,6 +275,68 @@ names =
     'OCamlMakefile': 'makefile'
     
 
+binaries = 
+    'gif': true
+    'png': true
+    'jpg': true
+    'jpeg': true
+    'ico': true
+    'bmp': true
+    'psd': true
+    'tiff': true
+    
+    'iso': true
+    'zip': true
+    'rar': true
+    'tar': true
+    'jar': true
+    '7z': true
+    'war': true
+    'gzip': true
+    'bz2': true
+    'cab': true
+    'uue': true
+    'gz': true
+    'bzip2': true
+    'dmg': true
+    'deb': true
+    'rpm': true
+    'tgz': true
+    'z': true
+    
+    'mp3': true
+    'mp4': true
+    'avi': true
+    'mov': true
+    'rm': true
+    'rmvb': true
+    'asf': true
+    'mtv': true
+    'amv': true
+    'swf': true
+    'divx': true
+    'wmv': true
+    'smv': true
+    '3gp': true
+    'mkv': true
+    'flv': true
+    'f4v': true
+    'webm': true
+    
+    'pyc': true
+    'swp': true
+    
+    'dll': true
+    'so': true
+    
+    'woff': true
+    'eot': true
+    'ttf': true
+    'otf': true
+    
+    'rsrc': true
+    
+    
 window.guess_mode_by_extension = (file_extension) ->
     mode = extensions[file_extension]
     if not mode
@@ -292,4 +354,8 @@ window.guess_mode_by_name = (name) ->
 window.known_extension = (file_extension) ->
     if extensions[file_extension]
         return true
+    return false
+
+window.is_binary = (file_extension) ->
+    return true if binaries[file_extension]
     return false

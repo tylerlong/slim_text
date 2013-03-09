@@ -20,11 +20,6 @@ easy first, hard last, no hurry!
 90. Support tabs(inside the same chrome tab window)?
     1. there is tab example in the jquery ui layout project
     2. will not support this feature in version 0.0.1, postpone
-92. ubuntu bug：Chinese input eats a character after cursor
-    1. ubuntu has this problem
-        1. maybe it is a bug of the ibus input program
-        2. ace editor have this problem, report the bug to them!
-    2. windows OK, Mac OK
 93. bug: if current focus is not the editor window, ctrl + s does not work
     1. use chrome extension to listen this keyboard event?
 96. bug: windows csharp file, show BOM as *
@@ -45,7 +40,6 @@ easy first, hard last, no hurry!
 112. bug: slow when open windows 7 C: / Windows / System32
     1. caused by underscorejs filter method?
 115. make all the icons padded?
-116. change the filter algorithm, filter all binary files while keep all text files
 118. should be able to open a folder quickly.
     1. for example, register a folder as a button, and click that button.
     2. register workspace, quick open
@@ -98,7 +92,7 @@ easy first, hard last, no hurry!
     5. select a candidate to open
 162. Preview markdown: https://gist.github.com/4670615
 163. cvanalyze.com click qq icon can launch qq, investigate
-164. 
+164. change default theme to Merbivorse Soft
 
 
 ## won't fix
