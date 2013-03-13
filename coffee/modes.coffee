@@ -322,6 +322,7 @@ binaries =
     'flv': true
     'f4v': true
     'webm': true
+    'wav': true
     
     'pyc': true
     'swp': true
@@ -342,6 +343,12 @@ binaries =
     'doc': true
     'docx': true
     'ppt': true
+    'xls': true
+    'wk4': true
+    'shw': true
+    'wb2': true
+    'wpd': true
+    'wpg': true
     
     
 window.guess_mode_by_extension = (file_extension) ->
