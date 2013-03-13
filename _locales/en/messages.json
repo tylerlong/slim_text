@@ -136,5 +136,17 @@
     },
     "new_folder": {
         "message": "New folder"
+    },
+    "invalid_path_name": {
+        "message": "Invalid path name"
+    },
+    "already_exists": {
+        "message": "Already exists"
+    },
+    "create_file": {
+        "message": "Create file"
+    },
+    "create_folder": {
+        "message": "Create folder"
     }
 }

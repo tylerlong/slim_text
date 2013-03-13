@@ -136,5 +136,17 @@
     },
     "new_folder": {
         "message": "新建文件夹"
+    },
+    "invalid_path_name": {
+        "message": "非法的路径名"
+    },
+    "already_exists": {
+        "message": "已经存在"
+    },
+    "create_file": {
+        "message": "创建文件"
+    },
+    "create_folder": {
+        "message": "创建文件夹"
     }
 }

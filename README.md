@@ -103,14 +103,16 @@ easy first, hard last, no hurry!
     2. html files
 177. bug: Emacs ctrl + n conflicts with chrome create a new windows
     1. if I am an Emacs user, I feel quite annoying
-178. bug: can not save a new file!
-    1. a lot of users are complaining!
 179. s open /path/to/a/file should work even in a tab which is not the Slim Text.
   1. in such case, open a new tab
   2. if the current tab is blank, use the current tab.
 180. make it an app instead of an extension
     1. at least two uses request this
-181. 
+182. remove file/folder
+183. rename file/folder
+184. minor bug: right after installation, the path for windows is backslash instead of slash
+    1. problem resolved if you click any path
+185. 
 
 
 ## won't fix

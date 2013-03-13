@@ -6,6 +6,18 @@ window.combine_path = (path1, path2) ->
     file_manager.combine path1, path2
     
 
+window.prompt_file_name = ->
+    file_name = prompt "#{chrome.i18n.getMessage('create_file')} #{window.storage.path}/"
+    if not file_name or file_name.trim() == ''
+        return
+    if not file_manager.valid_name file_name
+        return window.notice chrome.i18n.getMessage('invalid_path_name'), file_name
+    file_path = "#{window.storage.path}/#{file_name}"
+    if file_manager.exists file_path
+        return window.notice chrome.i18n.getMessage('already_exists'), file_path
+    return file_path
+    
+
 window.save_file = ->
     if window.storage.file
         result = file_manager.write window.storage.file, editor.getValue()
@@ -14,32 +26,31 @@ window.save_file = ->
             document.title = "#{file_manager.filename(window.storage.file)} - Slim Text"
         else
             alert "#{chrome.i18n.getMessage('unable_to_save')} #{window.storage.file}"
+    else
+        window.storage.file = window.prompt_file_name()
+        return if not window.storage.file
+        window.save_file()
+        window.show_sidebar window.storage.path
 
 
 window.create_file = ->
-    file_name = prompt "Create file #{window.storage.path}/"
-    if not file_name or file_name.trim() == ''
-        return
-    if not file_manager.valid_name file_name
-        return window.notice 'Invalid file name', file_name
-    file_path = "#{window.storage.path}/#{file_name}"
-    if file_manager.exists file_path
-        return window.notice 'File already exists', file_path
+    file_path = window.prompt_file_name()
+    return if not file_path
     file_manager.write file_path, ''
     window.open_path file_path
 
 
 window.create_folder = ->
-    folder_name = prompt "Create folder #{window.storage.path}/"
+    folder_name = prompt "#{chrome.i18n.getMessage('create_folder')} #{window.storage.path}/"
     if not folder_name or folder_name.trim() == ''
         return
     if not file_manager.valid_name folder_name
-        return window.notice 'Invalid folder name', folder_name
+        return window.notice chrome.i18n.getMessage('invalid_path_name'), folder_name
     folder_path = "#{window.storage.path}/#{folder_name}"
     if file_manager.exists folder_path
-        return window.notice 'Folder already exists', folder_path
+        return window.notice chrome.i18n.getMessage('already_exists'), folder_path
     file_manager.create_folder folder_path
-    window.open_path window.storage.path
+    window.show_sidebar window.storage.path
 
 
 window.show_breadcrumb = (path) ->
