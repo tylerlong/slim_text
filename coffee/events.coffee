@@ -77,6 +77,12 @@ $('body').on 'click', '.find_btn', ->
 
 $('body').on 'click', '.replace_btn', ->
     ace.require('ace/ext/searchbox').Search(window.editor, true)
+    
+$('body').on 'click', '.new_file_btn', ->
+    setTimeout((-> window.create_file()), 50)
+
+$('body').on 'click', '.new_folder_btn', ->
+    setTimeout((-> window.create_folder()), 50)
 
 $('body').on 'click', '.check_for_updates_btn', ->
     $.get('https://raw.github.com/tylerlong/slimtext.org/gh-pages/__version__', (data) ->

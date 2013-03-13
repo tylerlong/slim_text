@@ -16,6 +16,32 @@ window.save_file = ->
             alert "#{chrome.i18n.getMessage('unable_to_save')} #{window.storage.file}"
 
 
+window.create_file = ->
+    file_name = prompt "Create file #{window.storage.path}/"
+    if not file_name or file_name.trim() == ''
+        return
+    if not file_manager.valid_name file_name
+        return window.notice 'Invalid file name', file_name
+    file_path = "#{window.storage.path}/#{file_name}"
+    if file_manager.exists file_path
+        return window.notice 'File already exists', file_path
+    file_manager.write file_path, ''
+    window.open_path file_path
+
+
+window.create_folder = ->
+    folder_name = prompt "Create folder #{window.storage.path}/"
+    if not folder_name or folder_name.trim() == ''
+        return
+    if not file_manager.valid_name folder_name
+        return window.notice 'Invalid folder name', folder_name
+    folder_path = "#{window.storage.path}/#{folder_name}"
+    if file_manager.exists folder_path
+        return window.notice 'Folder already exists', folder_path
+    file_manager.create_folder folder_path
+    window.open_path window.storage.path
+
+
 window.show_breadcrumb = (path) ->
     $('#route').empty()
     route = file_manager.route(path)
@@ -82,6 +108,8 @@ window.add_topbar = ->
         <b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
+          <li><a class="new_file_btn">#{chrome.i18n.getMessage('new_file')}</a></li>
+          <li><a class="new_folder_btn">#{chrome.i18n.getMessage('new_folder')}</a></li>
           <li><a class="save_btn">#{chrome.i18n.getMessage('save')}</a></li>
       </ul>
     </span>
@@ -148,6 +176,8 @@ window.add_topbar = ->
     </span>
 </div>
 <div id="toolbar">
+  <a class="new_file_btn" title="#{chrome.i18n.getMessage('new_file')}"><i class="icon-file"></i></a>
+  <a class="new_folder_btn" title="#{chrome.i18n.getMessage('new_folder')}"><i class="icon-folder-close-alt"></i></a>
   <a class="save_btn" title="#{chrome.i18n.getMessage('save')}"><i class="icon-save"></i></a>
   <a class="find_btn" title="#{chrome.i18n.getMessage('find')}"><i class="icon-search"></i></a>
   <a class="toggle_invisibles_btn" title="#{chrome.i18n.getMessage('toggle_invisibles')}"><i class="icon-eye-open"></i></a>
@@ -224,7 +254,7 @@ $ ->
 
     chrome.storage.sync.get ['theme', 'font_size', 'key_binding', 'tab_size'], (items) ->
         if not items.theme
-            items.theme = 'merbivore_soft'
+            items.theme = 'monokai'
         if not items.font_size
             items.font_size = '12'
         if not items.key_binding

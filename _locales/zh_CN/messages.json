@@ -130,5 +130,11 @@
     },
     "tab_size": {
         "message": "制表符大小"
+    },
+    "new_file": {
+        "message": "新建文件"
+    },
+    "new_folder": {
+        "message": "新建文件夹"
     }
 }

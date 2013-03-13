@@ -336,6 +336,13 @@ binaries =
     
     'rsrc': true
     
+    'exe': true
+    'msi': true
+    
+    'doc': true
+    'docx': true
+    'ppt': true
+    
     
 window.guess_mode_by_extension = (file_extension) ->
     mode = extensions[file_extension]

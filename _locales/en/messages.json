@@ -130,5 +130,11 @@
     },
     "tab_size": {
         "message": "Tab size"
+    },
+    "new_file": {
+        "message": "New file"
+    },
+    "new_folder": {
+        "message": "New folder"
     }
 }
