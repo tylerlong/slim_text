@@ -11,6 +11,7 @@ window.modes =
     'dart': 'Dart'
     'diff': 'Diff'
     'dot': 'Dot'
+    'ftl': 'FreeMarker'
     'glsl': 'Glsl'
     'golang': 'Golang'
     'groovy': 'Groovy'
@@ -27,6 +28,9 @@ window.modes =
     'less': 'LESS'
     'liquid': 'Liquid'
     'lisp': 'Lisp'
+    'livescript': 'LiveScript'
+    'logiql': 'LogiQL'
+    'lsl': 'LSL'
     'lua': 'Lua'
     'luapage': 'LuaPage'
     'lucene': 'Lucene'
@@ -34,6 +38,7 @@ window.modes =
     'markdown': 'Markdown'
     'objectivec': 'Objective-C'
     'ocaml': 'Ocaml'
+    'pascal': 'Pascal'
     'perl': 'Perl'
     'pgsql': 'pgSQL'
     'php': 'PHP'
@@ -43,6 +48,7 @@ window.modes =
     'rdoc': 'RDoc'
     'rhtml': 'RHTML'
     'ruby': 'Ruby'
+    'sass': 'SASS'
     'scad': 'OpenSCAD'
     'scala': 'Scala'
     'scheme': 'Scheme'
@@ -56,6 +62,7 @@ window.modes =
     'text': 'Text'
     'textible': 'Textile'
     'tm_snippet': 'tmSnippet'
+    'toml': 'toml'
     'typescript': 'Typescript'
     'vbscript': 'VBScript'
     'xml': 'XML'
@@ -68,9 +75,6 @@ extensions =
 
     'asciidoc': 'asciidoc'
     
-    'c9search_results': 'c9search'
-    'c9search': 'c9search'
-
     'cpp': 'c_cpp'
     'h': 'c_cpp'
     'hh': 'c_cpp'
@@ -104,6 +108,9 @@ extensions =
     'patch': 'diff'
 
     'dot': 'dot'
+    
+    'ftl': 'ftl'
+    'freemarker': 'ftl'
 
     'glsl': 'glsl'
     'vert': 'glsl'
@@ -156,6 +163,15 @@ extensions =
     'lp': 'luapage'
 
     'lucene': 'lucene'
+    
+    'livescript': 'livescript'
+    'ls': 'livescript'
+    
+    'logiql': 'logiql'
+    'lql': 'logiql'
+    'logic': 'logiql'
+    
+    'lsl': 'lsl'
 
     'cmake': 'makefile'
     'make': 'makefile'
@@ -171,6 +187,10 @@ extensions =
     'ml': 'ocaml'
     'mli': 'ocaml'
     'ocaml': 'ocaml'
+    
+    'pascal': 'pascal'
+    'p': 'pascal'
+    'pas': 'pascal'
 
     'pl': 'perl'
     'pm': 'perl'
@@ -213,8 +233,9 @@ extensions =
     'rkt': 'scheme'
     'scheme': 'scheme'
 
+    'sass': 'sass'
+    
     'scss': 'scss'
-    'sass': 'scss'
 
     'sh': 'sh'
     'bash': 'sh'
@@ -240,6 +261,8 @@ extensions =
     
     'tmSnippet': 'tm_snippet'
     'tm_snippet': 'tm_snippet'
+    
+    'toml': 'toml'
 
     'typescript': 'typescript'
     'ts': 'typescript'
@@ -369,6 +392,7 @@ window.known_extension = (file_extension) ->
     if extensions[file_extension]
         return true
     return false
+
 
 window.is_binary = (file_extension) ->
     return true if binaries[file_extension]
