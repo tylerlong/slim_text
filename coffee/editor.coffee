@@ -9,12 +9,14 @@ window.combine_path = (path1, path2) ->
 window.prompt_file_name = ->
     file_name = prompt "#{chrome.i18n.getMessage('create_file')} #{window.storage.path}/"
     if not file_name or file_name.trim() == ''
-        return
+        return false
     if not file_manager.valid_name file_name
-        return window.notice chrome.i18n.getMessage('invalid_path_name'), file_name
+        window.notice chrome.i18n.getMessage('invalid_path_name'), file_name
+        return false
     file_path = "#{window.storage.path}/#{file_name}"
     if file_manager.exists file_path
-        return window.notice chrome.i18n.getMessage('already_exists'), file_path
+        window.notice chrome.i18n.getMessage('already_exists'), file_path
+        return false
     return file_path
     
 
@@ -247,9 +249,9 @@ window.open_path = (path) ->
         else 
             editor.getSession().setMode window.guess_mode_by_name(filename)
         path = file_manager.container(path)
-    while not file_manager.can_list path
+    if not file_manager.can_list path
         window.notice chrome.i18n.getMessage('permission_denied'), path
-        path = file_manager.container(path)
+        path = file_manager.home_folder() or file_manager.temp_folder()
     window.storage.path = path
     show_breadcrumb path
     show_sidebar path
