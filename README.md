@@ -6,7 +6,7 @@ Slim Text is a Slim Text editor which runs inside a web browser.
 ## priority items
 
 easy first, hard last, no hurry!
-135, 162
+175, 135, 162
 
 
 ## todo list
@@ -99,9 +99,7 @@ easy first, hard last, no hurry!
     1. such as show/hide invisibles, two states: show invisibles and hide invisibles
 173. create seperators for toolbar icons
 175. add toolbar icon for "Report an issue", because I think gathering user feedback is very important
-176. compress more files before deployment
-    1. json files
-    2. html files
+176. compress html files before deployment
 177. bug: Emacs ctrl + n conflicts with chrome create a new windows
     1. if I am an Emacs user, I feel quite annoying
 179. s open /path/to/a/file should work even in a tab which is not the Slim Text.

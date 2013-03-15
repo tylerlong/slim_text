@@ -25,7 +25,8 @@ def dist():
     with workspace():
         run('mkdir -p {0}/'.format(folder))
         run('rm -rf {0}/*'.format(folder))
-        run('cp -r _locales/ {0}/'.format(folder))
+        
+        run('cp -r _locales {0}/'.format(folder))
         
         run('mkdir -p {0}/ace/src-min-noconflict/'.format(folder))
         run('cp -r ace/src-min-noconflict/* {0}/ace/src-min-noconflict/'.format(folder))
@@ -36,7 +37,10 @@ def dist():
         run('scss -t compressed css/jquery.layout.css {0}/css/jquery.layout.css'.format(folder))
         run('scss -t compressed css/options.css {0}/css/options.css'.format(folder))
         
-        run('cp -r font/ {0}/'.format(folder))
+        run('mkdir -p {0}/font/'.format(folder))
+        run('scss -t compressed font/fonts.css {0}/font/fonts.css'.format(folder))
+        run('cp -r -n font/* {0}/font/'.format(folder))
+        
         run('cp -r html/ {0}/'.format(folder))
         
         run('mkdir -p {0}/image/'.format(folder))  
