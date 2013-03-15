@@ -10,6 +10,7 @@ window.modes =
     'curly': 'Curly'
     'dart': 'Dart'
     'diff': 'Diff'
+    'django': 'Django'
     'dot': 'Dot'
     'ftl': 'FreeMarker'
     'glsl': 'Glsl'
