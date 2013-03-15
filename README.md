@@ -25,7 +25,8 @@ easy first, hard last, no hurry!
     1. use chrome extension to listen this keyboard event?
 96. bug: windows csharp file, show BOM as *
 97. enable ace editor features:
-    1. remove trailing space upon saving
+    1. remove trailing spaces upon saving
+        1. some one hate trailing spaces a lot!
     2. add new line to the end of file upon saving
     4. auto complete
 99. marketing
@@ -112,7 +113,9 @@ easy first, hard last, no hurry!
 183. rename file/folder
 184. minor bug: right after installation, the path for windows is backslash instead of slash
     1. problem resolved if you click any path
-185. 
+185. should be able to define filter, do not show some kind of files
+    1. such as *.pyc
+186. 
 
 
 ## won't fix
