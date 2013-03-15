@@ -6,7 +6,7 @@ Slim Text is a Slim Text editor which runs inside a web browser.
 ## priority items
 
 easy first, hard last, no hurry!
-135, 162
+186, 135, 162
 
 
 ## todo list
@@ -112,7 +112,8 @@ easy first, hard last, no hurry!
     1. problem resolved if you click any path
 185. should be able to define filter, do not show some kind of files
     1. such as *.pyc
-186. 
+186. Minor bug: save a new file, the file on left panel does not appear as white color
+187. 
 
 
 ## won't fix
