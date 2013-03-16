@@ -113,7 +113,13 @@ easy first, hard last, no hurry!
 185. should be able to define filter, do not show some kind of files
     1. such as *.pyc
 186. Minor bug: save a new file, the file on left panel does not appear as white color
-187. 
+187. can not be installed on win8!
+    1. this application is not supported on this computer. Installation has been disabled
+    2. it is said that run chrome in win7 compatible mode can resolve this issue
+188. hidden files, useless files such as *.pyc
+    1. some body said that they didn't want to see them
+    2. combine this feature together with show invisibles quick button?
+189. 
 
 
 ## won't fix
