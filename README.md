@@ -119,7 +119,8 @@ easy first, hard last, no hurry!
 188. hidden files, useless files such as *.pyc
     1. some body said that they didn't want to see them
     2. combine this feature together with show invisibles quick button?
-189. 
+189. NPAPI seems broken on linux mint
+190. 
 
 
 ## won't fix
