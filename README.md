@@ -13,17 +13,11 @@ easy first, hard last, no hurry!
 
 68. auto detect file change outside of the editor and load the newest content into editor
     1. advanced feature, postpone
-85. windows bug: does not support chinese characters in path
-    1. ubuntu OK, Mac OK
-    2. windows 7 list result does not contain Chinese folders or files at all
-    3. windows xp show Chinese folders as drunk codes, can not list the folder and can not open file
-86. bug: chinese encoding decoding issue for C:/QQDownload/From Tyler/01.htm
 90. Support tabs(inside the same chrome tab window)?
     1. there is tab example in the jquery ui layout project
     2. will not support this feature in version 0.0.1, postpone
 93. bug: if current focus is not the editor window, ctrl + s does not work
     1. use chrome extension to listen this keyboard event?
-96. bug: windows csharp file, show BOM as *
 97. enable ace editor features:
     1. remove trailing spaces upon saving
         1. some one hate trailing spaces a lot!
@@ -38,11 +32,9 @@ easy first, hard last, no hurry!
     1. page actions, to change the appearance or behavior of the software, such as change background, such as define new shortcut key 
     2. advanced feature, postpone
     3. is it viable and practical?
-107. provide multiple themes and icons, the user can switch themes and icons
 111. bug: windows 7 C: / Windows / System32 / drivers, can not see the etc/ folder
 112. bug: slow when open windows 7 C: / Windows / System32
     1. caused by underscorejs filter method?
-115. make all the icons padded?
 118. should be able to open a folder quickly.
     1. for example, register a folder as a button, and click that button.
     2. register workspace, quick open
@@ -52,10 +44,6 @@ easy first, hard last, no hurry!
 123. do not need any omnibox keyword at all?
     1. google search does not need keyword at all, so it is technically possible
 125. launch via command line, such as subl . &
-132. infobar to issue commands? http://developer.chrome.com/extensions/experimental.infobars.html
-    1. and for find and replace?
-    2. and for create new files?
-    3. problem: this feature is currently experimental, disabled by default unless user change some flag manually.
 133. open a new tab, default path is the current tab's path?
     1. the same as ubuntu terminal
 135. go through this page: http://ace.ajax.org/#nav=production
@@ -67,10 +55,10 @@ easy first, hard last, no hurry!
     1. 四死私似思斯司丝驷
     2. 零另令灵领玲凌玲聆伶
     3. no hurry, postpone
+    4. 要普通中国人接受这个编辑器，必须得有中文名!
 142. add increase font-size or decrease font-size to menu ?
-151. split window?
-  1. design this feature together with multiple tabs
-155. can diable soft tab?
+    1. and persist locally
+    2. when open the editor, first check local storage, then check sync storage, and then last storage. Use the first one found.
 157. bug: searchbox too weak, can not specify case-sensitive and regex search
 158. chrome history api to go back to last folder?
     1. I think use history api for quick file open is possible. can do free form searching
@@ -96,8 +84,6 @@ easy first, hard last, no hurry!
 179. s open /path/to/a/file should work even in a tab which is not the Slim Text.
   1. in such case, open a new tab
   2. if the current tab is blank, use the current tab.
-180. make it an app instead of an extension
-    1. at least two uses request this
 182. remove file/folder
 183. rename file/folder
 184. minor bug: right after installation, the path for windows is backslash instead of slash
@@ -108,11 +94,14 @@ easy first, hard last, no hurry!
 187. can not be installed on win8!
     1. this application is not supported on this computer. Installation has been disabled
     2. it is said that run chrome in win7 compatible mode can resolve this issue
+    3. install win8 and do testing
+    4. write instructions for win8 users
 188. hidden files, useless files such as *.pyc
     1. some body said that they didn't want to see them
     2. combine this feature together with show invisibles quick button?
 189. NPAPI seems broken on linux mint
-190. write instructions for win8 users
+    1. not working on Linux Mint 14 Cinnamon desktop 32 bit
+    2. try it on mint 64bit mate desktop
 191. update the website once standalone version is ready
 192. create chrome packaged app version?
     1. there are issue: jquery ui layout does not run in chrome packaged app
@@ -122,8 +111,17 @@ easy first, hard last, no hurry!
         1. user have to open a dialog each time he wants to open a file
         2. So NPAPI is still needed
     3. already have chrome extension version and Qt version
-193. 
-
+    4. at least two uses request this
+    5. but I cannot see the value. there is no major advantages.
+193. chinese characters in path
+    1. ubuntu OK, Mac OK
+    2. hard-coded gb2312 decoding, works for windows xp Chinese version, not work for win7 English version
+    3. should detect locale instead of hard-coded
+194. file content encode issue on windows
+    1. create a text file, contains Chinese characters. The file encoding is ANSI by default
+    2. open in Slim Text, Chinese characters are unreadable
+    3. bug: chinese encoding decoding issue for C:/QQDownload/From Tyler/01.htm
+    4. bug: windows csharp file, show BOM as * (because cannot handle utf8 with BOM)
 
 ## won't fix
 
