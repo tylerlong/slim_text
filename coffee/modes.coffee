@@ -389,12 +389,6 @@ window.guess_mode_by_name = (name) ->
     return "ace/mode/#{mode}"
     
 
-window.known_extension = (file_extension) ->
-    if extensions[file_extension]
-        return true
-    return false
-
-
 window.is_binary = (file_extension) ->
     return true if binaries[file_extension]
     return false

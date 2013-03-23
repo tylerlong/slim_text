@@ -86,14 +86,6 @@ easy first, hard last, no hurry!
 162. Preview markdown: https://gist.github.com/4670615
 163. cvanalyze.com click qq icon can launch qq, investigate
 166. spell check (it is an ext of Ace)
-167. Text Drive 这个app可以直接读写本地的文件! 了解下是怎么做的！！！
-    1. https://chrome.google.com/webstore/detail/text-drive/mmfbcljfglbokpmkimbfghdkjmjhdgbg
-    2. 在我电脑上的目录： C:\Users\Tyler\AppData\Local\Google\Chrome\User Data\Default\Extensions\mmfbcljfglbokpmkimbfghdkjmjhdgbg\0.2.38_0
-    3. 初步的了解， 它没有用NPAPI
-    4. 貌似是因为app的缘故？ app的权限远大于extension？
-        1. 正确来讲， 是packaged app的权限非常大。 这是个新东东， 不得不学。
-    5. 我可以用这个推出桌面版的Slim Text？
-168. 开发桌面版的Slim Text， 利用这里的技术： http://developer.chrome.com/apps/about_apps.html
 169. 这篇文章不错： http://www.ibm.com/developerworks/library/os-extendchrome/index.html
 172. differentiate states for some operations
     1. such as show/hide invisibles, two states: show invisibles and hide invisibles
@@ -120,7 +112,17 @@ easy first, hard last, no hurry!
     1. some body said that they didn't want to see them
     2. combine this feature together with show invisibles quick button?
 189. NPAPI seems broken on linux mint
-190. 
+190. write instructions for win8 users
+191. update the website once standalone version is ready
+192. create chrome packaged app version?
+    1. there are issue: jquery ui layout does not run in chrome packaged app
+        1. packaged app does not support unload event
+        2. but I can create the app wihout jquery ui layout
+    2. can not list a folder. only file dialog available. 
+        1. user have to open a dialog each time he wants to open a file
+        2. So NPAPI is still needed
+    3. already have chrome extension version and Qt version
+193. 
 
 
 ## won't fix
