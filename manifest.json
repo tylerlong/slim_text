@@ -35,6 +35,10 @@
             "public": false
         },
         {
+            "path": "plugin/npFileManager.so",
+            "public": false
+        },
+        {
             "path": "plugin/npFileManager.plugin",
             "public": false
         }

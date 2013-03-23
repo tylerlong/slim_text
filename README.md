@@ -123,8 +123,11 @@ easy first, hard last, no hurry!
     1. tested agaist Mint and Ubuntu, 64-bit OK, 32-bit NPAPI broken
 196. does it work on 32-bit Mac?
     1. ask Fengyun Liu first
-197. 
-
+197. Minor bug: windows 中文文件夹后面没有'/'
+    1. winxp OK, win7 has this bug
+198. Question: File Manager, why not wstring as parameter directly?
+199. remove boost_filesystem_version 3. it is not necessary. Is it?
+200. 
 
 ## won't fix
 
