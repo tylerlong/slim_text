@@ -99,9 +99,6 @@ easy first, hard last, no hurry!
 188. hidden files, useless files such as *.pyc
     1. some body said that they didn't want to see them
     2. combine this feature together with show invisibles quick button?
-189. NPAPI seems broken on linux mint
-    1. not working on Linux Mint 14 Cinnamon desktop 32 bit
-    2. try it on mint 64bit mate desktop
 191. update the website once standalone version is ready
 192. create chrome packaged app version?
     1. there are issue: jquery ui layout does not run in chrome packaged app
@@ -122,6 +119,12 @@ easy first, hard last, no hurry!
     2. open in Slim Text, Chinese characters are unreadable
     3. bug: chinese encoding decoding issue for C:/QQDownload/From Tyler/01.htm
     4. bug: windows csharp file, show BOM as * (because cannot handle utf8 with BOM)
+195. does not support Linux 32-bit
+    1. tested agaist Mint and Ubuntu, 64-bit OK, 32-bit NPAPI broken
+196. does it work on 32-bit Mac?
+    1. ask Fengyun Liu first
+197. 
+
 
 ## won't fix
 

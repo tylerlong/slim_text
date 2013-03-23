@@ -3,7 +3,7 @@
     "version": "0.0.6",
     "manifest_version": 2,
     "default_locale": "en",
-    
+
     "description": "__MSG_description__",
     "icons": { 
         "16": "image/icon16.png", 
@@ -16,7 +16,7 @@
         "notifications",
         "*://*/*"
     ],
-    
+
     "omnibox": { "keyword": "s" },
 
     "background": { "scripts": ["js/background.js"] },
@@ -31,11 +31,11 @@
             "public": false
         },
         {
-            "path": "plugin/npFileManager.plugin",
+            "path": "plugin/npFileManager_64.so",
             "public": false
         },
         {
-            "path": "plugin/npFileManager.so",
+            "path": "plugin/npFileManager.plugin",
             "public": false
         }
     ],
