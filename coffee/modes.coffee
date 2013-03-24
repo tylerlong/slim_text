@@ -373,6 +373,7 @@ binaries =
     'wb2': true
     'wpd': true
     'wpg': true
+    'pdf': true
     
     
 window.guess_mode_by_extension = (file_extension) ->

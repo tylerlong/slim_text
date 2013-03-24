@@ -306,7 +306,7 @@ $ ->
         west:
             spacing_open: 5
             livePaneResizing: true
-            size: 128
+            size: 192
             togglerLength_open: 0
             togglerLength_closed: 0
             slideTrigger_open: 'mouseover'

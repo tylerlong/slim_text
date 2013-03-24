@@ -119,15 +119,10 @@ easy first, hard last, no hurry!
     2. open in Slim Text, Chinese characters are unreadable
     3. bug: chinese encoding decoding issue for C:/QQDownload/From Tyler/01.htm
     4. bug: windows csharp file, show BOM as * (because cannot handle utf8 with BOM)
-195. does not support Linux 32-bit
-    1. tested agaist Mint and Ubuntu, 64-bit OK, 32-bit NPAPI broken
 196. does it work on 32-bit Mac?
     1. ask Fengyun Liu first
-197. Minor bug: windows 中文文件夹后面没有'/'
-    1. winxp OK, win7 has this bug
-198. Question: File Manager, why not wstring as parameter directly?
-199. remove boost_filesystem_version 3. it is not necessary. Is it?
-200. 
+200. bug: cannot see mounted external dirves in windows. such as virtualbox shared folder
+202. 
 
 ## won't fix
 
