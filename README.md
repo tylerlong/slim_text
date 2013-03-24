@@ -77,7 +77,6 @@ easy first, hard last, no hurry!
 169. 这篇文章不错： http://www.ibm.com/developerworks/library/os-extendchrome/index.html
 172. differentiate states for some operations
     1. such as show/hide invisibles, two states: show invisibles and hide invisibles
-173. create seperators for toolbar icons
 176. compress html files before deployment
 177. bug: Emacs ctrl + n conflicts with chrome create a new windows
     1. if I am an Emacs user, I feel quite annoying
@@ -88,8 +87,6 @@ easy first, hard last, no hurry!
 183. rename file/folder
 184. minor bug: right after installation, the path for windows is backslash instead of slash
     1. problem resolved if you click any path
-185. should be able to define filter, do not show some kind of files
-    1. such as *.pyc
 186. Minor bug: save a new file, the file on left panel does not appear as white color
 187. can not be installed on win8!
     1. this application is not supported on this computer. Installation has been disabled
@@ -110,17 +107,11 @@ easy first, hard last, no hurry!
     3. already have chrome extension version and Qt version
     4. at least two uses request this
     5. but I cannot see the value. there is no major advantages.
-193. chinese characters in path
-    1. ubuntu OK, Mac OK
-    2. hard-coded gb2312 decoding, works for windows xp Chinese version, not work for win7 English version
-    3. should detect locale instead of hard-coded
 194. file content encode issue on windows
     1. create a text file, contains Chinese characters. The file encoding is ANSI by default
     2. open in Slim Text, Chinese characters are unreadable
     3. bug: chinese encoding decoding issue for C:/QQDownload/From Tyler/01.htm
     4. bug: windows csharp file, show BOM as * (because cannot handle utf8 with BOM)
-196. does it work on 32-bit Mac?
-    1. ask Fengyun Liu first
 200. bug: cannot see mounted external dirves in windows. such as virtualbox shared folder
 202. 
 
