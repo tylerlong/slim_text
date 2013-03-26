@@ -28,7 +28,7 @@ div.ui-layout-west, div.ui-layout-north {
 div.ui-layout-center {
     padding: 0;
 }
-#editor {
+div[id^=editor-] {
     position: absolute;
     top: 23px;
     left: 0;    

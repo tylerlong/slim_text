@@ -1,13 +1,20 @@
 window.tabs = $('#tabs').tabs()
 
+window.add_tab = () ->
+    uid = _.uniqueId()
+    $('#tabs').append """<div id="tab-#{uid}"><div id="editor-#{uid}"></div></div>"""
+    $("""<li><a href="#tab-#{uid}">New tab</a> <span class="ui-icon ui-icon-close">Remove tab</span></li>""").appendTo('#tabs .ui-tabs-nav')
+    $('#tabs').tabs 'refresh'
+    $('#tabs').tabs 'option', 'active', -1
+    window.editor = ace.edit "editor-#{uid}"
+window.add_tab()
 
-window.editor = ace.edit "editor"
 file_manager = document.getElementById('file_manager')
 
 
 window.combine_path = (path1, path2) ->
     file_manager.combine path1, path2
-    
+
 
 window.prompt_file_name = ->
     file_name = prompt "#{chrome.i18n.getMessage('create_file')} #{window.storage.path}/"
@@ -21,7 +28,7 @@ window.prompt_file_name = ->
         window.notice chrome.i18n.getMessage('already_exists'), file_path
         return false
     return file_path
-    
+
 
 window.save_file = ->
     if window.storage.file
