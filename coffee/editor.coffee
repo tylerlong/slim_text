@@ -7,7 +7,32 @@ window.add_tab = () ->
     $('#tabs').tabs 'refresh'
     $('#tabs').tabs 'option', 'active', -1
     window.editor = ace.edit "editor-#{uid}"
-window.add_tab()
+    window.init_editor window.editor
+    
+    lazy_change = _.debounce (->
+        if document.title.indexOf('* ') != 0
+            document.title = '* ' + document.title
+        ), 500, true
+    window.editor.getSession().on 'change', ->
+        lazy_change()
+
+window.init_editor = (editor) ->
+    chrome.storage.sync.get ['theme', 'font_size', 'key_binding', 'tab_size'], (items) ->
+        if not items.theme
+            items.theme = 'monokai'
+        if not items.font_size
+            items.font_size = '12'
+        if not items.key_binding
+            items.key_binding = 'ace'
+        if not items.tab_size
+            items.tab_size = 4
+        editor.setTheme "ace/theme/#{items.theme}"
+        editor.setFontSize "#{items.font_size}px"
+        editor.getSession().setTabSize(items.tab_size)
+        if items.key_binding == 'vim'
+            editor.setKeyboardHandler(ace.require("ace/keyboard/vim").handler)
+        else if items.key_binding == 'emacs'
+            editor.setKeyboardHandler(ace.require("ace/keyboard/emacs").handler)
 
 file_manager = document.getElementById('file_manager')
 
@@ -246,10 +271,11 @@ window.open_path = (path) ->
         return
     type = file_manager.type path
     if type == 'file'
-        if document.title.indexOf('* ') == 0
-            return if not confirm(""""#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}""")
+        #if document.title.indexOf('* ') == 0
+            #return if not confirm(""""#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}""")
         window.storage.file = path
         content = file_manager.read(path)
+        window.add_tab()
         editor.session.setValue content, -1
         filename = file_manager.filename(path)
         document.title = "#{filename} - Slim Text"
@@ -275,23 +301,6 @@ $ ->
         open_path path
         path = items.path or file_manager.home_folder() or file_manager.temp_folder()
         open_path path
-
-    chrome.storage.sync.get ['theme', 'font_size', 'key_binding', 'tab_size'], (items) ->
-        if not items.theme
-            items.theme = 'monokai'
-        if not items.font_size
-            items.font_size = '12'
-        if not items.key_binding
-            items.key_binding = 'ace'
-        if not items.tab_size
-            items.tab_size = 4
-        editor.setTheme "ace/theme/#{items.theme}"
-        editor.setFontSize "#{items.font_size}px"
-        editor.getSession().setTabSize(items.tab_size)
-        if items.key_binding == 'vim'
-            editor.setKeyboardHandler(ace.require("ace/keyboard/vim").handler)
-        else if items.key_binding == 'emacs'
-            editor.setKeyboardHandler(ace.require("ace/keyboard/emacs").handler)
 
     window.layout = $('body').layout
         spacing_closed: 5

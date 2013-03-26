@@ -6,26 +6,14 @@ window.exit_full_window = ->
     if window.layout.state.north.isClosed
         window.layout.open 'north'
 
-window.editor.commands.addCommand
-    name: 'saveCommand'
-    bindKey: { win: 'Ctrl-S',  mac: 'Command-S' }
-    exec: ->
+$(document).keydown (event) ->
+    if (String.fromCharCode(event.which).toLowerCase() == 's' and event.ctrlKey) or event.which == 19
         window.save_file()
-    readOnly: false
-    
-window.editor.commands.addCommand
-    name: 'exitFullWindowCommand'
-    bindKey: { win: 'Esc',  mac: 'Esc' }
-    exec: ->
+        event.preventDefault()
+        return false
+    else if event.which == 27
         window.exit_full_window()
-
-lazy_change = _.debounce (->
-    if document.title.indexOf('* ') != 0
-        document.title = '* ' + document.title
-    ), 500, true
-window.editor.getSession().on 'change', ->
-    lazy_change()
-    window.editor.focus()
+    return true
 
 $('body').on 'click', '.file-link', ->
     window.open_path $(this).data('path')
