@@ -1,3 +1,6 @@
+window.tabs = $('#tabs').tabs()
+
+
 window.editor = ace.edit "editor"
 file_manager = document.getElementById('file_manager')
 

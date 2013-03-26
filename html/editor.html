@@ -4,6 +4,7 @@
     <title>Slim Text</title>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="../image/icon16.png">
+    <link rel="stylesheet" href="../css/jqueryui.css" type="text/css">
     <link rel="stylesheet" href="../css/jquery.layout.css" type="text/css">
     <link rel="stylesheet" href="../css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="../font/font-awesome.css" type="text/css">
@@ -16,8 +17,13 @@
             <span id="route"></span>
         </div>
     </div>
-    <div class="ui-layout-center">
-        <div id="editor"></div>
+    <div class="ui-layout-center" id="tabs">
+        <ul>
+            <li><a href="#tab-1">Tab 1</a><span class="ui-icon ui-icon-close"></span></li>
+        </ul>
+        <div id="tab-1">
+            <div id="editor"></div>
+        </div>
     </div>
     <div class="ui-layout-west">
         <div id="sidebar" class="ace_editor"></div>

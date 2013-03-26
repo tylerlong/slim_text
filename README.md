@@ -113,7 +113,8 @@ easy first, hard last, no hurry!
     3. bug: chinese encoding decoding issue for C:/QQDownload/From Tyler/01.htm
     4. bug: windows csharp file, show BOM as * (because cannot handle utf8 with BOM)
 200. bug: cannot see mounted external dirves in windows. such as virtualbox shared folder
-202. 
+202. Preview HTML
+203. 
 
 ## won't fix
 
