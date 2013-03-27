@@ -1,6 +1,6 @@
 window.tabs = $('#tabs').tabs()
 
-window.add_tab = () ->
+window.open_file = (path) ->
     uid = _.uniqueId()
     $('#tabs').append """<div id="tab-#{uid}"><div id="editor-#{uid}"></div></div>"""
     $("""<li><a href="#tab-#{uid}">New tab</a> <span class="ui-icon ui-icon-close">Remove tab</span></li>""").appendTo('#tabs .ui-tabs-nav')
@@ -8,7 +8,16 @@ window.add_tab = () ->
     $('#tabs').tabs 'option', 'active', -1
     window.editor = ace.edit "editor-#{uid}"
     window.init_editor window.editor
-    
+    content = file_manager.read(path)
+    editor.session.setValue content, -1
+    filename = file_manager.filename(path)
+    #document.title = "#{filename} - Slim Text"
+    extension = file_manager.extension(filename)
+    if extension
+        extension = extension.toLowerCase().substr(1, extension.length - 1)
+        editor.getSession().setMode window.guess_mode_by_extension(extension)
+    else 
+        editor.getSession().setMode window.guess_mode_by_name(filename)
     lazy_change = _.debounce (->
         #if document.title.indexOf('* ') != 0
             #document.title = '* ' + document.title
@@ -272,17 +281,7 @@ window.open_path = (path) ->
     type = file_manager.type path
     if type == 'file'
         window.storage.file = path
-        content = file_manager.read(path)
-        window.add_tab()
-        editor.session.setValue content, -1
-        filename = file_manager.filename(path)
-        #document.title = "#{filename} - Slim Text"
-        extension = file_manager.extension(filename)
-        if extension
-            extension = extension.toLowerCase().substr(1, extension.length - 1)
-            editor.getSession().setMode window.guess_mode_by_extension(extension)
-        else 
-            editor.getSession().setMode window.guess_mode_by_name(filename)
+        window.open_file path
         path = file_manager.container(path)
     if not file_manager.can_list path
         window.notice chrome.i18n.getMessage('permission_denied'), path
