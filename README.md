@@ -101,7 +101,8 @@ easy first, hard last, no hurry!
 200. bug: cannot see mounted external dirves in windows. such as virtualbox shared folder
 202. Preview HTML
 203. hide address bar
-204. 
+204. refactor code using OO, a tab is an OO object
+205. 
 
 ## won't fix
 

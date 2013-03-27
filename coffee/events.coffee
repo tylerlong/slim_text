@@ -84,7 +84,7 @@ $('body').on 'click', '.check_for_updates_btn', ->
     ).fail ->
         window.notice chrome.i18n.getMessage('network_error'), chrome.i18n.getMessage('check_manually'), 5000
 
-window.onbeforeunload = () ->
-    chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
+#window.onbeforeunload = () ->
+    #chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
     #if document.title.indexOf('* ') == 0
         #return """"#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}"""

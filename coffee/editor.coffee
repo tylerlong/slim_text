@@ -2,16 +2,18 @@ window.tabs = $('#tabs').tabs()
 
 window.open_file = (path) ->
     uid = _.uniqueId()
-    $('#tabs').append """<div id="tab-#{uid}"><div id="editor-#{uid}"></div></div>"""
-    $("""<li><a href="#tab-#{uid}">New tab</a> <span class="ui-icon ui-icon-close">Remove tab</span></li>""").appendTo('#tabs .ui-tabs-nav')
+    filename = file_manager.filename(path)
+    panel = $("""<div id="tab-#{uid}"><div id="editor-#{uid}"></div></div>""")
+    panel.data 'path', path
+    panel.data 'uid', uid
+    $('#tabs').append panel
+    $("""<li><a id="link-#{uid}" href="#tab-#{uid}">#{filename}</a> <span class="ui-icon ui-icon-close">Remove tab</span></li>""").appendTo('#tabs .ui-tabs-nav')
     $('#tabs').tabs 'refresh'
     $('#tabs').tabs 'option', 'active', -1
     window.editor = ace.edit "editor-#{uid}"
     window.init_editor window.editor
     content = file_manager.read(path)
     editor.session.setValue content, -1
-    filename = file_manager.filename(path)
-    #document.title = "#{filename} - Slim Text"
     extension = file_manager.extension(filename)
     if extension
         extension = extension.toLowerCase().substr(1, extension.length - 1)
@@ -19,8 +21,8 @@ window.open_file = (path) ->
     else 
         editor.getSession().setMode window.guess_mode_by_name(filename)
     lazy_change = _.debounce (->
-        #if document.title.indexOf('* ') != 0
-            #document.title = '* ' + document.title
+        if $("#link-#{uid}").text().indexOf('* ') != 0
+            $("#link-#{uid}").text '* ' + $("#link-#{uid}").text()
         ), 500, true
     window.editor.getSession().on 'change', ->
         lazy_change()
@@ -51,13 +53,13 @@ window.combine_path = (path1, path2) ->
 
 
 window.prompt_file_name = ->
-    file_name = prompt "#{chrome.i18n.getMessage('create_file')} #{window.storage.path}/"
+    file_name = prompt "#{chrome.i18n.getMessage('create_file')} #{window.current_folder()}/"
     if not file_name or file_name.trim() == ''
         return false
     if not file_manager.valid_name file_name
         window.notice chrome.i18n.getMessage('invalid_path_name'), file_name
         return false
-    file_path = "#{window.storage.path}/#{file_name}"
+    file_path = "#{window.current_folder()}/#{file_name}"
     if file_manager.exists file_path
         window.notice chrome.i18n.getMessage('already_exists'), file_path
         return false
@@ -65,19 +67,20 @@ window.prompt_file_name = ->
 
 
 window.save_file = ->
-    if window.storage.file
-        result = file_manager.write window.storage.file, editor.getValue()
+    current_panel = $("#tabs div.ui-tabs-panel[aria-hidden='false']")
+    if current_panel
+        path = current_panel.data 'path'
+        result = file_manager.write path, editor.getValue()
         if result
-            window.notice chrome.i18n.getMessage('saved'), window.storage.file
-            #document.title = "#{file_manager.filename(window.storage.file)} - Slim Text"
+            link = $("""a#link-#{current_panel.data('uid')}""")
+            if link.text().indexOf('* ') == 0
+                link.text link.text().substr(2)
         else
-            alert "#{chrome.i18n.getMessage('unable_to_save')} #{window.storage.file}"
-    else
-        window.storage.file = window.prompt_file_name()
-        return if not window.storage.file
-        window.save_file()
-        window.show_sidebar window.storage.path
+            alert "#{chrome.i18n.getMessage('unable_to_save')} #{path}"
 
+
+window.current_folder = ->
+    $('#route').data 'path'
 
 window.create_file = ->
     file_path = window.prompt_file_name()
@@ -87,16 +90,16 @@ window.create_file = ->
 
 
 window.create_folder = ->
-    folder_name = prompt "#{chrome.i18n.getMessage('create_folder')} #{window.storage.path}/"
+    folder_name = prompt "#{chrome.i18n.getMessage('create_folder')} #{window.current_folder()}/"
     if not folder_name or folder_name.trim() == ''
         return
     if not file_manager.valid_name folder_name
         return window.notice chrome.i18n.getMessage('invalid_path_name'), folder_name
-    folder_path = "#{window.storage.path}/#{folder_name}"
+    folder_path = "#{window.current_folder()}/#{folder_name}"
     if file_manager.exists folder_path
         return window.notice chrome.i18n.getMessage('already_exists'), folder_path
     file_manager.create_folder folder_path
-    window.show_sidebar window.storage.path
+    window.show_sidebar window.current_folder()
 
 
 window.show_breadcrumb = (path) ->
@@ -144,9 +147,7 @@ window.show_sidebar = (path) ->
     items = _.sortBy items, (item) ->
         item.name.toLowerCase()
     for item in items
-        if item.path == window.storage.file
-            $('#sidebar').append """<span class="current">#{item.name}</span>"""
-        else if clickable(item)
+        if clickable(item)
             link = $("""<a class="file-link">#{item.name}</a>""")
             link.data("path", item.path)
             $('#sidebar').append link
@@ -280,13 +281,11 @@ window.open_path = (path) ->
         return
     type = file_manager.type path
     if type == 'file'
-        window.storage.file = path
         window.open_file path
         path = file_manager.container(path)
     if not file_manager.can_list path
         window.notice chrome.i18n.getMessage('permission_denied'), path
         path = file_manager.home_folder() or file_manager.temp_folder()
-    window.storage.path = path
     document.title = path
     show_breadcrumb path
     show_sidebar path
@@ -295,7 +294,6 @@ window.open_path = (path) ->
 $ ->
     chrome.storage.local.get ['path', 'file'], (items) ->
         path = items.file or items.path or file_manager.home_folder() or file_manager.temp_folder()
-        window.storage = { file: items.file, path: path }
         open_path path
         path = items.path or file_manager.home_folder() or file_manager.temp_folder()
         open_path path
@@ -314,12 +312,10 @@ $ ->
                 window.layout.open 'west'
                 $('#navbar').show()
                 $('#toolbar').show()
-                window.editor.focus()
             onclose_start: ->
                 window.layout.close 'west'
                 $('#navbar').hide()
                 $('#toolbar').hide()
-                window.editor.focus()
         west:
             spacing_open: 5
             livePaneResizing: true
