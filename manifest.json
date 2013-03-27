@@ -17,8 +17,6 @@
         "*://*/*"
     ],
 
-    "omnibox": { "keyword": "s" },
-
     "background": { "scripts": ["js/background.js"] },
 
     "browser_action": {

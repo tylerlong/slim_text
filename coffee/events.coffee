@@ -88,26 +88,3 @@ window.onbeforeunload = () ->
     chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
     if document.title.indexOf('* ') == 0
         return """"#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}"""
-
-chrome.omnibox.onInputEntered.addListener (text) ->
-    chrome.tabs.getCurrent (tab) ->
-        chrome.tabs.query { currentWindow: true, active: true }, (tabs) ->
-            if tabs[0].id == tab.id
-                text = text.replace /\s{2,}/g, ' '
-                tokens = text.split(' ')
-                command = tokens[0]
-                params = _.rest(tokens).join(' ')
-                switch command
-                    when 'save'
-                        window.save_file()
-                    when 'open', 'cd'
-                        if params.indexOf('/') == 0 || params.indexOf(':/') == 1
-                            window.open_path params
-                        else 
-                            absolute_path = window.combine_path(window.storage.path, params)
-                            if absolute_path != ''
-                                window.open_path absolute_path
-                            else 
-                                window.notice chrome.i18n.getMessage('does_not_exist'), params
-                    else
-                        window.notice chrome.i18n.getMessage('command_not_found'), command

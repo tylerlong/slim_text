@@ -271,8 +271,6 @@ window.open_path = (path) ->
         return
     type = file_manager.type path
     if type == 'file'
-        #if document.title.indexOf('* ') == 0
-            #return if not confirm(""""#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}""")
         window.storage.file = path
         content = file_manager.read(path)
         window.add_tab()
