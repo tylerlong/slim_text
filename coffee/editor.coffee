@@ -10,8 +10,8 @@ window.add_tab = () ->
     window.init_editor window.editor
     
     lazy_change = _.debounce (->
-        if document.title.indexOf('* ') != 0
-            document.title = '* ' + document.title
+        #if document.title.indexOf('* ') != 0
+            #document.title = '* ' + document.title
         ), 500, true
     window.editor.getSession().on 'change', ->
         lazy_change()
@@ -60,7 +60,7 @@ window.save_file = ->
         result = file_manager.write window.storage.file, editor.getValue()
         if result
             window.notice chrome.i18n.getMessage('saved'), window.storage.file
-            document.title = "#{file_manager.filename(window.storage.file)} - Slim Text"
+            #document.title = "#{file_manager.filename(window.storage.file)} - Slim Text"
         else
             alert "#{chrome.i18n.getMessage('unable_to_save')} #{window.storage.file}"
     else
@@ -276,7 +276,7 @@ window.open_path = (path) ->
         window.add_tab()
         editor.session.setValue content, -1
         filename = file_manager.filename(path)
-        document.title = "#{filename} - Slim Text"
+        #document.title = "#{filename} - Slim Text"
         extension = file_manager.extension(filename)
         if extension
             extension = extension.toLowerCase().substr(1, extension.length - 1)
@@ -288,6 +288,7 @@ window.open_path = (path) ->
         window.notice chrome.i18n.getMessage('permission_denied'), path
         path = file_manager.home_folder() or file_manager.temp_folder()
     window.storage.path = path
+    document.title = path
     show_breadcrumb path
     show_sidebar path
 

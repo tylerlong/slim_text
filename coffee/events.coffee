@@ -86,5 +86,5 @@ $('body').on 'click', '.check_for_updates_btn', ->
 
 window.onbeforeunload = () ->
     chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
-    if document.title.indexOf('* ') == 0
-        return """"#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}"""
+    #if document.title.indexOf('* ') == 0
+        #return """"#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}"""
