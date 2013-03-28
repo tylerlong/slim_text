@@ -1,10 +1,12 @@
 *.pyc
 *.swp
 
+js/application.js
 js/background.js
 js/editor.js
-js/events.js
-js/modes.js
+js/editor_old.js
+js/event.js
+js/mode.js
 js/options.js
 js/util.js
 

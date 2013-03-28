@@ -102,7 +102,8 @@ easy first, hard last, no hurry!
 202. Preview HTML
 203. hide address bar
 204. refactor code using OO, a tab is an OO object
-205. 
+205. does not support Ubuntu 10.04 32-bit or 64-bit
+206. 
 
 ## won't fix
 
