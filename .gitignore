@@ -9,5 +9,6 @@ js/event.js
 js/mode.js
 js/options.js
 js/util.js
+js/main.js
 
 .sass-cache/

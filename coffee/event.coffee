@@ -1,11 +1,13 @@
 class @Event
     constructor: ->
         $('body').on 'click', '.file-link', ->
-            open_path $(this).data('path')
+            action.open_path $(this).data('path')
     
         $('body').on 'click', '.options_btn', ->
             chrome.tabs.create { url: chrome.extension.getURL('html/options.html') }
-    
+
+
+class @Action
     open_path: (path) ->
         if not file_manager.exists(path)
             util.notice chrome.i18n.getMessage('does_not_exist'), path
@@ -23,8 +25,8 @@ class @Event
             util.notice chrome.i18n.getMessage('permission_denied'), path
             path = file_manager.home_folder() or file_manager.temp_folder()
         document.title = path
-        main_app.show_breadcrumb path
-        main_app.show_sidebar path
+        application.show_breadcrumb path
+        application.show_sidebar path
 
 
 #window.full_window = ->

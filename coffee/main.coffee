@@ -1,6 +1,7 @@
 @application = new Application()
 @editors = {}
 @event = new Event()
+@action = new Action()
 @file_manager = new FileManager()
 @mode = new Mode()
 @util = new Util()
