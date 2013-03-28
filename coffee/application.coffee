@@ -33,7 +33,7 @@ class @Application
                 resizerTip: chrome.i18n.getMessage('resize')
             center:
                 onresize_end: ->
-                    current_editor = window.current_editor()
+                    current_editor = util.current_editor()
                     if current_editor
                         current_editor.resize()
 

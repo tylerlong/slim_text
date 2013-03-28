@@ -63,3 +63,7 @@ class @Editor
                 link.text link.text().substr(2)
         else
             alert "#{chrome.i18n.getMessage('unable_to_save')} #{@path}"
+    
+    resize: ->
+        @editor.resize()
+
