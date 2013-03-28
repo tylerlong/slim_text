@@ -6,9 +6,10 @@ js/background.js
 js/editor.js
 js/editor_old.js
 js/event.js
-js/mode.js
-js/options.js
-js/util.js
+js/file_manager.js
 js/main.js
+js/mode.js
+js/option.js
+js/util.js
 
 .sass-cache/
