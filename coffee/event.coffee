@@ -30,26 +30,23 @@ class @Event
 
         $('body').on 'click', '.file_link', ->
             action.open_file $(this).data('path')
-
         $('body').on 'click', '.folder_link', ->
             action.open_folder $(this).data('path')
-
-        $('body').on 'click', '.options_btn', ->
-            chrome.tabs.create { url: chrome.extension.getURL('html/options.html') }
-
         $('body').on 'click', "span.ui-icon-close", ->
             uid = $(this).closest("li").attr('aria-controls').substr(4)
             editors[uid].dispose()
+
+        $('body').on 'click', '.options_btn', ->
+            chrome.tabs.create { url: chrome.extension.getURL('html/options.html') }
 
         $('body').on 'click', '.full_window_btn', ->
             action.full_window()
 
         $('body').on 'click', '.save_btn', ->
             action.save_file()
-        
+
         $('body').on 'click', '.new_file_btn', ->
             setTimeout((-> action.create_file()), 50)
-
         $('body').on 'click', '.new_folder_btn', ->
             setTimeout((-> action.create_folder()), 50)
 
@@ -57,7 +54,6 @@ class @Event
             current_editor = util.current_editor()
             if current_editor
                 ace.require('ace/ext/searchbox').Search(current_editor.editor)
-
         $('body').on 'click', '.replace_btn', ->
             current_editor = util.current_editor()
             if current_editor
@@ -67,7 +63,7 @@ class @Event
             current_editor = util.current_editor()
             if current_editor
                 current_editor.editor.setShowInvisibles(!current_editor.editor.getShowInvisibles())
-        
+
         $('body').on 'click', '.indent_btn', ->
             current_editor = util.current_editor()
             if current_editor
@@ -76,6 +72,15 @@ class @Event
             current_editor = util.current_editor()
             if current_editor
                 current_editor.editor.blockOutdent()
+
+        $('body').on 'click', '.lower_case_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                current_editor.editor.toLowerCase()
+        $('body').on 'click', '.upper_case_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                current_editor.editor.toUpperCase()
 
 class @Action
     open_file: (path) ->
@@ -140,12 +145,7 @@ class @Action
 #
 #$('body').on 'click', '.remove_lines_btn', ->
     #window.editor.removeLines()
-#
-#$('body').on 'click', '.lower_case_btn', ->
-    #window.editor.toLowerCase()
-#
-#$('body').on 'click', '.upper_case_btn', ->
-    #window.editor.toUpperCase()
+
 #
 #$('body').on 'click', '.toggle_comment_btn', ->
     #window.editor.toggleCommentLines()

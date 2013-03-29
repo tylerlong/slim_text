@@ -67,6 +67,7 @@ class @Editor
             util.notice chrome.i18n.getMessage('unable_to_save'), @path
 
     dispose: ->
+        @editor.destroy()
         $("li[aria-controls='tab-#{@uid}']").remove()
         $("#tab-#{@uid}").remove()
         @tabs.tabs("refresh")
