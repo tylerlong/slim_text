@@ -2,7 +2,7 @@ class @Event
     constructor: ->
         $(document).keydown (event) ->
             if (String.fromCharCode(event.which).toLowerCase() == 's' and event.ctrlKey) or event.which == 19
-                util.current_editor().save_file()
+                action.save_file()
                 event.preventDefault()
                 return false
             else if event.which == 27
@@ -27,6 +27,9 @@ class @Event
 
         $('body').on 'click', '.full_window_btn', ->
             action.full_window()
+
+        $('body').on 'click', '.save_btn', ->
+            action.save_file()
 
 class @Action
     open_path: (path) ->
@@ -69,11 +72,14 @@ class @Action
     full_window: ->
         if window.layout.state.north.isVisible
             window.layout.close 'north'
+    
+    save_file: ->
+        current_editor = util.current_editor()
+        if current_editor
+            current_editor.save_file()
 
 
-#
-#$('body').on 'click', '.save_btn', ->
-    #window.save_file()
+
 #
 #$('body').on 'click', '.mode-link', ->
     #window.editor.getSession().setMode "ace/mode/#{$(this).data('mode')}"
