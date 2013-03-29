@@ -96,12 +96,18 @@ class @Event
             current_editor = util.current_editor()
             if current_editor
                 current_editor.editor.getSession().setMode "ace/mode/#{$(this).data('mode')}"
-        
+
         $('body').on 'click', '.toggle_word_wrap_btn', ->
             current_editor = util.current_editor()
             if current_editor
                 useWrapMode = current_editor.editor.getSession().getUseWrapMode()
                 current_editor.editor.getSession().setUseWrapMode !useWrapMode
+
+        $('body').on 'click', '.check_for_updates_btn', ->
+            action.check_for_updates()
+
+        $('body').on 'click', '.about_btn', ->
+            util.notice "Slim Text #{chrome.app.getDetails().version}", "Copyright © 2012 - 2013 slimtext.org", 5000
 
 class @Action
     open_file: (path) ->
@@ -151,25 +157,18 @@ class @Action
         return if not folder_path
         file_manager.create_folder folder_path
         application.refresh_sidebar()
+    
+    check_for_updates: ->
+        $.get('https://raw.github.com/tylerlong/slimtext.org/gh-pages/__version__', (data) ->
+            newest = data.trim()
+            current = chrome.app.getDetails().version
+            if newest > current
+                util.notice "#{chrome.i18n.getMessage('new_version')}: #{newest}", chrome.i18n.getMessage('fetch_and_install'), 8000
+            else
+                util.notice chrome.i18n.getMessage('no_update'), "#{chrome.i18n.getMessage('newest_version')}: #{current}", 5000
+        ).fail ->
+            util.notice chrome.i18n.getMessage('network_error'), chrome.i18n.getMessage('check_manually'), 5000
 
-
-#$('body').on 'click', '.about_btn', ->
-    #util.notice "Slim Text #{chrome.app.getDetails().version}", "Copyright © 2012 - 2013 slimtext.org", 5000
 #
 #$('body').on 'change', '#drives_select', ->
     #window.open_path $(this).val()
-#
-
-
-#
-#$('body').on 'click', '.check_for_updates_btn', ->
-    #$.get('https://raw.github.com/tylerlong/slimtext.org/gh-pages/__version__', (data) ->
-        #newest = data.trim()
-        #current = chrome.app.getDetails().version
-        #if newest > current
-            #util.notice "#{chrome.i18n.getMessage('new_version')}: #{newest}", chrome.i18n.getMessage('fetch_and_install'), 8000
-        #else
-            #util.notice chrome.i18n.getMessage('no_update'), "#{chrome.i18n.getMessage('newest_version')}: #{current}", 5000
-            #
-    #).fail ->
-        #util.notice chrome.i18n.getMessage('network_error'), chrome.i18n.getMessage('check_manually'), 5000
