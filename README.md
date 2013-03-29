@@ -27,6 +27,7 @@ easy first, hard last, no hurry!
     3. is it viable and practical?
 111. bug: windows 7 C: / Windows / System32 / drivers, can not see the etc/ folder
     1. and a lot of *.sys files are invisible too.
+    2. notepad++ has this issue too
 112. bug: slow when open windows 7 C: / Windows / System32
     1. caused by underscorejs filter method?
 118. should be able to open a folder quickly.

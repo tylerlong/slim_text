@@ -168,7 +168,7 @@ class @Application
             if route.length ==0
                 $('#route').append('/')
         for item in _.initial(route)
-            link = $("""<a class="file-link">#{item.name}</a>""")
+            link = $("""<a class="path_link">#{item.name}</a>""")
             link.data("path", item.path)
             $('#route').append(link)
             if item.name == '/'
@@ -186,7 +186,7 @@ class @Application
             item.name.toLowerCase()
         for item in items
             if util.clickable(item)
-                link = $("""<a class="file-link">#{item.name}</a>""")
+                link = $("""<a class="path_link">#{item.name}</a>""")
                 link.data("path", item.path)
                 $('#sidebar').append link
                 if item.type == 'folder'

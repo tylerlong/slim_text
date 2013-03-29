@@ -1,6 +1,6 @@
 class @Event
     constructor: ->
-        $('body').on 'click', '.file-link', ->
+        $('body').on 'click', '.path_link', ->
             action.open_path $(this).data('path')
     
         $('body').on 'click', '.options_btn', ->
@@ -14,20 +14,26 @@ class @Action
             route = file_manager.route path
             for item in _.rest(route)
                 if file_manager.exists item.path
-                    open_path item.path
+                    action.open_folder item.path
                     return
             return
         type = file_manager.type path
         if type == 'file'
-            open_file path
+            action.open_file path
             path = file_manager.container(path)
+        action.open_folder path
+
+    open_file: (path) ->
+        editor = new Editor path
+        editors[editor.uid] = editor
+        
+    open_folder: (path) ->
         if not file_manager.can_list path
             util.notice chrome.i18n.getMessage('permission_denied'), path
             path = file_manager.home_folder() or file_manager.temp_folder()
         document.title = path
         application.show_breadcrumb path
         application.show_sidebar path
-
 
 #window.full_window = ->
     #if window.layout.state.north.isVisible

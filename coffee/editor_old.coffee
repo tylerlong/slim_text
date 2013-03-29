@@ -1,8 +1,3 @@
-
-
-
-
-
 window.current_folder = ->
     $('#route').data 'path'
 
@@ -24,29 +19,6 @@ window.create_folder = ->
         return window.notice chrome.i18n.getMessage('already_exists'), folder_path
     file_manager.create_folder folder_path
     window.show_sidebar window.current_folder()
-
-
-
-
-window.open_path = (path) ->
-    if not file_manager.exists(path)
-        window.notice chrome.i18n.getMessage('does_not_exist'), path
-        route = file_manager.route path
-        for item in _.rest(route)
-            if file_manager.exists item.path
-                window.open_path item.path
-                return
-        return
-    type = file_manager.type path
-    if type == 'file'
-        window.open_file path
-        path = file_manager.container(path)
-    if not file_manager.can_list path
-        window.notice chrome.i18n.getMessage('permission_denied'), path
-        path = file_manager.home_folder() or file_manager.temp_folder()
-    document.title = path
-    show_breadcrumb path
-    show_sidebar path
 
 
 $ ->

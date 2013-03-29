@@ -9,5 +9,3 @@
 $ ->
     application.show_breadcrumb('/home/tyler/src/win/test/')
     application.show_sidebar('/home/tyler/src/win/test/')
-    editor = new Editor('/home/tyler/src/win/test/111.py')
-    editors[editor.uid] = editor
