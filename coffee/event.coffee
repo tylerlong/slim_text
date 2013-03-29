@@ -96,6 +96,12 @@ class @Event
             current_editor = util.current_editor()
             if current_editor
                 current_editor.editor.getSession().setMode "ace/mode/#{$(this).data('mode')}"
+        
+        $('body').on 'click', '.toggle_word_wrap_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                useWrapMode = current_editor.editor.getSession().getUseWrapMode()
+                current_editor.editor.getSession().setUseWrapMode !useWrapMode
 
 class @Action
     open_file: (path) ->
@@ -153,8 +159,7 @@ class @Action
 #$('body').on 'change', '#drives_select', ->
     #window.open_path $(this).val()
 #
-#$('body').on 'click', '.toggle_word_wrap_btn', ->
-    #window.editor.getSession().setUseWrapMode(!window.editor.getSession().getUseWrapMode())
+
 
 #
 #$('body').on 'click', '.check_for_updates_btn', ->
