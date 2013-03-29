@@ -8,6 +8,12 @@ class @Event
             else if event.which == 27
                 action.exit_full_window()
             return true
+        
+        $("#tabs").on "tabsactivate", (event, ui) ->
+            uid = ui.newPanel.data('uid')
+            editor = editors[uid]
+            if editor
+                editor.resize()
 
         $('body').on 'click', '.path_link', ->
             action.open_path $(this).data('path')
