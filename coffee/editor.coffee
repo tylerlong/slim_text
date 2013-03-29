@@ -66,9 +66,6 @@ class @Editor
         else
             util.notice chrome.i18n.getMessage('unable_to_save'), @path
 
-    resize: ->
-        @editor.resize()
-
     dispose: ->
         $("li[aria-controls='tab-#{@uid}']").remove()
         $("#tab-#{@uid}").remove()

@@ -13,7 +13,10 @@ class @Event
             uid = ui.newPanel.data('uid')
             editor = editors[uid]
             if editor
+                editor = editor.editor
                 editor.resize()
+                editor.setShowInvisibles(true)
+                editor.setShowInvisibles(false)
 
         window.onbeforeunload = () ->
             chrome.storage.local.set { 'path': document.title }

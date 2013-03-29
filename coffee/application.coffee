@@ -36,7 +36,7 @@ class @Application
                 onresize_end: ->
                     current_editor = util.current_editor()
                     if current_editor
-                        current_editor.resize()
+                        current_editor.editor.resize()
 
     create_topbar: ->
         $('.ui-layout-resizer-north').append """<div id="navbar">
