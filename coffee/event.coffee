@@ -57,6 +57,11 @@ class @Event
             if current_editor
                 ace.require('ace/ext/searchbox').Search(current_editor.editor, true)
 
+        $('body').on 'click', '.toggle_invisibles_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                current_editor.editor.setShowInvisibles(!current_editor.editor.getShowInvisibles())
+
 class @Action
     open_file: (path) ->
         if not file_manager.exists(path)
@@ -136,9 +141,7 @@ class @Action
 #
 #$('body').on 'click', '.outdent_btn', ->
     #window.editor.blockOutdent()
-#
-#$('body').on 'click', '.toggle_invisibles_btn', ->
-    #window.editor.setShowInvisibles(!window.editor.getShowInvisibles())
+
 #
 #$('body').on 'click', '.toggle_word_wrap_btn', ->
     #window.editor.getSession().setUseWrapMode(!window.editor.getSession().getUseWrapMode())
