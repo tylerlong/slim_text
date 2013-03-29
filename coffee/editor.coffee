@@ -10,9 +10,10 @@ class @Editor
     create_tab: ->
         panel = $("""<div id="tab-#{@uid}"><div id="editor-#{@uid}"></div></div>""")
         panel.data 'path', @path
+        panel.data 'uid', @uid
         $('#tabs').append panel
         @filename = file_manager.filename(@path)
-        tab = $("""<li id="link-#{@uid}" title="#{@path}"><a href="#tab-#{@uid}">#{@filename}</a> <span class="ui-icon ui-icon-close">x</span></li>""")
+        tab = $("""<li id="li-#{@uid}" title="#{@path}"><a id="link-#{@uid}" href="#tab-#{@uid}">#{@filename}</a> <span class="ui-icon ui-icon-close">x</span></li>""")
         tab.appendTo('#tabs .ui-tabs-nav')
         @tabs.tabs 'refresh'
         @tabs.tabs 'option', 'active', -1
@@ -48,6 +49,7 @@ class @Editor
             @editor.getSession().setMode mode.guess_mode_by_name(@filename)
 
     bind_event: ->
+        uid = @uid
         lazy_change = _.debounce (->
             if $("#link-#{uid}").text().indexOf('* ') != 0
                 $("#link-#{uid}").text '* ' + $("#link-#{uid}").text()

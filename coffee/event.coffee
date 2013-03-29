@@ -1,5 +1,14 @@
 class @Event
     constructor: ->
+        $(document).keydown (event) ->
+            if (String.fromCharCode(event.which).toLowerCase() == 's' and event.ctrlKey) or event.which == 19
+                util.current_editor().save_file()
+                event.preventDefault()
+                return false
+            else if event.which == 27
+                action.exit_full_window()
+            return true
+
         $('body').on 'click', '.path_link', ->
             action.open_path $(this).data('path')
 
@@ -9,6 +18,7 @@ class @Event
         $('body').on 'click', "span.ui-icon-close", ->
             uid = $(this).closest("li").attr('aria-controls').substr(4)
             editors[uid].dispose()
+
 
 class @Action
     open_path: (path) ->
@@ -30,7 +40,7 @@ class @Action
         for key, editor of editors
             if path == editor.path
                 uid = editor.uid
-                index = $('#tabs ul li').index $("#link-#{uid}")
+                index = $('#tabs ul li').index $("#li-#{uid}")
                 $('#tabs').tabs 'option', "active", index
                 return
         editor = new Editor path
@@ -51,15 +61,7 @@ class @Action
 #window.exit_full_window = ->
     #if window.layout.state.north.isClosed
         #window.layout.open 'north'
-#
-#$(document).keydown (event) ->
-    #if (String.fromCharCode(event.which).toLowerCase() == 's' and event.ctrlKey) or event.which == 19
-        #window.save_file()
-        #event.preventDefault()
-        #return false
-    #else if event.which == 27
-        #window.exit_full_window()
-    #return true
+
 #
 #$('body').on 'click', '.file-link', ->
     #window.open_path $(this).data('path')
