@@ -8,7 +8,7 @@ class @Event
             else if event.which == 27
                 action.exit_full_window()
             return true
-        
+
         $("#tabs").on "tabsactivate", (event, ui) ->
             uid = ui.newPanel.data('uid')
             editor = editors[uid]
@@ -25,6 +25,8 @@ class @Event
             uid = $(this).closest("li").attr('aria-controls').substr(4)
             editors[uid].dispose()
 
+        $('body').on 'click', '.full_window_btn', ->
+            action.full_window()
 
 class @Action
     open_path: (path) ->
@@ -59,21 +61,16 @@ class @Action
         document.title = path
         application.show_breadcrumb path
         application.show_sidebar path
+    
+    exit_full_window: ->
+        if window.layout.state.north.isClosed
+            window.layout.open 'north'
+    
+    full_window: ->
+        if window.layout.state.north.isVisible
+            window.layout.close 'north'
 
-#window.full_window = ->
-    #if window.layout.state.north.isVisible
-        #window.layout.close 'north'
-#
-#window.exit_full_window = ->
-    #if window.layout.state.north.isClosed
-        #window.layout.open 'north'
 
-#
-#$('body').on 'click', '.file-link', ->
-    #window.open_path $(this).data('path')
-#
-#$('body').on 'click', '.full_window_btn', ->
-    #window.full_window()
 #
 #$('body').on 'click', '.save_btn', ->
     #window.save_file()
