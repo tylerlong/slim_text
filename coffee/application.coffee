@@ -182,24 +182,31 @@ class @Application
         if item
             $('#route').append("#{item.name}")
 
-    show_sidebar: (path) ->
+    show_sidebar: (path, filePath = null) ->
         $('#sidebar').empty()
         items = file_manager.list(path)
         items = _.sortBy items, (item) ->
             item.name.toLowerCase()
+        if not filePath
+            current_editor = util.current_editor()
+            if current_editor
+                filePath = current_editor.path
         for item in items
             if util.clickable(item)
                 link = $("""<a class="#{item.type}_link">#{item.name}</a>""")
                 link.data("path", item.path)
                 $('#sidebar').append link
+                if filePath == item.path
+                    link.css 'color', 'white'
+                    link.css 'cursor', 'text'
                 if item.type == 'folder'
                     $('#sidebar').append '/'
             else 
                 $('#sidebar').append "<span>#{item.name}</span>"
             $('#sidebar').append "<br/>"
 
-    refresh_sidebar: ->
-        @show_sidebar document.title
+    refresh_sidebar: (filePath = null)->
+        @show_sidebar document.title, filePath
 
     open_file: (path) ->
         editor = new Editor path

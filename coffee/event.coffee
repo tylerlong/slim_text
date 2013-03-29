@@ -18,6 +18,8 @@ class @Event
                 editor.setShowInvisibles(true)
                 editor.setShowInvisibles(false)
 
+            application.refresh_sidebar(ui.newPanel.data('path'))
+
         window.onbeforeunload = () ->
             chrome.storage.local.set { 'path': document.title }
             paths = []
@@ -35,6 +37,7 @@ class @Event
         $('body').on 'click', "span.ui-icon-close", ->
             uid = $(this).closest("li").attr('aria-controls').substr(4)
             editors[uid].dispose()
+            application.refresh_sidebar()
 
         $('body').on 'click', '.options_btn', ->
             chrome.tabs.create { url: chrome.extension.getURL('html/options.html') }
