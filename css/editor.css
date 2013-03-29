@@ -7,8 +7,11 @@ a {
 
 div.ui-layout-west, div.ui-layout-north {
     background-color: #1b1b1b;
-    color: #ccc;
+    color: #999;
     padding: 0 12px;
+}
+div.ui-layout-north {
+    color: white;
 }
 
 #header, #sidebar {
