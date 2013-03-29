@@ -67,6 +67,15 @@ class @Event
             current_editor = util.current_editor()
             if current_editor
                 current_editor.editor.setShowInvisibles(!current_editor.editor.getShowInvisibles())
+        
+        $('body').on 'click', '.indent_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                current_editor.editor.indent()
+        $('body').on 'click', '.outdent_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                current_editor.editor.blockOutdent()
 
 class @Action
     open_file: (path) ->
@@ -141,11 +150,7 @@ class @Action
 #$('body').on 'click', '.toggle_comment_btn', ->
     #window.editor.toggleCommentLines()
 #
-#$('body').on 'click', '.indent_btn', ->
-    #window.editor.indent()
-#
-#$('body').on 'click', '.outdent_btn', ->
-    #window.editor.blockOutdent()
+
 
 #
 #$('body').on 'click', '.toggle_word_wrap_btn', ->

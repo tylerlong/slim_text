@@ -9,6 +9,7 @@ class @Application
         window.layout = $('body').layout
             spacing_closed: 5
             stateManagement__enabled: true
+            resizerDblClickToggle: false
             north:
                 slidable: false
                 spacing_open: 15
