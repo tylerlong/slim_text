@@ -82,6 +82,16 @@ class @Event
             if current_editor
                 current_editor.editor.toUpperCase()
 
+        $('body').on 'click', '.remove_lines_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                current_editor.editor.removeLines()
+
+        $('body').on 'click', '.toggle_comment_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                current_editor.editor.toggleCommentLines()
+
 class @Action
     open_file: (path) ->
         if not file_manager.exists(path)
@@ -143,19 +153,8 @@ class @Action
 #$('body').on 'change', '#drives_select', ->
     #window.open_path $(this).val()
 #
-#$('body').on 'click', '.remove_lines_btn', ->
-    #window.editor.removeLines()
-
-#
-#$('body').on 'click', '.toggle_comment_btn', ->
-    #window.editor.toggleCommentLines()
-#
-
-
-#
 #$('body').on 'click', '.toggle_word_wrap_btn', ->
     #window.editor.getSession().setUseWrapMode(!window.editor.getSession().getUseWrapMode())
-
 
 #
 #$('body').on 'click', '.check_for_updates_btn', ->
