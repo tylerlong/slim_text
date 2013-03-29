@@ -10,10 +10,9 @@ class @Editor
     create_tab: ->
         panel = $("""<div id="tab-#{@uid}"><div id="editor-#{@uid}"></div></div>""")
         panel.data 'path', @path
-        panel.data 'uid', @uid
         $('#tabs').append panel
         @filename = file_manager.filename(@path)
-        tab = $("""<li><a id="link-#{@uid}" href="#tab-#{@uid}">#{@filename}</a> <span class="ui-icon ui-icon-close">x</span></li>""")
+        tab = $("""<li id="link-#{@uid}" title="#{@path}"><a href="#tab-#{@uid}">#{@filename}</a> <span class="ui-icon ui-icon-close">x</span></li>""")
         tab.appendTo('#tabs .ui-tabs-nav')
         @tabs.tabs 'refresh'
         @tabs.tabs 'option', 'active', -1
@@ -72,3 +71,4 @@ class @Editor
         $("li[aria-controls='tab-#{@uid}']").remove()
         $("#tab-#{@uid}").remove()
         @tabs.tabs("refresh")
+        delete editors[@uid]

@@ -27,9 +27,15 @@ class @Action
         action.open_folder path
 
     open_file: (path) ->
+        for key, editor of editors
+            if path == editor.path
+                uid = editor.uid
+                index = $('#tabs ul li').index $("#link-#{uid}")
+                $('#tabs').tabs 'option', "active", index
+                return
         editor = new Editor path
         editors[editor.uid] = editor
-        
+
     open_folder: (path) ->
         if not file_manager.can_list path
             util.notice chrome.i18n.getMessage('permission_denied'), path

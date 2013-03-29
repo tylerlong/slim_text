@@ -7,7 +7,7 @@ a {
 
 div.ui-layout-west, div.ui-layout-north {
     background-color: #1b1b1b;
-    color: white;
+    color: #ccc;
     padding: 0 12px;
 }
 
