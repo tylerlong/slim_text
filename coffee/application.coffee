@@ -2,8 +2,7 @@ class @Application
     constructor: ->
         @create_layout()
         @create_topbar()
-        $('#tabs').tabs()
-        
+
     create_layout: ->
         window.layout = $('body').layout
             spacing_closed: 5

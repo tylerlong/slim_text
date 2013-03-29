@@ -2,10 +2,13 @@ class @Event
     constructor: ->
         $('body').on 'click', '.path_link', ->
             action.open_path $(this).data('path')
-    
+
         $('body').on 'click', '.options_btn', ->
             chrome.tabs.create { url: chrome.extension.getURL('html/options.html') }
 
+        $('body').on 'click', "span.ui-icon-close", ->
+            uid = $(this).closest("li").attr('aria-controls').substr(4)
+            editors[uid].dispose()
 
 class @Action
     open_path: (path) ->

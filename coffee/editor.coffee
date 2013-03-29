@@ -1,6 +1,7 @@
 class @Editor
     constructor: (@path) ->
         @uid = _.uniqueId()
+        @tabs = $('#tabs').tabs()
         @create_tab()
         @create_editor()
         @load_content()
@@ -14,8 +15,8 @@ class @Editor
         @filename = file_manager.filename(@path)
         tab = $("""<li><a id="link-#{@uid}" href="#tab-#{@uid}">#{@filename}</a> <span class="ui-icon ui-icon-close">x</span></li>""")
         tab.appendTo('#tabs .ui-tabs-nav')
-        $('#tabs').tabs 'refresh'
-        $('#tabs').tabs 'option', 'active', -1
+        @tabs.tabs 'refresh'
+        @tabs.tabs 'option', 'active', -1
 
     create_editor: ->
         @editor = ace.edit "editor-#{@uid}"
@@ -63,7 +64,11 @@ class @Editor
                 link.text link.text().substr(2)
         else
             alert "#{chrome.i18n.getMessage('unable_to_save')} #{@path}"
-    
+
     resize: ->
         @editor.resize()
 
+    dispose: ->
+        $("li[aria-controls='tab-#{@uid}']").remove()
+        $("#tab-#{@uid}").remove()
+        @tabs.tabs("refresh")
