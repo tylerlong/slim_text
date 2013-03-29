@@ -47,6 +47,16 @@ class @Event
         $('body').on 'click', '.new_folder_btn', ->
             setTimeout((-> action.create_folder()), 50)
 
+        $('body').on 'click', '.find_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                ace.require('ace/ext/searchbox').Search(current_editor.editor)
+
+        $('body').on 'click', '.replace_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                ace.require('ace/ext/searchbox').Search(current_editor.editor, true)
+
 class @Action
     open_file: (path) ->
         if not file_manager.exists(path)
@@ -132,13 +142,6 @@ class @Action
 #
 #$('body').on 'click', '.toggle_word_wrap_btn', ->
     #window.editor.getSession().setUseWrapMode(!window.editor.getSession().getUseWrapMode())
-#
-#$('body').on 'click', '.find_btn', ->
-    #ace.require('ace/ext/searchbox').Search(window.editor)
-#
-#$('body').on 'click', '.replace_btn', ->
-    #ace.require('ace/ext/searchbox').Search(window.editor, true)
-    #
 
 
 #
