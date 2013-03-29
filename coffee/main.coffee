@@ -8,3 +8,8 @@
 $ ->
     util.last_folder (path) ->
         window.application = new Application(path)
+    
+    util.last_files (paths) ->
+        for path in paths
+            if file_manager.exists path
+                application.open_file path

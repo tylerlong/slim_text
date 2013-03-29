@@ -17,10 +17,13 @@ class @Event
 
         window.onbeforeunload = () ->
             chrome.storage.local.set { 'path': document.title }
+            paths = []
             for key, editor of editors
+                paths.push editor.path
                 filename = $("#link-#{editor.uid}").text()
                 if filename.indexOf('* ') == 0
                     return """"#{filename.substr(2)}" #{chrome.i18n.getMessage('save_before_leaving')}"""
+            chrome.storage.local.set { 'paths': paths }
 
         $('body').on 'click', '.file_link', ->
             action.open_file $(this).data('path')
@@ -73,8 +76,7 @@ class @Action
                 index = $('#tabs ul li').index $("#li-#{uid}")
                 $('#tabs').tabs 'option', "active", index
                 return
-        editor = new Editor path
-        editors[editor.uid] = editor
+        application.open_file path
 
     open_folder: (path) ->
         if not file_manager.exists(path)

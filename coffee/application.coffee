@@ -201,3 +201,7 @@ class @Application
 
     refresh_sidebar: ->
         @show_sidebar document.title
+
+    open_file: (path) ->
+        editor = new Editor path
+        editors[editor.uid] = editor

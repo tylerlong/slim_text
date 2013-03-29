@@ -35,9 +35,13 @@ class @Util
 
     last_folder: (callback) ->
         chrome.storage.local.get ['path'], (items) ->
-            path = null
             if items.path and file_manager.exists(items.path)
                 path = items.path
             else
                 path = file_manager.home_folder() or file_manager.temp_folder()
             callback path
+    
+    last_files: (callback) ->
+        chrome.storage.local.get ['paths'], (items) ->
+            if items.paths
+                callback items.paths
