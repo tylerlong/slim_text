@@ -15,8 +15,11 @@ class @Event
             if editor
                 editor.resize()
 
-        $('body').on 'click', '.path_link', ->
-            action.open_path $(this).data('path')
+        $('body').on 'click', '.file_link', ->
+            action.open_file $(this).data('path')
+
+        $('body').on 'click', '.folder_link', ->
+            action.open_folder $(this).data('path')
 
         $('body').on 'click', '.options_btn', ->
             chrome.tabs.create { url: chrome.extension.getURL('html/options.html') }
@@ -30,24 +33,15 @@ class @Event
 
         $('body').on 'click', '.save_btn', ->
             action.save_file()
+        
+        $('body').on 'click', '.new_file_btn', ->
+            setTimeout((-> action.create_file()), 50)
 
 class @Action
-    open_path: (path) ->
+    open_file: (path) ->
         if not file_manager.exists(path)
             util.notice chrome.i18n.getMessage('does_not_exist'), path
-            route = file_manager.route path
-            for item in _.rest(route)
-                if file_manager.exists item.path
-                    action.open_folder item.path
-                    return
             return
-        type = file_manager.type path
-        if type == 'file'
-            action.open_file path
-            path = file_manager.container(path)
-        action.open_folder path
-
-    open_file: (path) ->
         for key, editor of editors
             if path == editor.path
                 uid = editor.uid
@@ -58,13 +52,15 @@ class @Action
         editors[editor.uid] = editor
 
     open_folder: (path) ->
+        if not file_manager.exists(path)
+            util.notice chrome.i18n.getMessage('does_not_exist'), path
+            return
         if not file_manager.can_list path
             util.notice chrome.i18n.getMessage('permission_denied'), path
             path = file_manager.home_folder() or file_manager.temp_folder()
-        document.title = path
         application.show_breadcrumb path
         application.show_sidebar path
-    
+
     exit_full_window: ->
         if window.layout.state.north.isClosed
             window.layout.open 'north'
@@ -77,6 +73,13 @@ class @Action
         current_editor = util.current_editor()
         if current_editor
             current_editor.save_file()
+    
+    create_file: ->
+        file_path = util.prompt_path_name('file')
+        return if not file_path
+        file_manager.create_file file_path
+        application.refresh_sidebar()
+        action.open_file file_path
 
 
 
@@ -121,8 +124,7 @@ class @Action
 #$('body').on 'click', '.replace_btn', ->
     #ace.require('ace/ext/searchbox').Search(window.editor, true)
     #
-#$('body').on 'click', '.new_file_btn', ->
-    #setTimeout((-> window.create_file()), 50)
+
 #
 #$('body').on 'click', '.new_folder_btn', ->
     #setTimeout((-> window.create_folder()), 50)

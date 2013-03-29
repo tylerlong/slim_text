@@ -1,12 +1,6 @@
 window.current_folder = ->
     $('#route').data 'path'
 
-window.create_file = ->
-    file_path = window.prompt_file_name()
-    return if not file_path
-    file_manager.write file_path, ''
-    window.open_path file_path
-
 
 window.create_folder = ->
     folder_name = prompt "#{chrome.i18n.getMessage('create_folder')} #{window.current_folder()}/"

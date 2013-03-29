@@ -148,6 +148,9 @@ class @Application
             $('#toolbar').hide()
 
     show_breadcrumb: (path) ->
+        if path.substr(path.length - 1) == '/'
+            path = path.substr 0, path.length - 1
+        document.title = path
         $('#route').empty()
         route = file_manager.route(path)
         route.reverse()
@@ -167,7 +170,7 @@ class @Application
             if route.length ==0
                 $('#route').append('/')
         for item in _.initial(route)
-            link = $("""<a class="path_link">#{item.name}</a>""")
+            link = $("""<a class="folder_link">#{item.name}</a>""")
             link.data("path", item.path)
             $('#route').append(link)
             if item.name == '/'
@@ -185,7 +188,7 @@ class @Application
             item.name.toLowerCase()
         for item in items
             if util.clickable(item)
-                link = $("""<a class="path_link">#{item.name}</a>""")
+                link = $("""<a class="#{item.type}_link">#{item.name}</a>""")
                 link.data("path", item.path)
                 $('#sidebar').append link
                 if item.type == 'folder'
@@ -193,3 +196,6 @@ class @Application
             else 
                 $('#sidebar').append "<span>#{item.name}</span>"
             $('#sidebar').append "<br/>"
+    
+    refresh_sidebar: ->
+        @show_sidebar document.title

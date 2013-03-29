@@ -12,19 +12,20 @@ class @Util
                 return false if mode.is_binary(extension)
         return true
     
-    prompt_file_name: ->
-        file_name = prompt "#{chrome.i18n.getMessage('create_file')} #{window.current_folder()}/"
-        if not file_name or file_name.trim() == ''
+    prompt_path_name: (type) ->
+        message = chrome.i18n.getMessage("create_#{type}")
+        path_name = prompt "#{message} #{document.title}/"
+        if not path_name or path_name.trim() == ''
             return false
-        if not file_manager.valid_name file_name
-            window.notice chrome.i18n.getMessage('invalid_path_name'), file_name
+        if not file_manager.valid_name path_name
+            util.notice chrome.i18n.getMessage('invalid_path_name'), path_name
             return false
-        file_path = "#{window.current_folder()}/#{file_name}"
-        if file_manager.exists file_path
-            window.notice chrome.i18n.getMessage('already_exists'), file_path
+        path = "#{document.title}/#{path_name}"
+        if file_manager.exists path
+            util.notice chrome.i18n.getMessage('already_exists'), path
             return false
-        return file_path
-    
+        return path
+
     current_editor: ->
         current_panel = $("#tabs div.ui-tabs-panel[aria-hidden='false']")
         if not current_panel
