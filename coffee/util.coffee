@@ -3,7 +3,7 @@ class @Util
         notification = webkitNotifications.createNotification '../image/icon48.png', title, content
         notification.show()
         setTimeout (-> notification.cancel()), timeout
-    
+
     clickable: (item) ->
         if item.type == 'file'
             extension = file_manager.extension(item.name)
@@ -11,7 +11,7 @@ class @Util
                 extension = extension.toLowerCase().substr(1, extension.length - 1)
                 return false if mode.is_binary(extension)
         return true
-    
+
     prompt_path_name: (type) ->
         message = chrome.i18n.getMessage("create_#{type}")
         path_name = prompt "#{message} #{document.title}/"
@@ -32,3 +32,12 @@ class @Util
             return null
         uid = current_panel.data 'uid'
         return editors[uid]
+
+    last_folder: (callback) ->
+        chrome.storage.local.get ['path'], (items) ->
+            path = null
+            if items.path and file_manager.exists(items.path)
+                path = items.path
+            else
+                path = file_manager.home_folder() or file_manager.temp_folder()
+            callback path

@@ -15,6 +15,13 @@ class @Event
             if editor
                 editor.resize()
 
+        window.onbeforeunload = () ->
+            chrome.storage.local.set { 'path': document.title }
+            for key, editor of editors
+                filename = $("#link-#{editor.uid}").text()
+                if filename.indexOf('* ') == 0
+                    return """"#{filename.substr(2)}" #{chrome.i18n.getMessage('save_before_leaving')}"""
+
         $('body').on 'click', '.file_link', ->
             action.open_file $(this).data('path')
 
@@ -36,6 +43,9 @@ class @Event
         
         $('body').on 'click', '.new_file_btn', ->
             setTimeout((-> action.create_file()), 50)
+
+        $('body').on 'click', '.new_folder_btn', ->
+            setTimeout((-> action.create_folder()), 50)
 
 class @Action
     open_file: (path) ->
@@ -64,16 +74,16 @@ class @Action
     exit_full_window: ->
         if window.layout.state.north.isClosed
             window.layout.open 'north'
-    
+
     full_window: ->
         if window.layout.state.north.isVisible
             window.layout.close 'north'
-    
+
     save_file: ->
         current_editor = util.current_editor()
         if current_editor
             current_editor.save_file()
-    
+
     create_file: ->
         file_path = util.prompt_path_name('file')
         return if not file_path
@@ -81,6 +91,11 @@ class @Action
         application.refresh_sidebar()
         action.open_file file_path
 
+    create_folder: ->
+        folder_path = util.prompt_path_name('folder')
+        return if not folder_path
+        file_manager.create_folder folder_path
+        application.refresh_sidebar()
 
 
 #
@@ -125,9 +140,7 @@ class @Action
     #ace.require('ace/ext/searchbox').Search(window.editor, true)
     #
 
-#
-#$('body').on 'click', '.new_folder_btn', ->
-    #setTimeout((-> window.create_folder()), 50)
+
 #
 #$('body').on 'click', '.check_for_updates_btn', ->
     #$.get('https://raw.github.com/tylerlong/slimtext.org/gh-pages/__version__', (data) ->
@@ -140,8 +153,3 @@ class @Action
             #
     #).fail ->
         #util.notice chrome.i18n.getMessage('network_error'), chrome.i18n.getMessage('check_manually'), 5000
-
-#window.onbeforeunload = () ->
-    #chrome.storage.local.set { 'path': window.storage.path, 'file': window.storage.file }
-    #if document.title.indexOf('* ') == 0
-        #return """"#{window.storage.file}" #{chrome.i18n.getMessage('save_before_leaving')}"""

@@ -1,7 +1,9 @@
 class @Application
-    constructor: ->
+    constructor: (@path) ->
         @create_layout()
         @create_topbar()
+        @show_breadcrumb @path
+        @show_sidebar @path
 
     create_layout: ->
         window.layout = $('body').layout
@@ -180,7 +182,7 @@ class @Application
         item = _.last(route)
         if item
             $('#route').append("#{item.name}")
-    
+
     show_sidebar: (path) ->
         $('#sidebar').empty()
         items = file_manager.list(path)
@@ -196,6 +198,6 @@ class @Application
             else 
                 $('#sidebar').append "<span>#{item.name}</span>"
             $('#sidebar').append "<br/>"
-    
+
     refresh_sidebar: ->
         @show_sidebar document.title

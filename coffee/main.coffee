@@ -1,4 +1,3 @@
-@application = new Application()
 @editors = {}
 @event = new Event()
 @action = new Action()
@@ -7,5 +6,5 @@
 @util = new Util()
 
 $ ->
-    application.show_breadcrumb('/home/tyler/src/win/test/')
-    application.show_sidebar('/home/tyler/src/win/test/')
+    util.last_folder (path) ->
+        window.application = new Application(path)

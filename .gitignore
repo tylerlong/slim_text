@@ -1,15 +1,14 @@
 *.pyc
 *.swp
 
+.sass-cache/
+
 js/application.js
 js/background.js
 js/editor.js
-js/editor_old.js
 js/event.js
 js/file_manager.js
 js/main.js
 js/mode.js
 js/option.js
 js/util.js
-
-.sass-cache/
