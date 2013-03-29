@@ -36,6 +36,8 @@ class @Event
             action.open_folder $(this).data('path')
         $('body').on 'click', "span.ui-icon-close", ->
             uid = $(this).closest("li").attr('aria-controls').substr(4)
+            filename = $("#link-#{uid}").text()
+            return if filename.indexOf('* ') == 0 and not confirm """"#{filename.substr(2)}" #{chrome.i18n.getMessage('save_before_leaving')}"""
             editors[uid].dispose()
             application.refresh_sidebar()
 

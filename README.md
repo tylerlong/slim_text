@@ -107,8 +107,8 @@ easy first, hard last, no hurry!
 206. save all
 207. close all
 208. close all tabs
-210. alert before close unsaved file
-211. 
+211. two many files opened, tabs bar not enough space to hold them
+212. 
 
 
 ## won't fix
