@@ -92,6 +92,11 @@ class @Event
             if current_editor
                 current_editor.editor.toggleCommentLines()
 
+        $('body').on 'click', '.mode_link', ->
+            current_editor = util.current_editor()
+            if current_editor
+                current_editor.editor.getSession().setMode "ace/mode/#{$(this).data('mode')}"
+
 class @Action
     open_file: (path) ->
         if not file_manager.exists(path)
@@ -142,11 +147,6 @@ class @Action
         application.refresh_sidebar()
 
 
-#
-#$('body').on 'click', '.mode-link', ->
-    #window.editor.getSession().setMode "ace/mode/#{$(this).data('mode')}"
-
-#
 #$('body').on 'click', '.about_btn', ->
     #util.notice "Slim Text #{chrome.app.getDetails().version}", "Copyright © 2012 - 2013 slimtext.org", 5000
 #

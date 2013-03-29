@@ -139,8 +139,8 @@ class @Application
     </li>
     """
             pairs.push [RegExp("^[#{range[0]}-#{range[1]}]", 'i'), "##{range[0]}_to_#{range[1]}"]
-        for mode, name of window.modes
-            item = """<li><a data-mode="#{mode}" class="mode-link">#{name}</a></li>"""
+        for key, name of mode.modes
+            item = """<li><a data-mode="#{key}" class="mode_link">#{name}</a></li>"""
             for pair in pairs
                 if name.match pair[0]
                     $(pair[1]).append item
