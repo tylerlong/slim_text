@@ -1,6 +1,9 @@
 {
+    "name": {
+        "message": "Slim Text"
+    },
     "description": {
-        "message": "Slim Text is a slim text editor which runs inside a web browser."
+        "message": "Slim Text is a slim text editor which runs inside a web browser"
     },
     "file": {
         "message": "File"
@@ -36,7 +39,7 @@
         "message": "Website"
     },
     "about": {
-        "message": "About"
+        "message": "About Slim Text"
     },
     "report_issue": {
         "message": "Report an issue"
