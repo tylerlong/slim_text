@@ -160,5 +160,8 @@
     },
     "close_all_tabs": {
         "message": "Close all tabs"
+    },
+    "pop_out": {
+        "message": "Pop out"
     }
 }

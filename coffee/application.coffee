@@ -92,6 +92,7 @@ class @Application
           <li><a class="toggle_word_wrap_btn">#{chrome.i18n.getMessage('toggle_word_wrap')}</a></li>
           <li><a class="toggle_invisibles_btn">#{chrome.i18n.getMessage('toggle_invisibles')}</a></li>
           <li><a class="full_window_btn">#{chrome.i18n.getMessage('full_window')}</a></li>
+          <li><a class="pop_out_btn">#{chrome.i18n.getMessage('pop_out')}</a></li>
       </ul>
     </span>
     <span class="dropdown">
@@ -124,6 +125,7 @@ class @Application
   <a class="find_btn" title="#{chrome.i18n.getMessage('find')}"><i class="icon-search"></i></a>
   <a class="toggle_invisibles_btn" title="#{chrome.i18n.getMessage('toggle_invisibles')}"><i class="icon-eye-open"></i></a>
   <a class="full_window_btn" title="#{chrome.i18n.getMessage('full_window')}"><i class="icon-fullscreen"></i></a>
+  <a class="pop_out_btn" title="#{chrome.i18n.getMessage('pop_out')}"><i class="icon-external-link"></i></a>
   <a class="options_btn" title="#{chrome.i18n.getMessage('options')}"><i class="icon-cog"></i></a>
   <a class="check_for_updates_btn" title="#{chrome.i18n.getMessage('check_for_updates')}"><i class="icon-cloud-download"></i></a>
   <a title="#{chrome.i18n.getMessage('report_issue')}" href="https://github.com/tylerlong/slimtext.org/issues" target="_blank"><i class="icon-github-alt"></i></a>

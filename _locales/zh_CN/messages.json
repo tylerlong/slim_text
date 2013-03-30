@@ -160,5 +160,8 @@
     },
     "close_all_tabs": {
         "message": "关闭所有标签页"
+    },
+    "pop_out": {
+        "message": "弹出窗口"
     }
 }

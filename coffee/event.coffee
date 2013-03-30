@@ -127,6 +127,9 @@ class @Event
             for key, editor of editors
                 editor.dispose()
         
+        $('body').on 'click', '.pop_out_btn', ->
+            chrome.windows.create { url: chrome.extension.getURL('html/main.html'), type: 'popup' }
+        
         $('body').on 'change', '#drives_select', ->
             action.open_folder $(this).val()
 

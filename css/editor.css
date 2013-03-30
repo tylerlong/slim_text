@@ -55,7 +55,7 @@ div[id^=editor-] {
 #toolbar a {
     font-size: 14px;
     color: #222;
-    padding: 1px 3px;
+    padding: 0px 3px;
 }
 #toolbar a:hover {
     color: #b5e853;
