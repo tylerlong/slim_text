@@ -107,7 +107,9 @@ easy first, hard last, no hurry!
 211. two many files opened, tabs bar not enough space to hold them
 212. context menu: https://github.com/medialize/jQuery-contextMenu
 213. bug: window switch dirves
-214. 
+214. drag & drop tabs
+    1. jqueryui sortable kind of buggy
+215. 
 
 
 ## won't fix

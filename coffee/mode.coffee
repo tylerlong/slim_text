@@ -135,6 +135,7 @@ class @Mode
             'htm': 'html'
             'html': 'html'
             'xhtml': 'html'
+            'erb': 'html'
         
             'jade': 'jade'
         
@@ -220,7 +221,6 @@ class @Mode
             'rd': 'rdoc'
         
             'rhtml': 'rhtml'
-            'erb': 'rhtml'
         
             'rb': 'ruby'
             'ru': 'ruby'
