@@ -58,8 +58,7 @@ div[id^=editor-] {
     padding: 0px 3px;
 }
 #toolbar a:hover {
-    color: #b5e853;
-    background-color: #1b1b1b;
+    background-color: #aaa;
 }
 #hidden_btn {
     color: #DDD;
