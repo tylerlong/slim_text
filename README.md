@@ -15,9 +15,6 @@ Slim Text is a Slim Text editor which runs inside a web browser
     2. add new line to the end of file upon saving
     4. auto complete
     5. it seems that I have to implment those features myself, ace doesn't provide such features.
-104. minor bug: unsaved content, refresh page, page title changed to "chrome-extension://...."
-    1. if the title does not start with "* ", is OK
-    2. I think it is a bug of chrome
 105. introduce plugin system
     1. page actions, to change the appearance or behavior of the software, such as change background, such as define new shortcut key 
     2. advanced feature, postpone
@@ -34,9 +31,8 @@ Slim Text is a Slim Text editor which runs inside a web browser
 125. launch via command line, such as subl . &
 133. open a new tab, default path is the current tab's path?
     1. the same as ubuntu terminal
+    2. if already have a window, then no need to open all of the files, just navigate to folder path ?
 135. go through this page: http://ace.ajax.org/#nav=production
-137. listen to backspace keyboard event and open the last folder?
-    1. but editor also need this event. do experiments
 140. add command line
     1. gcli: https://github.com/mozilla/gcli
     2. research, find the best solution!
@@ -62,11 +58,8 @@ Slim Text is a Slim Text editor which runs inside a web browser
 176. compress html files before deployment
 177. bug: Emacs ctrl + n conflicts with chrome create a new windows
     1. if I am an Emacs user, I feel quite annoying
-182. remove file/folder
-183. rename file/folder
-184. minor bug: right after installation, the path for windows is backslash instead of slash
-    1. problem resolved if you click any path
-186. Minor bug: save a new file, the file on left panel does not appear as white color
+182. remove/rename file/folder
+    1. show remove/rename icons on the left panel whenever mouse over
 187. can not be installed on win8!
     1. this application is not supported on this computer. Installation has been disabled
     2. it is said that run chrome in win7 compatible mode can resolve this issue
@@ -84,7 +77,7 @@ Slim Text is a Slim Text editor which runs inside a web browser
         1. user have to open a dialog each time he wants to open a file
         2. So NPAPI is still needed
     3. already have chrome extension version and Qt version
-    4. at least two uses request this
+    4. at least two users request this
     5. but I cannot see the value. there is no major advantages.
 194. file content encode issue on windows
     1. create a text file, contains Chinese characters. The file encoding is ANSI by default
@@ -93,20 +86,14 @@ Slim Text is a Slim Text editor which runs inside a web browser
     4. bug: windows csharp file, show BOM as * (because cannot handle utf8 with BOM)
 200. bug: cannot see mounted external dirves in windows. such as virtualbox shared folder
 202. Preview HTML
-203. hide address bar
 205. does not support Ubuntu 10.04 32-bit or 64-bit
 206. save all
 211. two many files opened, tabs bar not enough space to hold them
 212. context menu: https://github.com/medialize/jQuery-contextMenu
-213. bug: window switch dirves
 214. drag & drop tabs
     1. jqueryui sortable kind of buggy
-216. 
-
-
-## won't fix
-
-1. bug: refresh page before desktop notification closes, the notification never closes
-    1. cannot dismiss the notification window upon refreshing, this is a bug of chrome, so postpone
-        1. https://code.google.com/p/chromium/issues/detail?id=40262
-2.
+216. popup window task bar icon too small on windows
+217. popup window or new tab? configurable or allow Pop-out?
+218. remember the current active tab
+219. decrease tab height further? 
+220. 
