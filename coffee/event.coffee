@@ -45,9 +45,7 @@ class @Event
             action.full_window()
 
         $('body').on 'click', '.save_btn', ->
-            current_editor = util.current_editor()
-            if current_editor
-                current_editor.save_file()
+            action.save_file()
         $('body').on 'click', '.save_all_btn', ->
             for key, editor of editors
                 editor.save_file()
@@ -150,6 +148,11 @@ class @Action
                 $('#tabs').tabs 'option', "active", index
                 return
         application.open_file path
+    
+    save_file: ->
+        current_editor = util.current_editor()
+        if current_editor
+            current_editor.save_file()
 
     open_folder: (path) ->
         if not file_manager.exists(path)
