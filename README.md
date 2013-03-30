@@ -1,17 +1,14 @@
 # Slim Text
 
-Slim Text is a Slim Text editor which runs inside a web browser.
-
-
-## priority items
-
-easy first, hard last, no hurry!
+Slim Text is a Slim Text editor which runs inside a web browser
 
 
 ## todo list
 
 68. auto detect file change outside of the editor and load the newest content into editor
     1. advanced feature, postpone
+    2. can check last modified time using boost filesystem api
+    3. listen to focus event of document, then check file for each editor
 97. enable ace editor features:
     1. remove trailing spaces upon saving
         1. some one hate trailing spaces a lot!
@@ -43,11 +40,6 @@ easy first, hard last, no hurry!
 140. add command line
     1. gcli: https://github.com/mozilla/gcli
     2. research, find the best solution!
-141. Chinese name 思灵编辑器 ?
-    1. 四死私似思斯司丝驷
-    2. 零另令灵领玲凌玲聆伶
-    3. no hurry, postpone
-    4. 要普通中国人接受这个编辑器，必须得有中文名!
 142. add increase font-size or decrease font-size to menu ?
     1. and persist locally
     2. when open the editor, first check local storage, then check sync storage, and then last storage. Use the first one found.
@@ -109,7 +101,7 @@ easy first, hard last, no hurry!
 213. bug: window switch dirves
 214. drag & drop tabs
     1. jqueryui sortable kind of buggy
-215. 
+216. 
 
 
 ## won't fix
