@@ -45,7 +45,12 @@ class @Event
             action.full_window()
 
         $('body').on 'click', '.save_btn', ->
-            action.save_file()
+            current_editor = util.current_editor()
+            if current_editor
+                current_editor.save_file()
+        $('body').on 'click', '.save_all_btn', ->
+            for key, editor of editors
+                editor.save_file()
 
         $('body').on 'click', '.new_file_btn', ->
             setTimeout((-> action.create_file()), 50)
@@ -163,11 +168,6 @@ class @Action
     full_window: ->
         if window.layout.state.north.isVisible
             window.layout.close 'north'
-
-    save_file: ->
-        current_editor = util.current_editor()
-        if current_editor
-            current_editor.save_file()
 
     create_file: ->
         file_path = util.prompt_path_name('file')

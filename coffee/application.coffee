@@ -50,6 +50,7 @@ class @Application
           <li><a class="new_file_btn">#{chrome.i18n.getMessage('new_file')}</a></li>
           <li><a class="new_folder_btn">#{chrome.i18n.getMessage('new_folder')}</a></li>
           <li><a class="save_btn">#{chrome.i18n.getMessage('save')}</a></li>
+          <li><a class="save_all_btn">#{chrome.i18n.getMessage('save_all')}</a></li>
           <li><a class="close_tab_btn">#{chrome.i18n.getMessage('close_tab')}</a></li>
           <li><a class="close_other_tabs_btn">#{chrome.i18n.getMessage('close_other_tabs')}</a></li>
           <li><a class="close_all_tabs_btn">#{chrome.i18n.getMessage('close_all_tabs')}</a></li>

@@ -87,18 +87,17 @@ Slim Text is a Slim Text editor which runs inside a web browser
 200. bug: cannot see mounted external dirves in windows. such as virtualbox shared folder
 202. Preview HTML
 205. does not support Ubuntu 10.04 32-bit or 64-bit
-206. save all
 211. two many files opened, tabs bar not enough space to hold them
 212. context menu: https://github.com/medialize/jQuery-contextMenu
 214. drag & drop tabs
     1. jqueryui sortable kind of buggy
 216. popup window task bar icon too small on windows
-    1. chrome's issue, postpone: https://code.google.com/p/chromium/issues/detail?id=94301
+    1. chrome's bug, postpone: https://code.google.com/p/chromium/issues/detail?id=94301
 218. remember the current active tab
-219. decrease tab height further? 
 220. add google analytics to slimtext.org
 221. disable status bar when hover on tabs
     1. no easy way
     2. a possible solution: remove href upon hovering, add href back upon clicking. save href value in data attr
-224. 
+224. increase height of tab, too small visually
+225. 
 

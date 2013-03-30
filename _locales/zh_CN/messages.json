@@ -20,6 +20,9 @@
     "save": {
         "message": "保存"
     },
+    "save_all": {
+        "message": "保存所有"
+    },
     "syntax": {
         "message": "语法高亮"
     },

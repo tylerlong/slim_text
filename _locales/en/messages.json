@@ -20,6 +20,9 @@
     "save": {
         "message": "Save"
     },
+    "save_all": {
+        "message": "Save all"
+    },
     "syntax": {
         "message": "Syntax"
     },
