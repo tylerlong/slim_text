@@ -91,7 +91,6 @@ Slim Text is a Slim Text editor which runs inside a web browser
     4. bug: windows csharp file, show BOM as * (because cannot handle utf8 with BOM)
 200. bug: cannot see mounted external dirves in windows. such as virtualbox shared folder
 202. Preview HTML
-205. does not support Ubuntu 10.04 32-bit or 64-bit
 211. two many files opened, tabs bar not enough space to hold them
 212. context menu: https://github.com/medialize/jQuery-contextMenu
 214. drag & drop tabs
