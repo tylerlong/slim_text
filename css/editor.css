@@ -76,9 +76,9 @@ div[id^=editor-] {
 li a {
     outline-color: transparent;
 }
-.ui-icon-close { 
-    float: left; 
-    cursor: pointer; 
+.ui-icon-close {
+    float: left;
+    cursor: pointer;
 }
 #tabs .ui-tabs-nav {
     height: 17px;
