@@ -75,7 +75,7 @@ div[id^=editor-] {
     font-family: 'Consolas', 'Droid Sans Mono';
 }
 li a {
-    outline-color: transparent;
+    outline-color: white;
 }
 .ui-icon-close {
     float: left;

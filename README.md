@@ -103,4 +103,5 @@ Slim Text is a Slim Text editor which runs inside a web browser
     1. no easy way
     2. a possible solution: remove href upon hovering, add href back upon clicking. save href value in data attr
 225. the first time installed on linux, does not work
-226. 
+226. bug: Mac ctrl + s instead of command + s
+227. 
