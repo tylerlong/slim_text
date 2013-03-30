@@ -93,12 +93,11 @@ Slim Text is a Slim Text editor which runs inside a web browser
 214. drag & drop tabs
     1. jqueryui sortable kind of buggy
 216. popup window task bar icon too small on windows
-217. popup window or new tab? configurable or allow Pop-out?
+    1. chrome's issue, postpone: https://code.google.com/p/chromium/issues/detail?id=94301
 218. remember the current active tab
 219. decrease tab height further? 
 220. add google analytics to slimtext.org
-221. disable status bar
+221. disable status bar globally
 222. toolbar icon hover add border instead of change color?
-223. default size for popup window
 224. 
 

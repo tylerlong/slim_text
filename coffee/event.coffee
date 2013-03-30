@@ -128,7 +128,7 @@ class @Event
                 editor.dispose()
         
         $('body').on 'click', '.pop_out_btn', ->
-            chrome.windows.create { url: chrome.extension.getURL('html/main.html'), type: 'popup' }
+            chrome.windows.create { url: chrome.extension.getURL('html/main.html'), type: 'popup', width: 800, height: 600 }
         
         $('body').on 'change', '#drives_select', ->
             action.open_folder $(this).val()
