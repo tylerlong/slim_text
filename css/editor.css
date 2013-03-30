@@ -25,7 +25,7 @@ div.ui-layout-center {
 }
 div[id^=editor-] {
     position: absolute;
-    top: 22px;
+    top: 21px;
     left: 0;    
     bottom: 0;
     right: 0;
@@ -72,6 +72,7 @@ div[id^=editor-] {
 #tabs {
     font-size: 12px;
     padding: 0;
+    font-family: 'Consolas', 'Droid Sans Mono';
 }
 li a {
     outline-color: transparent;
@@ -81,12 +82,12 @@ li a {
     cursor: pointer;
 }
 #tabs .ui-tabs-nav {
-    height: 22px;
+    height: 21px;
     border-width: 0px;
     border-radius: 0px;
     padding: 0;
 }
 
 .ui-tabs .ui-tabs-nav li a {
-    padding: 2px 8px 3px 4px;
+    padding: 2px 8px 2px 4px;
 }
