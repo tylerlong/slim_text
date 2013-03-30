@@ -25,7 +25,7 @@ div.ui-layout-center {
 }
 div[id^=editor-] {
     position: absolute;
-    top: 20px;
+    top: 18px;
     left: 0;    
     bottom: 0;
     right: 0;
@@ -73,17 +73,20 @@ div[id^=editor-] {
     font-size: 11px;
     padding: 0;
 }
+li a {
+    outline-color: transparent;
+}
 .ui-icon-close { 
     float: left; 
     cursor: pointer; 
 }
 #tabs .ui-tabs-nav {
-    height: 19px;
+    height: 17px;
     border-width: 0px;
     border-radius: 0px;
     padding: 0;
 }
 
 .ui-tabs .ui-tabs-nav li a {
-    padding: 2px 4px 1px 4px;
+    padding: 1px 3px 0px 3px;
 }
