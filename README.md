@@ -102,13 +102,12 @@ easy first, hard last, no hurry!
 200. bug: cannot see mounted external dirves in windows. such as virtualbox shared folder
 202. Preview HTML
 203. hide address bar
-204. refactor code using OO, a tab is an OO object
 205. does not support Ubuntu 10.04 32-bit or 64-bit
 206. save all
-207. close all
-208. close all tabs
 211. two many files opened, tabs bar not enough space to hold them
-212. 
+212. context menu: https://github.com/medialize/jQuery-contextMenu
+213. bug: window switch dirves
+214. 
 
 
 ## won't fix

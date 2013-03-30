@@ -36,10 +36,7 @@ class @Event
             action.open_folder $(this).data('path')
         $('body').on 'click', "span.ui-icon-close", ->
             uid = $(this).closest("li").attr('aria-controls').substr(4)
-            filename = $("#link-#{uid}").text()
-            return if filename.indexOf('* ') == 0 and not confirm """"#{filename.substr(2)}" #{chrome.i18n.getMessage('save_before_leaving')}"""
             editors[uid].dispose()
-            application.refresh_sidebar()
 
         $('body').on 'click', '.options_btn', ->
             chrome.tabs.create { url: chrome.extension.getURL('html/options.html') }
@@ -113,6 +110,22 @@ class @Event
 
         $('body').on 'click', '.about_btn', ->
             util.notice "Slim Text #{chrome.app.getDetails().version}", "Copyright © 2012 - 2013 slimtext.org", 5000
+        
+        $('body').on 'click', '.close_tab_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                current_editor.dispose()
+        
+        $('body').on 'click', '.close_other_tabs_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                for key, editor of editors
+                    if current_editor.uid != editor.uid
+                        editor.dispose()
+        
+        $('body').on 'click', '.close_all_tabs_btn', ->
+            for key, editor of editors
+                editor.dispose()
 
 class @Action
     open_file: (path) ->

@@ -148,5 +148,14 @@
     },
     "create_folder": {
         "message": "Create folder"
+    },
+    "close_tab": {
+        "message": "Close tab"
+    },
+    "close_other_tabs": {
+        "message": "Close other tabs"
+    },
+    "close_all_tabs": {
+        "message": "Close all tabs"
     }
 }

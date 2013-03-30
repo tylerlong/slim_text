@@ -50,6 +50,9 @@ class @Application
           <li><a class="new_file_btn">#{chrome.i18n.getMessage('new_file')}</a></li>
           <li><a class="new_folder_btn">#{chrome.i18n.getMessage('new_folder')}</a></li>
           <li><a class="save_btn">#{chrome.i18n.getMessage('save')}</a></li>
+          <li><a class="close_tab_btn">#{chrome.i18n.getMessage('close_tab')}</a></li>
+          <li><a class="close_other_tabs_btn">#{chrome.i18n.getMessage('close_other_tabs')}</a></li>
+          <li><a class="close_all_tabs_btn">#{chrome.i18n.getMessage('close_all_tabs')}</a></li>
       </ul>
     </span>
     <span class="dropdown">
@@ -149,8 +152,8 @@ class @Application
             $('#toolbar').hide()
 
     show_breadcrumb: (path) ->
-        if path.substr(path.length - 1) == '/'
-            path = path.substr 0, path.length - 1
+        if path.substr(path.length - 1) != '/'
+            path = path + '/'
         document.title = path
         $('#route').empty()
         route = file_manager.route(path)
@@ -180,7 +183,7 @@ class @Application
                 $('#route').append(' / ')
         item = _.last(route)
         if item
-            $('#route').append("#{item.name}")
+            $('#route').append("#{item.name} /")
 
     show_sidebar: (path, filePath = null) ->
         $('#sidebar').empty()

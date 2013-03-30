@@ -67,8 +67,11 @@ class @Editor
             util.notice chrome.i18n.getMessage('unable_to_save'), @path
 
     dispose: ->
+        filename = $("#link-#{@uid}").text()
+        return if filename.indexOf('* ') == 0 and not confirm """"#{filename.substr(2)}" #{chrome.i18n.getMessage('save_before_leaving')}"""
         @editor.destroy()
         $("li[aria-controls='tab-#{@uid}']").remove()
         $("#tab-#{@uid}").remove()
         @tabs.tabs("refresh")
         delete editors[@uid]
+        application.refresh_sidebar()

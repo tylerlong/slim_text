@@ -14,13 +14,13 @@ class @Util
 
     prompt_path_name: (type) ->
         message = chrome.i18n.getMessage("create_#{type}")
-        path_name = prompt "#{message} #{document.title}/"
+        path_name = prompt "#{message} #{document.title}"
         if not path_name or path_name.trim() == ''
             return false
         if not file_manager.valid_name path_name
             util.notice chrome.i18n.getMessage('invalid_path_name'), path_name
             return false
-        path = "#{document.title}/#{path_name}"
+        path = "#{document.title}#{path_name}"
         if file_manager.exists path
             util.notice chrome.i18n.getMessage('already_exists'), path
             return false
