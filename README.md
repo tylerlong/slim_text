@@ -3,6 +3,11 @@
 Slim Text is a Slim Text editor which runs inside a web browser
 
 
+## priority items
+
+205, 187, 182, 142, 135, 68
+
+
 ## todo list
 
 68. auto detect file change outside of the editor and load the newest content into editor
