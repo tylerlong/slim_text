@@ -376,6 +376,8 @@ class @Mode
             'wpd': true
             'wpg': true
             'pdf': true
+            
+            'vdi': true
 
     guess_mode_by_extension: (file_extension) ->
         mode = @extensions[file_extension]

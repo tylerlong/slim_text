@@ -126,6 +126,9 @@ class @Event
         $('body').on 'click', '.close_all_tabs_btn', ->
             for key, editor of editors
                 editor.dispose()
+        
+        $('body').on 'change', '#drives_select', ->
+            action.open_folder $(this).val()
 
 class @Action
     open_file: (path) ->
@@ -186,7 +189,3 @@ class @Action
                 util.notice chrome.i18n.getMessage('no_update'), "#{chrome.i18n.getMessage('newest_version')}: #{current}", 5000
         ).fail ->
             util.notice chrome.i18n.getMessage('network_error'), chrome.i18n.getMessage('check_manually'), 5000
-
-#
-#$('body').on 'change', '#drives_select', ->
-    #window.open_path $(this).val()
