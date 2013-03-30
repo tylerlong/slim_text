@@ -25,7 +25,7 @@ div.ui-layout-center {
 }
 div[id^=editor-] {
     position: absolute;
-    top: 23px;
+    top: 22px;
     left: 0;    
     bottom: 0;
     right: 0;
