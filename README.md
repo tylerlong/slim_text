@@ -102,5 +102,5 @@ Slim Text is a Slim Text editor which runs inside a web browser
 221. disable status bar when hover on tabs
     1. no easy way
     2. a possible solution: remove href upon hovering, add href back upon clicking. save href value in data attr
-225. the first time installed on linux, does not work
-227. 
+227. encourage user to rate the extension
+229. 
