@@ -35,7 +35,9 @@ def dist():
         run('scss -t compressed css/bootstrap.css {0}/css/bootstrap.css'.format(folder))
         run('scss -t compressed css/editor.css {0}/css/editor.css'.format(folder))
         run('scss -t compressed css/jquery.layout.css {0}/css/jquery.layout.css'.format(folder))
+        run('scss -t compressed css/jqueryui.css {0}/css/jqueryui.css'.format(folder))
         run('scss -t compressed css/options.css {0}/css/options.css'.format(folder))
+        run('cp -r -n css/* {0}/css/'.format(folder))
         
         run('mkdir -p {0}/font/'.format(folder))
         run('scss -t compressed font/fonts.css {0}/font/fonts.css'.format(folder))
@@ -47,11 +49,14 @@ def dist():
         run('cp -r image/* {0}/image/'.format(folder))
         
         run('mkdir -p {0}/js/'.format(folder))        
+        run('uglifyjs js/application.js -c -m -o {0}/js/application.js'.format(folder))
         run('uglifyjs js/background.js -c -m -o {0}/js/background.js'.format(folder))
         run('uglifyjs js/editor.js -c -m -o {0}/js/editor.js'.format(folder))
-        run('uglifyjs js/events.js -c -m -o {0}/js/events.js'.format(folder))
-        run('uglifyjs js/modes.js -c -m -o {0}/js/modes.js'.format(folder))
-        run('uglifyjs js/options.js -c -m -o {0}/js/options.js'.format(folder))
+        run('uglifyjs js/event.js -c -m -o {0}/js/event.js'.format(folder))
+        run('uglifyjs js/file_manager.js -c -m -o {0}/js/file_manager.js'.format(folder))
+        run('uglifyjs js/main.js -c -m -o {0}/js/main.js'.format(folder))
+        run('uglifyjs js/mode.js -c -m -o {0}/js/mode.js'.format(folder))
+        run('uglifyjs js/option.js -c -m -o {0}/js/option.js'.format(folder))
         run('uglifyjs js/util.js -c -m -o {0}/js/util.js'.format(folder))
         run('cp -r -n js/* {0}/js/'.format(folder))
         
