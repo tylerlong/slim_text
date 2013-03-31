@@ -1,11 +1,11 @@
 class @Event
     constructor: ->
         $(document).keydown (event) ->
-            if (String.fromCharCode(event.which).toLowerCase() == 's' and event.ctrlKey) or event.which == 19
+            if (event.metaKey or event.ctrlKey) and String.fromCharCode(event.keyCode).toLowerCase() == 's' 
                 action.save_file()
                 event.preventDefault()
                 return false
-            else if event.which == 27
+            else if event.keyCode == 27
                 action.exit_full_window()
             return true
 
