@@ -52,10 +52,9 @@ div[id^=editor-] {
     display: inline;
     float: right;
     margin-right: 2px;
-    margin-top: 1px;
 }
 #toolbar a {
-    font-size: 14px;
+    font-size: 15px;
     color: #222;
     padding: 0px 3px;
 }
