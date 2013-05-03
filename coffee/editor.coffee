@@ -25,7 +25,7 @@ class @Editor
             if not items.theme
                 items.theme = 'monokai'
             if not items.font_size
-                items.font_size = '12'
+                items.font_size = '13'
             if not items.key_binding
                 items.key_binding = 'ace'
             if not items.tab_size
