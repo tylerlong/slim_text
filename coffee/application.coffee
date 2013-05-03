@@ -12,8 +12,8 @@ class @Application
             resizerDblClickToggle: false
             north:
                 slidable: false
-                spacing_open: 15
-                size: 18
+                spacing_open: 18
+                size: 24
                 resizable: false
                 togglerLength_open: 0
                 togglerTip_closed: chrome.i18n.getMessage('exit_full_window')
@@ -129,7 +129,7 @@ class @Application
   <a class="pop_out_btn" title="#{chrome.i18n.getMessage('pop_out')}"><i class="icon-external-link"></i></a>
   <a class="options_btn" title="#{chrome.i18n.getMessage('options')}"><i class="icon-cog"></i></a>
   <a class="check_for_updates_btn" title="#{chrome.i18n.getMessage('check_for_updates')}"><i class="icon-cloud-download"></i></a>
-  <a title="#{chrome.i18n.getMessage('report_issue')}" href="https://github.com/tylerlong/slimtext.org/issues" target="_blank"><i class="icon-github-alt"></i></a>
+  <a title="#{chrome.i18n.getMessage('report_issue')}" href="https://github.com/tylerlong/slim_text/issues" target="_blank"><i class="icon-github-alt"></i></a>
   <a class="about_btn" title="#{chrome.i18n.getMessage('about')}"><i class="icon-info-sign"></i></a>
   <i class="icon-fullscreen" id="hidden_btn"></i>
 </div>"""

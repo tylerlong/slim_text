@@ -2,7 +2,7 @@ body {
     background-color: #1b1b1b;
     color: #b5e853;
     font-family: 'Consolas', 'Droid Sans Mono';
-    font-size: 12px;
+    font-size: 13px;
 }
 
 #container {
@@ -10,7 +10,7 @@ body {
 }
 
 td {
-    padding: 3px 12px;
+    padding: 3px 13px;
 }
 
 select {
