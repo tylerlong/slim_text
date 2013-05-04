@@ -1,11 +1,44 @@
 # Slim Text
 
-Slim Text is a Slim Text editor which runs inside a web browser
+Slim Text is a Slim Text editor which runs inside a web browser.
+
+Official website: http://slimtext.org
+
+![for Windows](http://slimtext.org/images/windows.png)
+![for Linux](http://slimtext.org/images/linux.png)
+![for Mac](http://slimtext.org/images/mac.png)
+
+
+
+## For Windows 8 users
+
+"This application is not supported on this computer. Installation has been disabled"
+
+Run chrome in Windows 7 compatible mode can fix this issue:
+
+1. right click on Chrome shortcut, select "Properties"
+2. switch to the "Compatibility" tab
+3. check "Run this program in compatibility mode for:"
+4. select "Windows 7"
+5. click "OK"
+
+It is said that after installation you can disable compatibility mode and Slim Text will still work.
+
+
+
+## Do you want to contribute?
+
+If you want to contribute, here is list of tasks that you can do:
+
+1. Add support for all the themes and modes that supported by ACE editor.
+2. Create an better icon for Slim Text
+
 
 
 ## priority items
 
-187, 182, 142, 135, 68
+182, 142, 135, 68
+
 
 
 ## todo list
@@ -65,11 +98,6 @@ Slim Text is a Slim Text editor which runs inside a web browser
     1. if I am an Emacs user, I feel quite annoying
 182. remove/rename file/folder
     1. show remove/rename icons on the left panel whenever mouse over
-187. can not be installed on win8!
-    1. this application is not supported on this computer. Installation has been disabled
-    2. it is said that run chrome in win7 compatible mode can resolve this issue
-    3. install win8 and do testing
-    4. write instructions for win8 users
 188. hidden files, useless files such as *.pyc
     1. some body said that they didn't want to see them
     2. combine this feature together with show invisibles quick button?
@@ -103,4 +131,5 @@ Slim Text is a Slim Text editor which runs inside a web browser
     1. no easy way
     2. a possible solution: remove href upon hovering, add href back upon clicking. save href value in data attr
 227. encourage user to rate the extension
-229. 
+229. new themes and modes added in the latest ace
+230. 
