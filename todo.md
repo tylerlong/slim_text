@@ -1,18 +1,10 @@
 # todo list
 
-## priority items
-
-182, 142, 135, 68
-
-
 68. auto detect file change outside of the editor and load the newest content into editor
     1. advanced feature, postpone
     2. can check last modified time using boost filesystem api
     3. listen to focus event of document, then check file for each editor
 97. enable ace editor features:
-    1. remove trailing spaces upon saving
-        1. some one hate trailing spaces a lot!
-        2. it is already supported by ace: https://github.com/ajaxorg/ace-builds/blob/master/src/ext-whitespace.js
     2. add new line to the end of file upon saving
     4. auto complete
 111. bug: windows 7 C: / Windows / System32 / drivers, can not see the etc/ folder
@@ -34,7 +26,7 @@
 158. chrome history api to go back to last folder?
     1. I think use history api for quick file open is possible. can do free form searching
 160. bootstrap Typeahead can replace omnibox
-161. a viable quick open solution: 
+161. a viable quick open solution:
     1. everyting time open a folder, add the files in the folder into chrome.history
     2. ctrl + P show a input box
     3. use chrome history search to search
@@ -48,7 +40,7 @@
     1. such as show/hide invisibles, two states: show invisibles and hide invisibles
 176. compress html files before deployment
 177. bug: Emacs ctrl + n conflicts with chrome create a new windows
-    1. if I am an Emacs user, I feel quite annoying
+    1. if I were an Emacs user, I would feel quite annoying
 182. remove/rename file/folder
     1. show remove/rename icons on the left panel whenever mouse over
 188. hidden files, useless files such as *.pyc
@@ -59,7 +51,7 @@
     1. there are issue: jquery ui layout does not run in chrome packaged app
         1. packaged app does not support unload event
         2. but I can create the app wihout jquery ui layout
-    2. can not list a folder. only file dialog available. 
+    2. can not list a folder. only file dialog available.
         1. user have to open a dialog each time he wants to open a file
         2. So NPAPI is still needed
     3. already have chrome extension version and Qt version
@@ -74,6 +66,7 @@
 202. Preview HTML
 211. two many files opened, tabs bar not enough space to hold them
 212. context menu: https://github.com/medialize/jQuery-contextMenu
+    1. rename, delete
 214. drag & drop tabs
     1. jqueryui sortable kind of buggy
 216. popup window task bar icon too small on windows
@@ -84,4 +77,6 @@
     1. no easy way
     2. a possible solution: remove href upon hovering, add href back upon clicking. save href value in data attr
 230. increase tab panel size dynamically if too many files opened
-231. 
+231. investigate how to write ext
+    1. take ext-whitespace as an example
+232.

@@ -21,7 +21,7 @@ class @Editor
     create_editor: ->
         @editor = ace.edit "editor-#{@uid}"
         editor = @editor
-        chrome.storage.sync.get ['theme', 'font_size', 'key_binding', 'tab_size'], (items) ->
+        chrome.storage.sync.get ['theme', 'font_size', 'key_binding', 'tab_size', 'trim_trailing_space'], (items) ->
             if not items.theme
                 items.theme = 'monokai'
             if not items.font_size
@@ -30,6 +30,8 @@ class @Editor
                 items.key_binding = 'ace'
             if not items.tab_size
                 items.tab_size = 4
+            if items.trim_trailing_space == undefined
+                items.trim_trailing_space = true
             editor.setTheme "ace/theme/#{items.theme}"
             editor.setFontSize "#{items.font_size}px"
             editor.getSession().setTabSize(items.tab_size)
@@ -37,6 +39,7 @@ class @Editor
                 editor.setKeyboardHandler(ace.require("ace/keyboard/vim").handler)
             else if items.key_binding == 'emacs'
                 editor.setKeyboardHandler(ace.require("ace/keyboard/emacs").handler)
+            editor.trim_trailing_space = items.trim_trailing_space
 
     load_content: ->
         content = file_manager.read @path
@@ -45,7 +48,7 @@ class @Editor
         if extension
             extension = extension.toLowerCase().substr(1, extension.length - 1)
             @editor.getSession().setMode mode.guess_mode_by_extension(extension)
-        else 
+        else
             @editor.getSession().setMode mode.guess_mode_by_name(@filename)
 
     bind_event: ->

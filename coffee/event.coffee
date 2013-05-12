@@ -1,7 +1,7 @@
 class @Event
     constructor: ->
         $(document).keydown (event) ->
-            if (event.metaKey or event.ctrlKey) and String.fromCharCode(event.keyCode).toLowerCase() == 's' 
+            if (event.metaKey or event.ctrlKey) and String.fromCharCode(event.keyCode).toLowerCase() == 's'
                 action.save_file()
                 event.preventDefault()
                 return false
@@ -96,7 +96,7 @@ class @Event
             current_editor = util.current_editor()
             if current_editor
                 current_editor.editor.toggleCommentLines()
-        
+
         $('body').on 'click', '.trim_trailing_space_btn', ->
             current_editor = util.current_editor()
             if current_editor
@@ -118,26 +118,26 @@ class @Event
 
         $('body').on 'click', '.about_btn', ->
             util.notice "Slim Text #{chrome.app.getDetails().version}", "Copyright © 2012 - 2013 slimtext.org", 5000
-        
+
         $('body').on 'click', '.close_tab_btn', ->
             current_editor = util.current_editor()
             if current_editor
                 current_editor.dispose()
-        
+
         $('body').on 'click', '.close_other_tabs_btn', ->
             current_editor = util.current_editor()
             if current_editor
                 for key, editor of editors
                     if current_editor.uid != editor.uid
                         editor.dispose()
-        
+
         $('body').on 'click', '.close_all_tabs_btn', ->
             for key, editor of editors
                 editor.dispose()
-        
+
         $('body').on 'click', '.pop_out_btn', ->
             chrome.windows.create { url: chrome.extension.getURL('html/main.html'), type: 'popup', width: 800, height: 600 }
-        
+
         $('body').on 'change', '#drives_select', ->
             action.open_folder $(this).val()
 
@@ -153,10 +153,12 @@ class @Action
                 $('#tabs').tabs 'option', "active", index
                 return
         application.open_file path
-    
+
     save_file: ->
         current_editor = util.current_editor()
         if current_editor
+            if current_editor.editor.trim_trailing_space
+                ace.require("ace/ext/whitespace").trimTrailingSpace(current_editor.editor.getSession())
             current_editor.save_file()
 
     open_folder: (path) ->
@@ -189,7 +191,7 @@ class @Action
         return if not folder_path
         file_manager.create_folder folder_path
         application.refresh_sidebar()
-    
+
     check_for_updates: ->
         $.get('https://raw.github.com/tylerlong/slimtext.org/gh-pages/__version__', (data) ->
             newest = data.trim()
