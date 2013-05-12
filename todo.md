@@ -12,9 +12,9 @@
 97. enable ace editor features:
     1. remove trailing spaces upon saving
         1. some one hate trailing spaces a lot!
+        2. it is already supported by ace: https://github.com/ajaxorg/ace-builds/blob/master/src/ext-whitespace.js
     2. add new line to the end of file upon saving
     4. auto complete
-    5. it seems that I have to implment those features myself, ace doesn't provide such features.
 111. bug: windows 7 C: / Windows / System32 / drivers, can not see the etc/ folder
     1. and a lot of *.sys files are invisible too.
     2. notepad++ has this issue too
@@ -83,6 +83,5 @@
 221. disable status bar when hover on tabs
     1. no easy way
     2. a possible solution: remove href upon hovering, add href back upon clicking. save href value in data attr
-229. new themes and modes added in the latest ace
 230. increase tab panel size dynamically if too many files opened
 231. 
