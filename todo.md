@@ -15,10 +15,6 @@
     2. add new line to the end of file upon saving
     4. auto complete
     5. it seems that I have to implment those features myself, ace doesn't provide such features.
-105. introduce plugin system
-    1. page actions, to change the appearance or behavior of the software, such as change background, such as define new shortcut key 
-    2. advanced feature, postpone
-    3. is it viable and practical?
 111. bug: windows 7 C: / Windows / System32 / drivers, can not see the etc/ folder
     1. and a lot of *.sys files are invisible too.
     2. notepad++ has this issue too
@@ -32,14 +28,9 @@
 133. open a new tab, default path is the current tab's path?
     1. the same as ubuntu terminal
     2. if already have a window, then no need to open all of the files, just navigate to folder path ?
-135. go through this page: http://ace.ajax.org/#nav=production
 140. add command line
     1. gcli: https://github.com/mozilla/gcli
     2. research, find the best solution!
-142. add increase font-size or decrease font-size to menu ?
-    1. and persist locally
-    2. when open the editor, first check local storage, then check sync storage, and then last storage. Use the first one found.
-157. bug: searchbox too weak, can not specify case-sensitive and regex search
 158. chrome history api to go back to last folder?
     1. I think use history api for quick file open is possible. can do free form searching
 160. bootstrap Typeahead can replace omnibox
@@ -92,6 +83,6 @@
 221. disable status bar when hover on tabs
     1. no easy way
     2. a possible solution: remove href upon hovering, add href back upon clicking. save href value in data attr
-227. encourage user to rate the extension
 229. new themes and modes added in the latest ace
-230. 
+230. increase tab panel size dynamically if too many files opened
+231. 

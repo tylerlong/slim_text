@@ -39,6 +39,7 @@ class @Mode
             'lucene': 'Lucene'
             'makefile': 'Makefile'
             'markdown': 'Markdown'
+            'mushcode': 'TinyMUSH'
             'objectivec': 'Objective-C'
             'ocaml': 'Ocaml'
             'pascal': 'Pascal'
@@ -56,18 +57,19 @@ class @Mode
             'scala': 'Scala'
             'scheme': 'Scheme'
             'scss': 'SCSS'
-            'sh': 'SH'
+            'sh': 'Shell'
             'sql': 'SQL'
             'stylus': 'Stylus'
             'svg': 'SVG'
             'tcl': 'Tcl'
             'tex': 'Tex'
             'text': 'Text'
-            'textible': 'Textile'
-            'tm_snippet': 'tmSnippet'
+            'textile': 'Textile'
+            'tmsnippet': 'tmSnippet'
             'toml': 'toml'
             'typescript': 'Typescript'
             'vbscript': 'VBScript'
+            'velocity': 'Velocity' 
             'xml': 'XML'
             'xquery': 'XQuery'
             'yaml': 'YAML'
@@ -93,6 +95,7 @@ class @Mode
         
             'coffee': 'coffee'
             'cf': 'coffee'
+            'cson': 'coffee'
         
             'cfm': 'coldfusion'
             'cfml': 'coldfusion'
@@ -136,6 +139,7 @@ class @Mode
             'html': 'html'
             'xhtml': 'html'
             'erb': 'html'
+            'hbs': 'html'
         
             'jade': 'jade'
         
@@ -183,6 +187,10 @@ class @Mode
         
             'md': 'markdown'
             'markdown': 'markdown'
+            
+            'mc': 'mushcode'
+            'mush': 'mushcode'
+            'mushcode': 'mushcode'
         
             'm': 'objectivec'
             'mm': 'objectivec'
@@ -262,8 +270,7 @@ class @Mode
         
             'textile': 'textile'
             
-            'tmSnippet': 'tm_snippet'
-            'tm_snippet': 'tm_snippet'
+            'tmsnippet': 'tmsnippet'
             
             'toml': 'toml'
         
@@ -273,6 +280,9 @@ class @Mode
         
             'vbscript': 'vbscript'
             'vbs': 'vbscript'
+            
+            'vm': 'velocity'
+            'velocity': 'velocity'
         
             'xml': 'xml'
             'rdf': 'xml'

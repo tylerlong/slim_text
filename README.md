@@ -1,6 +1,6 @@
 # Slim Text
 
-Slim Text is a Slim Text editor which runs inside Chrome browser. It supports Windows, Linux and Mac OS X.
+Slim Text is a slim text editor which runs inside Chrome browser. It supports Windows, Linux and Mac OS X.
 
 Official website: http://slimtext.org
 
@@ -21,6 +21,14 @@ Run chrome in Windows 7 compatible mode can fix this issue:
 5. Click "OK"
 
 It is said that after installation you can disable compatibility mode and Slim Text will still work.
+
+
+
+## Chrome Web Store
+
+Here is [the link](https://chrome.google.com/webstore/detail/slim-text/efgpjeojnoblodlofkhmhgghdfadmeoc) to Slim Text on Chrome Web Store.
+
+If you like it, don't forget to give it a 5 star rating!
 
 
 
