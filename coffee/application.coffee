@@ -68,6 +68,7 @@ class @Application
         <li><a class="upper_case_btn">#{chrome.i18n.getMessage('upper_case')}</a></li>
         <li><a class="remove_lines_btn">#{chrome.i18n.getMessage('remove_lines')}</a></li>
         <li><a class="toggle_comment_btn">#{chrome.i18n.getMessage('toggle_comment')}</a></li>
+        <li><a class="trim_trailing_space_btn">#{chrome.i18n.getMessage('trim_trailing_space')}</a></li>
       </ul>
     </span>
     <span class="dropdown">

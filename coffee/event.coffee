@@ -96,6 +96,11 @@ class @Event
             current_editor = util.current_editor()
             if current_editor
                 current_editor.editor.toggleCommentLines()
+        
+        $('body').on 'click', '.trim_trailing_space_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                ace.require("ace/ext/whitespace").trimTrailingSpace(current_editor.editor.getSession())
 
         $('body').on 'click', '.mode_link', ->
             current_editor = util.current_editor()

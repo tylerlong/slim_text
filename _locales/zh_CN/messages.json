@@ -166,5 +166,8 @@
     },
     "pop_out": {
         "message": "弹出窗口"
+    },
+    "trim_trailing_space": {
+        "message": "移除行末空白"
     }
 }

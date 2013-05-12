@@ -166,5 +166,8 @@
     },
     "pop_out": {
         "message": "Pop out"
+    },
+    "trim_trailing_space": {
+        "message": "Trim trailing space"
     }
 }
