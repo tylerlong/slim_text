@@ -15,7 +15,7 @@ Issue: "This application is not supported on this computer. Installation has bee
 Run chrome in Windows 7 compatible mode can fix this issue:
 
 1. Right click on Chrome shortcut, select "Properties"
-2. Wwitch to the "Compatibility" tab
+2. Switch to the "Compatibility" tab
 3. Check "Run this program in compatibility mode for:"
 4. Select "Windows 7"
 5. Click "OK"
@@ -28,7 +28,7 @@ It is said that after installation you can disable compatibility mode and Slim T
 
 Here is [the link](https://chrome.google.com/webstore/detail/slim-text/efgpjeojnoblodlofkhmhgghdfadmeoc) to Slim Text on Chrome Web Store.
 
-If you like it, don't forget to give it a 5 star rating!
+If you like it, don't forget to give it a 5-star rating ^_^.
 
 
 

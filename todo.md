@@ -72,7 +72,6 @@
 216. popup window task bar icon too small on windows
     1. chrome's bug, postpone: https://code.google.com/p/chromium/issues/detail?id=94301
 218. remember the current active tab
-220. add google analytics to slimtext.org
 221. disable status bar when hover on tabs
     1. no easy way
     2. a possible solution: remove href upon hovering, add href back upon clicking. save href value in data attr

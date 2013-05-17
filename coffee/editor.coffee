@@ -34,7 +34,7 @@ class @Editor
                 items.trim_trailing_space = true
             editor.setTheme "ace/theme/#{items.theme}"
             editor.setFontSize "#{items.font_size}px"
-            editor.getSession().setTabSize(items.tab_size)
+            editor.getSession().setTabSize(parseInt(items.tab_size))
             if items.key_binding == 'vim'
                 editor.setKeyboardHandler(ace.require("ace/keyboard/vim").handler)
             else if items.key_binding == 'emacs'
