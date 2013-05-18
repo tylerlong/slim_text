@@ -2,9 +2,6 @@ class @FileManager
     constructor:  ->
         @file_manager = document.getElementById('file_manager')
 
-    combine: (path1, path2) ->
-        @file_manager.combine path1, path2
-
     container: (path) ->
         @file_manager.container path
 

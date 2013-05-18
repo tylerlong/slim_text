@@ -10,9 +10,21 @@ class @Event
                 else if key == 'm'
                     current_editor = util.current_editor()
                     if current_editor and current_editor.editor.getSession().getMode().$id == 'ace/mode/markdown'
-                        chrome.tabs.create { url: """data:text/html;charset=utf-8,<!doctype html><html><head><meta charset="utf-8"><link rel="shortcut icon" href="http://slimtext.org/images/icon16.png"><title>Slim Text Markdown preview</title></head><body>
+                        html = """<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="http://slimtext.org/images/icon16.png">
+        <title>Slim Text Markdown preview</title>
+        <style type="text/css">body{font-family:Helvetica,Arial,Freesans,clean,sans-serif;padding:1em;margin:auto;max-width:42em;background:#fefefe}h1,h2,h3,h4,h5,h6{font-weight:bold}h1{color:#000;font-size:28px}h2{border-bottom:1px solid #ccc;color:#000;font-size:24px}h3{font-size:18px}h4{font-size:16px}h5{font-size:14px}h6{color:#777;background-color:inherit;font-size:14px}hr{height:.2em;border:0;color:#ccc;background-color:#ccc}p,blockquote,ul,ol,dl,li,table,pre{margin:15px 0}code,pre{border-radius:3px;background-color:#f8f8f8;color:inherit}code{border:1px solid #eaeaea;margin:0 2px;padding:0 5px}pre{border:1px solid #ccc;line-height:1.25em;overflow:auto;padding:6px 10px}pre>code{border:0;margin:0;padding:0}a,a:visited{color:#4183c4;background-color:inherit;text-decoration:none}</style>
+    </head>
+    <body>
 #{markdown.toHTML(current_editor.editor.getSession().getValue())}
-</body></html>"""}
+    </body>
+</html>"""
+                        file_path = "#{file_manager.temp_folder().replace(/\/$/, '')}/slim_text_markdown_preview.html"
+                        file_manager.write file_path, html
+                        chrome.tabs.create { url: """file://#{file_path}"""}
                     event.preventDefault()
                     return false
             else if event.keyCode == 27
