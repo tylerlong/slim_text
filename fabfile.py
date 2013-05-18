@@ -26,7 +26,7 @@ def dist():
     local('scss -t compressed css/editor.css {0}/css/editor.css'.format(folder))
     local('scss -t compressed css/jquery.layout.css {0}/css/jquery.layout.css'.format(folder))
     local('scss -t compressed css/jqueryui.css {0}/css/jqueryui.css'.format(folder))
-    local('scss -t compressed css/options.css {0}/css/options.css'.format(folder))
+    local('scss -t compressed css/preferences.css {0}/css/preferences.css'.format(folder))
     local('cp -r -n css/* {0}/css/'.format(folder))
 
     local('mkdir -p {0}/font/'.format(folder))
@@ -46,7 +46,7 @@ def dist():
     local('uglifyjs js/file_manager.js -c -m -o {0}/js/file_manager.js'.format(folder))
     local('uglifyjs js/main.js -c -m -o {0}/js/main.js'.format(folder))
     local('uglifyjs js/mode.js -c -m -o {0}/js/mode.js'.format(folder))
-    local('uglifyjs js/option.js -c -m -o {0}/js/option.js'.format(folder))
+    local('uglifyjs js/preference.js -c -m -o {0}/js/preference.js'.format(folder))
     local('uglifyjs js/util.js -c -m -o {0}/js/util.js'.format(folder))
     local('cp -r -n js/* {0}/js/'.format(folder))
 

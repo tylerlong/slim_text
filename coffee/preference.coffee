@@ -39,14 +39,14 @@ class @Option
                 $('span#tab_size_value').text $(this).val()
 
             $('button#save_btn').click ->
-                options =
+                preferences =
                     'theme': $('select#theme').val()
                     'font_size': $('select#font_size').val()
                     'key_binding': $('select#key_binding').val()
                     'tab_size': $('input#tab_size').val()
                     'trim_trailing_space': $('input#trim_trailing_space').is(':checked')
                     'ensure_newline_at_eof': $('input#ensure_newline_at_eof').is(':checked')
-                chrome.storage.sync.set options, ->
+                chrome.storage.sync.set preferences, ->
                     util.notice chrome.i18n.getMessage('saved'), ''
 
 $ ->

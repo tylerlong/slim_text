@@ -10,5 +10,5 @@ js/event.js
 js/file_manager.js
 js/main.js
 js/mode.js
-js/option.js
+js/preference.js
 js/util.js

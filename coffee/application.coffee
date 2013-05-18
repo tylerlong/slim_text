@@ -70,6 +70,8 @@ class @Application
         <li><a class="toggle_comment_btn">#{chrome.i18n.getMessage('toggle_comment')}</a></li>
         <li><a class="trim_trailing_space_btn">#{chrome.i18n.getMessage('trim_trailing_space')}</a></li>
         <li><a class="ensure_newline_at_eof_btn">#{chrome.i18n.getMessage('ensure_newline_at_eof')}</a></li>
+        <li class="divider"></li>
+        <li><a class="preferences_btn">#{chrome.i18n.getMessage('preferences')}</a></li>
       </ul>
     </span>
     <span class="dropdown">
@@ -100,15 +102,6 @@ class @Application
     </span>
     <span class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown">
-        #{chrome.i18n.getMessage('preferences')}
-        <b class="caret"></b>
-      </a>
-      <ul class="dropdown-menu">
-          <li><a class="options_btn">#{chrome.i18n.getMessage('options')}</a></li>
-      </ul>
-    </span>
-    <span class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown">
         #{chrome.i18n.getMessage('help')}
         <b class="caret"></b>
       </a>
@@ -129,7 +122,7 @@ class @Application
   <a class="toggle_invisibles_btn" title="#{chrome.i18n.getMessage('toggle_invisibles')}"><i class="icon-eye-open"></i></a>
   <a class="full_window_btn" title="#{chrome.i18n.getMessage('full_window')}"><i class="icon-fullscreen"></i></a>
   <a class="pop_out_btn" title="#{chrome.i18n.getMessage('pop_out')}"><i class="icon-external-link"></i></a>
-  <a class="options_btn" title="#{chrome.i18n.getMessage('options')}"><i class="icon-cog"></i></a>
+  <a class="preferences_btn" title="#{chrome.i18n.getMessage('preferences')}"><i class="icon-cog"></i></a>
   <a class="check_for_updates_btn" title="#{chrome.i18n.getMessage('check_for_updates')}"><i class="icon-cloud-download"></i></a>
   <a title="#{chrome.i18n.getMessage('report_issue')}" href="https://github.com/tylerlong/slim_text/issues" target="_blank"><i class="icon-github-alt"></i></a>
   <a class="about_btn" title="#{chrome.i18n.getMessage('about')}"><i class="icon-info-sign"></i></a>

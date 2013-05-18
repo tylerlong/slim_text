@@ -67,8 +67,8 @@ class @Event
             uid = $(this).closest("li").attr('aria-controls').substr(4)
             editors[uid].dispose()
 
-        $('body').on 'click', '.options_btn', ->
-            chrome.tabs.create { url: chrome.extension.getURL('html/options.html') }
+        $('body').on 'click', '.preferences_btn', ->
+            chrome.tabs.create { url: chrome.extension.getURL('html/preferences.html') }
 
         $('body').on 'click', '.full_window_btn', ->
             action.full_window()
