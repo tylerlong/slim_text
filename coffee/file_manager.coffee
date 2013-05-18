@@ -42,7 +42,9 @@ class @FileManager
         @file_manager.home_folder()
 
     temp_folder: ->
-        @file_manager.temp_folder()
+        folder = @file_manager.temp_folder()
+        folder = folder.slice(0, -1) if folder.slice(-1) == '/'
+        folder
 
     drives: ->
         @file_manager.drives()

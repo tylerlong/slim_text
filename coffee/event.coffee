@@ -22,8 +22,9 @@ class @Event
 #{showdown.makeHtml(current_editor.editor.getSession().getValue())}
     </body>
 </html>"""
-                        file_path = "#{file_manager.temp_folder().replace(/\/$/, '')}/slim_text_markdown_preview.html"
+                        file_path = "#{file_manager.temp_folder()}/slim_text_markdown_preview.html"
                         file_manager.write file_path, html
+                        file_path = "/#{file_path}" if file_path[0] != '/' # change "C:/test" to "/C:/test"
                         url = "file://#{file_path}"
                         chrome.tabs.getAllInWindow undefined, (tabs) ->
                             for tab in tabs
