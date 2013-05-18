@@ -22,8 +22,6 @@
 140. add command line
     1. gcli: https://github.com/mozilla/gcli
     2. research, find the best solution!
-158. chrome history api to go back to last folder?
-    1. I think use history api for quick file open is possible. can do free form searching
 160. bootstrap Typeahead can replace omnibox
 161. a viable quick open solution:
     1. everyting time open a folder, add the files in the folder into chrome.history
@@ -31,7 +29,6 @@
     3. use chrome history search to search
     4. bootstrap typeahead to show candidates
     5. select a candidate to open
-162. Preview markdown: https://gist.github.com/4670615
 163. cvanalyze.com click qq icon can launch qq, investigate
 166. spell check (it is an ext of Ace)
 169. 这篇文章不错： http://www.ibm.com/developerworks/library/os-extendchrome/index.html
@@ -78,4 +75,11 @@
 231. investigate how to write ext
     1. take ext-whitespace as an example
 232. auto complete
-233.
+233. write 'tips of the day' page
+234. learn js export and require
+235. mode specific menu
+    1. for example: when markdown mode, show a new "markdown menu", with "preview" option inside
+236. Refactor code
+237. write tests
+    1. how to test?
+238.

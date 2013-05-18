@@ -1,10 +1,20 @@
 class @Event
     constructor: ->
         $(document).keydown (event) ->
-            if (event.metaKey or event.ctrlKey) and String.fromCharCode(event.keyCode).toLowerCase() == 's'
-                action.save_file()
-                event.preventDefault()
-                return false
+            if (event.metaKey or event.ctrlKey)
+                key = String.fromCharCode(event.keyCode).toLowerCase()
+                if key == 's'
+                    action.save_file()
+                    event.preventDefault()
+                    return false
+                else if key == 'm'
+                    current_editor = util.current_editor()
+                    if current_editor and current_editor.editor.getSession().getMode().$id == 'ace/mode/markdown'
+                        chrome.tabs.create { url: """data:text/html;charset=utf-8,<!doctype html><html><head><meta charset="utf-8"><link rel="shortcut icon" href="http://slimtext.org/images/icon16.png"><title>Slim Text Markdown preview</title></head><body>
+#{markdown.toHTML(current_editor.editor.getSession().getValue())}
+</body></html>"""}
+                    event.preventDefault()
+                    return false
             else if event.keyCode == 27
                 action.exit_full_window()
             return true
@@ -17,7 +27,6 @@ class @Event
                 editor.resize()
                 editor.setShowInvisibles(true)
                 editor.setShowInvisibles(false)
-
             application.refresh_sidebar(ui.newPanel.data('path'))
 
         window.onbeforeunload = () ->

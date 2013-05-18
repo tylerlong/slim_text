@@ -19,12 +19,12 @@ def dist():
     with cd(PROJECT_DIR):
         local('mkdir -p {0}/'.format(folder))
         local('rm -rf {0}/*'.format(folder))
-        
+
         local('cp -r _locales {0}/'.format(folder))
-        
+
         local('mkdir -p {0}/ace/src-min-noconflict/'.format(folder))
         local('cp -r ace/src-min-noconflict/* {0}/ace/src-min-noconflict/'.format(folder))
-        
+
         local('mkdir -p {0}/css/'.format(folder))
         local('scss -t compressed css/bootstrap.css {0}/css/bootstrap.css'.format(folder))
         local('scss -t compressed css/editor.css {0}/css/editor.css'.format(folder))
@@ -32,17 +32,18 @@ def dist():
         local('scss -t compressed css/jqueryui.css {0}/css/jqueryui.css'.format(folder))
         local('scss -t compressed css/options.css {0}/css/options.css'.format(folder))
         local('cp -r -n css/* {0}/css/'.format(folder))
-        
+
         local('mkdir -p {0}/font/'.format(folder))
         local('scss -t compressed font/fonts.css {0}/font/fonts.css'.format(folder))
         local('cp -r -n font/* {0}/font/'.format(folder))
-        
+
         local('cp -r html/ {0}/'.format(folder))
-        
-        local('mkdir -p {0}/image/'.format(folder))  
+
+        local('mkdir -p {0}/image/'.format(folder))
         local('cp -r image/* {0}/image/'.format(folder))
-        
-        local('mkdir -p {0}/js/'.format(folder))        
+
+        local('mkdir -p {0}/js/'.format(folder))
+        local('uglifyjs js/markdown.js -c -m -o {0}/js/markdown.js'.format(folder))
         local('uglifyjs js/application.js -c -m -o {0}/js/application.js'.format(folder))
         local('uglifyjs js/background.js -c -m -o {0}/js/background.js'.format(folder))
         local('uglifyjs js/editor.js -c -m -o {0}/js/editor.js'.format(folder))
@@ -53,6 +54,6 @@ def dist():
         local('uglifyjs js/option.js -c -m -o {0}/js/option.js'.format(folder))
         local('uglifyjs js/util.js -c -m -o {0}/js/util.js'.format(folder))
         local('cp -r -n js/* {0}/js/'.format(folder))
-        
+
         local('cp manifest.json {0}/'.format(folder))
         local('cp -r plugin/ {0}/'.format(folder))
