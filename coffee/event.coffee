@@ -24,7 +24,14 @@ class @Event
 </html>"""
                         file_path = "#{file_manager.temp_folder().replace(/\/$/, '')}/slim_text_markdown_preview.html"
                         file_manager.write file_path, html
-                        chrome.tabs.create { url: """file://#{file_path}"""}
+                        url = "file://#{file_path}"
+                        chrome.tabs.getAllInWindow undefined, (tabs) ->
+                            for tab in tabs
+                                if tab.url == url
+                                    chrome.tabs.reload tab.id
+                                    chrome.tabs.update tab.id, {active: true}
+                                    return
+                            chrome.tabs.create { url: url}
                     event.preventDefault()
                     return false
             else if event.keyCode == 27
