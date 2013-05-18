@@ -43,7 +43,6 @@ def dist():
         local('cp -r image/* {0}/image/'.format(folder))
 
         local('mkdir -p {0}/js/'.format(folder))
-        local('uglifyjs js/markdown.js -c -m -o {0}/js/markdown.js'.format(folder))
         local('uglifyjs js/application.js -c -m -o {0}/js/application.js'.format(folder))
         local('uglifyjs js/background.js -c -m -o {0}/js/background.js'.format(folder))
         local('uglifyjs js/editor.js -c -m -o {0}/js/editor.js'.format(folder))
