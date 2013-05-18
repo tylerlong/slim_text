@@ -51,7 +51,7 @@
         "message": "编辑"
     },
     "remove_lines": {
-        "message": "删除行"    
+        "message": "删除行"
     },
     "lower_case": {
         "message": "转小写"
@@ -169,5 +169,8 @@
     },
     "trim_trailing_space": {
         "message": "移除行末空白"
+    },
+    "ensure_newline_at_eof": {
+        "message": "确保文件末空白行"
     }
 }

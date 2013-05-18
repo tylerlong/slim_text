@@ -21,7 +21,7 @@ class @Editor
     create_editor: ->
         @editor = ace.edit "editor-#{@uid}"
         editor = @editor
-        chrome.storage.sync.get ['theme', 'font_size', 'key_binding', 'tab_size', 'trim_trailing_space'], (items) ->
+        chrome.storage.sync.get ['theme', 'font_size', 'key_binding', 'tab_size', 'trim_trailing_space', 'ensure_newline_at_eof'], (items) ->
             if not items.theme
                 items.theme = 'monokai'
             if not items.font_size
@@ -32,6 +32,8 @@ class @Editor
                 items.tab_size = 4
             if items.trim_trailing_space == undefined
                 items.trim_trailing_space = true
+            if items.ensure_newline_at_eof == undefined
+                items.ensure_newline_at_eof = true
             editor.setTheme "ace/theme/#{items.theme}"
             editor.setFontSize "#{items.font_size}px"
             editor.getSession().setTabSize(parseInt(items.tab_size))
@@ -39,7 +41,8 @@ class @Editor
                 editor.setKeyboardHandler(ace.require("ace/keyboard/vim").handler)
             else if items.key_binding == 'emacs'
                 editor.setKeyboardHandler(ace.require("ace/keyboard/emacs").handler)
-            editor.trim_trailing_space = items.trim_trailing_space
+            @trim_trailing_space = items.trim_trailing_space
+            @ensure_newline_at_eof = items.ensure_newline_at_eof
 
     load_content: ->
         content = file_manager.read @path
@@ -59,6 +62,21 @@ class @Editor
             ), 500, true
         @editor.getSession().on 'change', ->
             lazy_change()
+
+    trim_trailing_space: ->
+        ace.require("ace/ext/whitespace").trimTrailingSpace(@editor.getSession())
+
+    ensure_newline_at_eof: ->
+        doc = @editor.session.getDocument()
+        lines = doc.getAllLines()
+        if lines[lines.length - 1].search(/^\s*$/) == -1
+            doc.insert({row: lines.length, column: 0}, doc.getNewLineCharacter())
+        else
+            for i in [(lines.length - 1) ... 0]
+                if lines[i].search(/^\s*$/) != -1 and lines[i - 1].search(/^\s*$/) != -1
+                    doc.removeLines i, i
+                else
+                    break
 
     save_file: ->
         result = file_manager.write @path, @editor.getValue()

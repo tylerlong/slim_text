@@ -100,7 +100,12 @@ class @Event
         $('body').on 'click', '.trim_trailing_space_btn', ->
             current_editor = util.current_editor()
             if current_editor
-                ace.require("ace/ext/whitespace").trimTrailingSpace(current_editor.editor.getSession())
+                current_editor.trim_trailing_space()
+
+        $('body').on 'click', '.ensure_newline_at_eof_btn', ->
+            current_editor = util.current_editor()
+            if current_editor
+                current_editor.ensure_newline_at_eof()
 
         $('body').on 'click', '.mode_link', ->
             current_editor = util.current_editor()
@@ -157,8 +162,10 @@ class @Action
     save_file: ->
         current_editor = util.current_editor()
         if current_editor
-            if current_editor.editor.trim_trailing_space
-                ace.require("ace/ext/whitespace").trimTrailingSpace(current_editor.editor.getSession())
+            if current_editor.trim_trailing_space
+                current_editor.trim_trailing_space()
+            if current_editor.ensure_newline_at_eof
+                current_editor.ensure_newline_at_eof()
             current_editor.save_file()
 
     open_folder: (path) ->

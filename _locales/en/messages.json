@@ -169,5 +169,8 @@
     },
     "trim_trailing_space": {
         "message": "Trim trailing space"
+    },
+    "ensure_newline_at_eof": {
+        "message": "Ensure newline at EOF"
     }
 }

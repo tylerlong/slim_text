@@ -1,12 +1,11 @@
 # todo list
 
 68. auto detect file change outside of the editor and load the newest content into editor
-    1. advanced feature, postpone
-    2. can check last modified time using boost filesystem api
-    3. listen to focus event of document, then check file for each editor
-97. enable ace editor features:
-    2. add new line to the end of file upon saving
-    4. auto complete
+    2. save timestamp everytime saving a file
+        1. get the time via boost api?
+    4. listen to tab focus event, check the file status
+        1. if file is removed, confirm the user whether want to remove it
+        2. check last\_mod\_time, if newer, confirm the user to relad it
 111. bug: windows 7 C: / Windows / System32 / drivers, can not see the etc/ folder
     1. and a lot of *.sys files are invisible too.
     2. notepad++ has this issue too
@@ -78,4 +77,5 @@
 230. increase tab panel size dynamically if too many files opened
 231. investigate how to write ext
     1. take ext-whitespace as an example
-232.
+232. auto complete
+233.

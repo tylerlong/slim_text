@@ -69,6 +69,7 @@ class @Application
         <li><a class="remove_lines_btn">#{chrome.i18n.getMessage('remove_lines')}</a></li>
         <li><a class="toggle_comment_btn">#{chrome.i18n.getMessage('toggle_comment')}</a></li>
         <li><a class="trim_trailing_space_btn">#{chrome.i18n.getMessage('trim_trailing_space')}</a></li>
+        <li><a class="ensure_newline_at_eof_btn">#{chrome.i18n.getMessage('ensure_newline_at_eof')}</a></li>
       </ul>
     </span>
     <span class="dropdown">
@@ -208,7 +209,7 @@ class @Application
                     link.css 'cursor', 'text'
                 if item.type == 'folder'
                     $('#sidebar').append '/'
-            else 
+            else
                 $('#sidebar').append "<span>#{item.name}</span>"
             $('#sidebar').append "<br/>"
 
