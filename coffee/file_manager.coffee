@@ -36,7 +36,7 @@ class @FileManager
         @file_manager.route path
 
     can_list: (path) ->
-        @file_manager.can_list
+        @file_manager.can_list path
 
     home_folder: ->
         @file_manager.home_folder()
