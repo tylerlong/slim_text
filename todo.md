@@ -31,10 +31,8 @@
     5. select a candidate to open
 163. cvanalyze.com click qq icon can launch qq, investigate
 166. spell check (it is an ext of Ace)
-169. 这篇文章不错： http://www.ibm.com/developerworks/library/os-extendchrome/index.html
 172. differentiate states for some operations
     1. such as show/hide invisibles, two states: show invisibles and hide invisibles
-176. compress html files before deployment
 177. bug: Emacs ctrl + n conflicts with chrome create a new windows
     1. if I were an Emacs user, I would feel quite annoying
 182. remove/rename file/folder
@@ -59,7 +57,6 @@
     3. bug: chinese encoding decoding issue for C:/QQDownload/From Tyler/01.htm
     4. bug: windows csharp file, show BOM as * (because cannot handle utf8 with BOM)
 200. bug: cannot see mounted external dirves in windows. such as virtualbox shared folder
-202. Preview HTML
 211. two many files opened, tabs bar not enough space to hold them
 212. context menu: https://github.com/medialize/jQuery-contextMenu
     1. rename, delete
