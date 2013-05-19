@@ -17,7 +17,7 @@ div.ui-layout-north {
 #header, #sidebar {
     font-size: 13px;
     font-family: 'Consolas', 'Droid Sans Mono';
-    line-height: 1.6em;
+    line-height: 1.5em;
 }
 
 div.ui-layout-center {
@@ -27,7 +27,7 @@ div.ui-layout-center {
 div[id^=editor-] {
     position: absolute;
     top: 21px;
-    left: 0;    
+    left: 0;
     bottom: 0;
     right: 0;
     font-family: 'Consolas', 'Droid Sans Mono';
