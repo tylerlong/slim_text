@@ -41,3 +41,8 @@ https://github.com/tylerlong/slim_text/issues/4
 ## 开发者教程
 
 https://github.com/tylerlong/slim_text/issues/3
+
+
+## Software license
+
+[GPL](http://www.gnu.org/licenses/gpl.html)
