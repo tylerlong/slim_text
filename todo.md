@@ -1,6 +1,6 @@
 # todo list
 
-68. auto detect file change outside of the editor and load the newest content into editor
+68. auto detect file change outside of the editor and load the latest content into editor
     2. save timestamp everytime saving a file
         1. get the time via boost api?
     4. listen to tab focus event, check the file status

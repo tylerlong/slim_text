@@ -95,14 +95,14 @@
     "no_update": {
         "message": "No update is available"
     },
-    "newest_version": {
-        "message": "You are running the newest version"
+    "latest_version": {
+        "message": "You are running the latest version"
     },
     "new_version": {
         "message": "New version available"
     },
     "fetch_and_install": {
-        "message": "Please visit http://slimtext.org to get the newest version"
+        "message": "Please visit http://slimtext.org to get the latest version"
     },
     "network_error": {
         "message": "Network error"

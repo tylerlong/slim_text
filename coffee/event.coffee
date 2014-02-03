@@ -230,11 +230,11 @@ class @Action
 
     check_for_updates: ->
         $.get('https://raw.github.com/tylerlong/slimtext.org/gh-pages/__version__', (data) ->
-            newest = data.trim()
+            latest = data.trim()
             current = chrome.app.getDetails().version
-            if newest > current
-                util.notice "#{chrome.i18n.getMessage('new_version')}: #{newest}", chrome.i18n.getMessage('fetch_and_install'), 8000
+            if latest > current
+                util.notice "#{chrome.i18n.getMessage('new_version')}: #{latest}", chrome.i18n.getMessage('fetch_and_install'), 8000
             else
-                util.notice chrome.i18n.getMessage('no_update'), "#{chrome.i18n.getMessage('newest_version')}: #{current}", 5000
+                util.notice chrome.i18n.getMessage('no_update'), "#{chrome.i18n.getMessage('latest_version')}: #{current}", 5000
         ).fail ->
             util.notice chrome.i18n.getMessage('network_error'), chrome.i18n.getMessage('check_manually'), 5000

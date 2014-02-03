@@ -95,7 +95,7 @@
     "no_update": {
         "message": "没有可用的更新"
     },
-    "newest_version": {
+    "latest_version": {
         "message": "您运行的是最新版本"
     },
     "new_version": {
