@@ -30,6 +30,7 @@ class @Mode
             'haskell': 'Haskell'
             'haxe': 'haXe'
             'html': 'HTML'
+            'html_ruby': 'HTML (Ruby)'
             'jade': 'Jade'
             'java': 'Java'
             'javascript': 'Javascript'
@@ -173,8 +174,10 @@ class @Mode
             'htm': 'html'
             'html': 'html'
             'xhtml': 'html'
-            'erb': 'html'
             'cow': 'html'
+            
+            'erb': 'html_ruby'
+            'html_ruby': 'html_ruby'
         
             'jade': 'jade'
         
