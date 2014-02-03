@@ -1,11 +1,11 @@
-from fabric.api import task, local
+from fabric.api import local
 
-@task
+
 def coffee():
     """start coffeescript daemon to compile dynamically"""
     local('coffee --watch --output js/ --compile coffee/')
 
-@task
+
 def dist():
     """generate distribution package inside the dist/ folder"""
     import json
