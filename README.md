@@ -4,7 +4,7 @@ Slim Text is a slim text editor which runs inside Chrome browser. It supports Wi
 
 Official website: http://slimtext.org
 
-![for Linux](http://slimtext.org/images/windows.png)
+![for Windows](http://slimtext.org/images/windows.png)
 
 
 
