@@ -108,7 +108,7 @@ class @Application
       <ul class="dropdown-menu">
           <li><a href="https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts" target="_blank">#{chrome.i18n.getMessage('keyboard_shortcuts')}</a></li>
           <li><a href="http://slimtext.org" target="_blank">#{chrome.i18n.getMessage('website')}</a></li>
-          <li><a href="https://github.com/tylerlong/slimtext.org/issues" target="_blank">#{chrome.i18n.getMessage('report_issue')}</a></li>
+          <li><a href="https://github.com/tylerlong/slim_text/issues" target="_blank">#{chrome.i18n.getMessage('report_issue')}</a></li>
           <li><a class="check_for_updates_btn">#{chrome.i18n.getMessage('check_for_updates')}</a></li>
           <li><a class="about_btn">#{chrome.i18n.getMessage('about')}</a></li>
       </ul>
