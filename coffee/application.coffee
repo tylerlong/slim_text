@@ -128,7 +128,7 @@ class @Application
   <a class="about_btn" title="#{chrome.i18n.getMessage('about')}"><i class="icon-info-sign"></i></a>
   <i class="icon-fullscreen" id="hidden_btn"></i>
 </div>"""
-        ranges = [['a', 'd'], ['e', 'j'], ['k', 'o'], ['p', 's'], ['t', 'z']]
+        ranges = [['a', 'c'], ['d', 'h'], ['i', 'l'], ['m', 'p'], ['q', 's'], ['t', 'z']]
         pairs = []
         for range in ranges
             $('#mode_list').append """

@@ -80,7 +80,7 @@ class @Mode
             'ruby': 'Ruby'
             'rust': 'Rust'
             'sass': 'SASS'
-            'scad': 'OpenSCAD'
+            'scad': 'SCAD'
             'scala': 'Scala'
             'scheme': 'Scheme'
             'scss': 'SCSS'
