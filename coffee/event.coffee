@@ -151,7 +151,7 @@ class @Event
             action.check_for_updates()
 
         $('body').on 'click', '.about_btn', ->
-            util.notice "Slim Text #{chrome.app.getDetails().version}", "Copyright © 2012 - 2013 slimtext.org", 5000
+            util.notice "Slim Text #{chrome.app.getDetails().version}", "Copyright © 2012 - 2014 slimtext.org", 5000
 
         $('body').on 'click', '.close_tab_btn', ->
             current_editor = util.current_editor()
