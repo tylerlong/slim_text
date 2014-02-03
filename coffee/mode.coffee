@@ -18,11 +18,16 @@ class @Mode
             'diff': 'Diff'
             'django': 'Django'
             'dot': 'Dot'
+            'erlang': 'Erlang'
+            'ejs': 'EJS'
+            'forth': 'Forth'
             'ftl': 'FreeMarker'
             'glsl': 'Glsl'
             'golang': 'Golang'
             'groovy': 'Groovy'
             'haml': 'HAML'
+            'handlebars': 'Handlebars'
+            'haskell': 'Haskell'
             'haxe': 'haXe'
             'html': 'HTML'
             'jade': 'Jade'
@@ -131,6 +136,14 @@ class @Mode
         
             'dot': 'dot'
             
+            'erl': 'erlang'
+            'erlang': 'erlang'
+            
+            'ejs': 'ejs'
+            
+            'fth': 'forth'
+            'forth': 'forth'
+            
             'ftl': 'ftl'
             'freemarker': 'ftl'
         
@@ -147,6 +160,12 @@ class @Mode
             'gsh': 'groovy'
         
             'haml': 'haml'
+            
+            'hbs': 'handlebars'
+            'handlebars': 'handlebars'
+            
+            'hs': 'haskell'
+            'haskell': 'haskell'
         
             'hx': 'haxe'
             'haxe': 'haxe'
@@ -155,7 +174,6 @@ class @Mode
             'html': 'html'
             'xhtml': 'html'
             'erb': 'html'
-            'hbs': 'html'
             'cow': 'html'
         
             'jade': 'jade'
