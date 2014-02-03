@@ -42,6 +42,7 @@ class @Mode
             'java': 'Java'
             'javascript': 'Javascript'
             'json': 'JSON'
+            'jsoniq': 'JSONiq'
             'jsp': 'JSP'
             'jsx': 'JSX'
             'julia': 'Julia'
@@ -58,7 +59,10 @@ class @Mode
             'makefile': 'Makefile'
             'matlab': 'Matlab'
             'markdown': 'Markdown'
-            'mushcode': 'TinyMUSH'
+            'mel': 'MEL'
+            'mysql': 'MySQL'
+            'mushcode': 'MUSHCode'
+            'nix': 'Nix'
             'objectivec': 'Objective-C'
             'ocaml': 'Ocaml'
             'pascal': 'Pascal'
@@ -66,11 +70,15 @@ class @Mode
             'pgsql': 'pgSQL'
             'php': 'PHP'
             'powershell': 'Powershell'
+            'prolog': 'Prolog'
+            'properties': 'Properties'
+            'protobuf': 'Protobuf'
             'python': 'Python'
             'r': 'R'
             'rdoc': 'RDoc'
             'rhtml': 'RHTML'
             'ruby': 'Ruby'
+            'rust': 'Rust'
             'sass': 'SASS'
             'scad': 'OpenSCAD'
             'scala': 'Scala'
@@ -247,9 +255,15 @@ class @Mode
             'md': 'markdown'
             'markdown': 'markdown'
             
+            'mel': 'mel'
+            
+            'mysql': 'mysql'
+            
             'mc': 'mushcode'
             'mush': 'mushcode'
             'mushcode': 'mushcode'
+            
+            'nix': 'nix'
         
             'm': 'objectivec'
             'mm': 'objectivec'
@@ -278,6 +292,12 @@ class @Mode
             'psd1': 'powershell'
             'psm1': 'powershell'
             'powershell': 'powershell'
+            
+            'prolog': 'prolog'
+            
+            'properties': 'properties'
+            
+            'protobuf': 'protobuf'
         
             'py': 'python'
             'python': 'python'
@@ -294,6 +314,9 @@ class @Mode
             'gemspec': 'ruby'
             'rake': 'ruby'
             'ruby': 'ruby'
+            
+            'rs': 'rust'
+            'rust': 'rust'
         
             'scad': 'scad'
         
