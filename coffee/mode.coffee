@@ -2,14 +2,18 @@ class @Mode
     constructor: ->
         @modes =
             'abap': 'ABAP'
+            'actionscript': 'ActionScript'
+            'ada': 'ADA'
             'asciidoc': 'AsciiDoc'
             'c_cpp': 'C/C++'
             'clojure': 'Clojure'
+            'cobol': 'Cobol'
             'coffee': 'CoffeeScript'
             'coldfusion': 'Coldfusion'
             'csharp': 'C#'
             'css': 'CSS'
             'curly': 'Curly'
+            'd': 'D'
             'dart': 'Dart'
             'diff': 'Diff'
             'django': 'Django'
@@ -69,7 +73,7 @@ class @Mode
             'toml': 'toml'
             'typescript': 'Typescript'
             'vbscript': 'VBScript'
-            'velocity': 'Velocity' 
+            'velocity': 'Velocity'
             'xml': 'XML'
             'xquery': 'XQuery'
             'yaml': 'YAML'
@@ -77,6 +81,13 @@ class @Mode
 
         @extensions =
             'abap': 'abap'
+            
+            'as': 'actionscript'
+            'actionscript': 'actionscript'
+            
+            'adb': 'ada'
+            'ads': 'ada'
+            'ada': 'ada'
         
             'asciidoc': 'asciidoc'
             
@@ -92,6 +103,9 @@ class @Mode
         
             'clj': 'clojure'
             'clojure': 'clojure'
+            
+            'cbl': 'cobol'
+            'cobol': 'cobol'
         
             'coffee': 'coffee'
             'cf': 'coffee'
@@ -107,6 +121,8 @@ class @Mode
             'css': 'css'
         
             'curly': 'curly'
+            
+            'd': 'd'
         
             'dart': 'dart'
         
@@ -140,6 +156,7 @@ class @Mode
             'xhtml': 'html'
             'erb': 'html'
             'hbs': 'html'
+            'cow': 'html'
         
             'jade': 'jade'
         
@@ -302,7 +319,7 @@ class @Mode
             'yml': 'yaml'
 
 
-        @names = 
+        @names =
             'Cakefile': 'coffee'
             'Gemfile': 'ruby'
             'GNUmakefile': 'makefile'
@@ -311,7 +328,7 @@ class @Mode
             'OCamlMakefile': 'makefile'
     
 
-        @binaries = 
+        @binaries =
             'gif': true
             'png': true
             'jpg': true
