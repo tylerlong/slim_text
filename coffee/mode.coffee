@@ -85,6 +85,10 @@ class @Mode
             'scheme': 'Scheme'
             'scss': 'SCSS'
             'sh': 'Shell'
+            'sjs': 'SJS'
+            'space': 'Space'
+            'snippets': 'Snippets'
+            'soy_template': 'Soy template'
             'sql': 'SQL'
             'stylus': 'Stylus'
             'svg': 'SVG'
@@ -92,11 +96,12 @@ class @Mode
             'tex': 'Tex'
             'text': 'Text'
             'textile': 'Textile'
-            'tmsnippet': 'tmSnippet'
-            'toml': 'toml'
+            'toml': 'Toml'
+            'twig': 'Twig'
             'typescript': 'Typescript'
             'vbscript': 'VBScript'
             'velocity': 'Velocity'
+            'verilog': 'Verilog'
             'xml': 'XML'
             'xquery': 'XQuery'
             'yaml': 'YAML'
@@ -332,6 +337,14 @@ class @Mode
         
             'sh': 'sh'
             'bash': 'sh'
+            
+            'sjs': 'sjs'
+            
+            'space': 'space'
+            
+            'snippets': 'snippets'
+            
+            'soy_template': 'soy_template'
         
             'sql': 'sql'
         
@@ -351,9 +364,9 @@ class @Mode
         
             'textile': 'textile'
             
-            'tmsnippet': 'tmsnippet'
-            
             'toml': 'toml'
+            
+            'twig': 'twig'
         
             'typescript': 'typescript'
             'ts': 'typescript'
@@ -364,6 +377,9 @@ class @Mode
             
             'vm': 'velocity'
             'velocity': 'velocity'
+            
+            'v': 'verilog'
+            'verilog': 'verilog'
         
             'xml': 'xml'
             'rdf': 'xml'
