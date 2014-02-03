@@ -1,10 +1,15 @@
 class @Mode
     constructor: ->
         @modes =
-            'abap': 'ABAP'
+            'abap': 'Abap'
             'actionscript': 'ActionScript'
-            'ada': 'ADA'
+            'ada': 'Ada'
+            'apache_conf': 'Apache Conf'
             'asciidoc': 'AsciiDoc'
+            'assembly_x86': 'Assembly x86'
+            'autohotkey': 'AutoHotKey'
+            'batchfile': 'BatchFile'
+            'c9search': 'C9Search'
             'c_cpp': 'C/C++'
             'clojure': 'Clojure'
             'cobol': 'Cobol'
@@ -25,20 +30,23 @@ class @Mode
             'glsl': 'Glsl'
             'golang': 'Golang'
             'groovy': 'Groovy'
-            'haml': 'HAML'
+            'haml': 'Haml'
             'handlebars': 'Handlebars'
             'haskell': 'Haskell'
             'haxe': 'haXe'
             'html': 'HTML'
             'html_ruby': 'HTML (Ruby)'
+            'ini': 'INI'
+            'jack': 'Jack'
             'jade': 'Jade'
             'java': 'Java'
             'javascript': 'Javascript'
             'json': 'JSON'
             'jsp': 'JSP'
             'jsx': 'JSX'
+            'julia': 'Julia'
             'latex': 'LaTex'
-            'less': 'LESS'
+            'less': 'Less'
             'liquid': 'Liquid'
             'lisp': 'Lisp'
             'livescript': 'LiveScript'
@@ -48,6 +56,7 @@ class @Mode
             'luapage': 'LuaPage'
             'lucene': 'Lucene'
             'makefile': 'Makefile'
+            'matlab': 'Matlab'
             'markdown': 'Markdown'
             'mushcode': 'TinyMUSH'
             'objectivec': 'Objective-C'
@@ -96,6 +105,9 @@ class @Mode
             'ada': 'ada'
         
             'asciidoc': 'asciidoc'
+            
+            'bat': 'batchfile'
+            'batchfile': 'batchfile'
             
             'cpp': 'c_cpp'
             'h': 'c_cpp'
@@ -178,6 +190,10 @@ class @Mode
             
             'erb': 'html_ruby'
             'html_ruby': 'html_ruby'
+            
+            'ini': 'ini'
+            
+            'jack': 'jack'
         
             'jade': 'jade'
         
@@ -191,6 +207,9 @@ class @Mode
             'jsp': 'jsp'
         
             'jsx': 'jsx'
+            
+            'jl': 'julia'
+            'julia': 'julia'
         
             'latex': 'latex'
             'tex': 'latex'
@@ -222,6 +241,8 @@ class @Mode
             'cmake': 'makefile'
             'make': 'makefile'
             'makefile': 'makefile'
+            
+            'matlab': 'matlab'
         
             'md': 'markdown'
             'markdown': 'markdown'
@@ -288,7 +309,6 @@ class @Mode
         
             'sh': 'sh'
             'bash': 'sh'
-            'bat': 'sh'
         
             'sql': 'sql'
         
