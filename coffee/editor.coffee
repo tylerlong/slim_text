@@ -64,7 +64,7 @@ class @Editor
             lazy_change()
 
     trim_trailing_space: ->
-        ace.require("ace/ext/whitespace").trimTrailingSpace(@editor.getSession())
+        ace.require("ace/ext/whitespace").trimTrailingSpace(@editor.getSession(), true)
 
     ensure_newline_at_eof: ->
         doc = @editor.session.getDocument()
