@@ -80,5 +80,5 @@
 237. write tests
     1. how to test?
 238. preview HTML?
-239. apply theme to top panel and left panel
-240.
+239. apply theme to top panel and left panel?
+240. each tab contains the whole window (including top panel and left panel)?
