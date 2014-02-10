@@ -140,6 +140,12 @@
     "new_folder": {
         "message": "新建文件夹"
     },
+    "remove_file": {
+        "message": "删除文件"
+    },
+    "confirm_remove": {
+        "message": "确定要移除"
+    },
     "invalid_path_name": {
         "message": "非法的路径名"
     },

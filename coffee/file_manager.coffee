@@ -11,6 +11,9 @@ class @FileManager
     read: (path) ->
         @file_manager.read path
 
+    remove: (path) ->
+        @file_manager.remove path
+
     extension: (filename) ->
         @file_manager.extension filename
 

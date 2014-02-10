@@ -87,9 +87,14 @@ class @Editor
         else
             util.notice chrome.i18n.getMessage('unable_to_save'), @path
 
-    dispose: ->
+    remove_file: ->
+        if confirm("#{chrome.i18n.getMessage('confirm_remove')} #{@path} ?")
+            file_manager.remove @path
+            this.dispose(false)
+
+    dispose: (check = true)->
         filename = $("#link-#{@uid}").text()
-        return if filename.indexOf('* ') == 0 and not confirm """"#{filename.substr(2)}" #{chrome.i18n.getMessage('save_before_leaving')}"""
+        return if check and filename.indexOf('* ') == 0 and not confirm """"#{filename.substr(2)}" #{chrome.i18n.getMessage('save_before_leaving')}"""
         @editor.destroy()
         $("li[aria-controls='tab-#{@uid}']").remove()
         $("#tab-#{@uid}").remove()

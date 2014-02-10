@@ -140,6 +140,12 @@
     "new_folder": {
         "message": "New folder"
     },
+    "remove_file": {
+        "message": "Remove file"
+    },
+    "confirm_remove": {
+        "message": "Are you sure to remove"
+    },
     "invalid_path_name": {
         "message": "Invalid path name"
     },

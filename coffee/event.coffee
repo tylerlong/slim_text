@@ -84,6 +84,9 @@ class @Event
         $('body').on 'click', '.new_folder_btn', ->
             setTimeout((-> action.create_folder()), 50)
 
+        $('body').on 'click', '.remove_file_btn', ->
+            setTimeout((-> action.remove_file()), 50)
+
         $('body').on 'click', '.find_btn', ->
             current_editor = util.current_editor()
             if current_editor
@@ -227,6 +230,12 @@ class @Action
         return if not folder_path
         file_manager.create_folder folder_path
         application.refresh_sidebar()
+
+    remove_file: ->
+        current_editor = util.current_editor()
+        if current_editor
+            current_editor.remove_file()
+
 
     check_for_updates: ->
         $.get('https://raw.github.com/tylerlong/slimtext.org/gh-pages/__version__', (data) ->

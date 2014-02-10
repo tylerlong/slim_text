@@ -49,6 +49,7 @@ class @Application
       <ul class="dropdown-menu">
           <li><a class="new_file_btn">#{chrome.i18n.getMessage('new_file')}</a></li>
           <li><a class="new_folder_btn">#{chrome.i18n.getMessage('new_folder')}</a></li>
+          <li><a class="remove_file_btn">#{chrome.i18n.getMessage('remove_file')}</a></li>
           <li><a class="save_btn">#{chrome.i18n.getMessage('save')}</a></li>
           <li><a class="save_all_btn">#{chrome.i18n.getMessage('save_all')}</a></li>
           <li><a class="close_tab_btn">#{chrome.i18n.getMessage('close_tab')}</a></li>
@@ -117,6 +118,7 @@ class @Application
 <div id="toolbar">
   <a class="new_file_btn" title="#{chrome.i18n.getMessage('new_file')}"><i class="icon-file"></i></a>
   <a class="new_folder_btn" title="#{chrome.i18n.getMessage('new_folder')}"><i class="icon-folder-close-alt"></i></a>
+  <a class="remove_file_btn" title="#{chrome.i18n.getMessage('remove_file')}"><i class="icon-remove"></i></a>
   <a class="save_btn" title="#{chrome.i18n.getMessage('save')}"><i class="icon-save"></i></a>
   <a class="find_btn" title="#{chrome.i18n.getMessage('find')}"><i class="icon-search"></i></a>
   <a class="toggle_invisibles_btn" title="#{chrome.i18n.getMessage('toggle_invisibles')}"><i class="icon-eye-open"></i></a>
